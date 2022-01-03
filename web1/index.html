@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/p_common.css">
+    <title>home</title>
+    <style>     
+.vs{
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+}
+/*ptroduct*/
+.product{
+    width:100%;
+    height: 630px;
+    padding-top: 80px;
+    text-align:center;
+    background-color: black;
+}
+.product h1{
+    color: #fff;
+}
+.product .p_plus{
+    margin-left: 150px;
+    width: 1350px;
+    height: 600px;
+    margin:auto;
+    text-align:right;
+
+} 
+.product .p_plus a
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.icons{
+    display: flex;
+    width: 1200px;
+    height: 360px;
+    background-color: black;
+    margin: auto;
+    margin-top: 10px;
+}
+.icons > li{
+    flex: 1;
+    margin-top: 45px;
+    height: 350px;
+    text-align: center;
+    background-color: black;
+
+}
+.icons > li:not(:last-child){
+    margin-right: 30px;
+}
+.service{
+    width: 100%;
+    height: 800px;
+    padding-top: 20px;
+    text-align:center;
+    background-color:black;
+}
+.service h1{
+    color: #fff;
+}
+.p_bold {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+
+}
+.bold{
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+</style>
+<style>
+.video { 
+    margin-top: 40px;
+    width: 1000px;
+    display: block; 
+     margin: 20px auto; 
+}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="intro_bg">
+        <div class="header">
+            <ul class="nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="product.html">PRODUCT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <ul class="tnb">
+                <li><a href="admin.html">관리자 페이지</a></li>                
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="sitemap.html">사이트맵</a></li>      
+        </ul>
+        </div>
+        </div>
+        <div class="vs">
+            <img src="img/intro2.jpg">
+        </div>
+      </div>
+    
+    <div class="product">
+        <h1>NEW PRODUCT</h1>
+            <div class="p_plus">
+                <a href="product.html">+더보기</a>
+                <ul class="icons">
+                    <li>
+                        <div class="icons_img">
+                            <img src="img/bag1.jpg">
+                        </div>
+                        <div class="bold">프라다 다이아그램 가죽 미디엄 숄더백</div>
+                    </li>
+                    <li>
+                        <div class="icons_img">
+                            <img src="img/bag2.jpg">
+                        </div>
+                        <div class="bold">사피아노 가죽 미니 엔벌로프 백</div>
+                    </li>
+                    <li><div class="icons_img">
+                        <img src="img/bag3.jpg">
+                    </div>
+                    <div class="bold">프라다  가죽 미디엄 숄더백</div>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="service">
+              <h1>SERVICE</h1>
+              <video class="video" muted autoplay loop>
+                  <source src="img/Fashion show.mp4" type="video/mp4" >
+                  <img src="img/event.jpg">
+              </video>
+              </div>
+        <div class="hr">
+            <hr>
+        <footer class="ft">
+             <div class="ft_wrap">
+                <p class="copyright">  회사명: 프라다 코리아 (유). 사업자등록번호: 213-86-18544. 공동 대표자: 이수진,명민준  개인정보 보호책임자: 이수진대표. 통신판매신고번호: 2017-경기도 일산-04082. 
+				이메일:www.naver.com</p>             
+                <address>경기도 고양시 일산동구 장항동 128</address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

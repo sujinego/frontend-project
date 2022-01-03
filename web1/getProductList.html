@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제품목록</title>
+<style>
+.tit { text-align:center; }
+table { display:table; border-collapse:collapse; }
+tr { display:table-row; }
+th, td { display:table-cell; }
+.tb { width:1500px; margin:20px auto; }
+.tb th, .tb td { line-height:36px; border-bottom:1px solid #333; }
+.tb th { border-top:2px solid #333; background:#d3d3d3; }
+.btn_wrap { width: 320px; margin: 20px auto; display:flex; }
+.btn_wrap .in_btn { display: block; width: 80px; margin: 15px; background-color: #333; color: #fff; 
+   text-align: center; border: 0; outline: 0; float: left; line-height: 38px; }
+   .btn_wrap .in_btn:hover { background-color:#808080; }
+   
+</style>
+</head>
+<body>
+   <link rel="stylesheet" type="text/css" href="./css/admin.css">
+<form action="DeleteProductCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)">
+   <div class="wrap">
+      <nav class="nav">
+         <ul>
+            <li><a href="getMemberList.html" class="g1">회원관리</a></li>
+            <li><a href="getProductList.html" class="g1">제품목록</a></li>
+            <li><a href="getNoticeList.html" class="g1">공지사항 관리</a></li>
+            <li><a href="" class="g1">관리자 로그아웃</a></li>
+         </ul>
+       </nav>
+   </div>
+<h2 class="tit">제품목록</h2>
+
+   <table class="tb">
+      <thead>
+         <tr>
+            <th class="item1">제품 번호</th>
+            <th class="item2">제품 이름</th>
+            <th class="item3">제품 가격</th>
+            <th class="item4">제품 수량</th>
+            <th class="item5">제품 사진</th>
+            <th class="item6">편집</th>
+         </tr>
+      </thead>
+
+
+   <tbody>
+      <tr>
+         <td class="item1">1<a href=""></a></td>
+         <td class="item2">호보백</td>
+         <td class="item3">1500000</td>
+         <td class="item4">1</td>
+         <td> <img src='' alt=""></td>
+         <th class="item6">
+            <input type="checkbox"  name="ck"  id="ck"  class="ck_item" value=""/></th>
+      </tr>
+
+
+      </tbody>
+   </table>
+   <hr />
+   <div class="btn_wrap">
+   <button type="submit" class="in_btn" onclick="">삭제</button>
+   <button type="reset" class="in_btn" onclick="">취소</button>
+   <a href="addProductForm.html"class="in_btn" onclick="">제품등록</a>
+   </div>
+   </form>
+   <script>
+   function frm_submit(f){
+      var sel ='input[name="ck"]:checked';
+      var item = document.querySelectorAll(sel);
+      var cnt = item.length;
+      if(cnt==0){
+         alert("삭제할 요소를 선택하지 않았습니다");
+         return false;
+      } else {
+         var qt = confirm("정말로 삭제하시겠습니까?");
+         if(qt){
+            f.submit();
+         } else {
+            return false;
+         }
+      }
+   }
+   </script>
+<br><br>
+<hr>
+<footer class="ft">
+  <div class="ft_wrap">
+      <p class="copyright">  회사명: 프라다 코리아 (유). 사업자등록번호: 213-86-18544. 공동 대표자: 이수진,명민준  개인정보 보호책임자: 이수진대표. 통신판매신고번호: 2017-경기도 일산-04082. 
+      이메일:www.naver.com</p>             
+      <address>경기도 고양시 일산동구 장항동 128</address>
+  </div>
+</footer>
+</body>
+</html>

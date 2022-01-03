@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지사항 목록</title>
+
+<style>
+.tit { text-align:center;
+ }
+table { display:table;
+ border-collapse:collapse; }
+.wrap{ height:750px;
+
+} 
+tr { display:table-row; }
+th, td { display:table-cell; }
+.tb { width:700px; margin:20px auto; height:40px;}
+.tb th, .tb td { line-height:36px; border-bottom:1px solid #333; }
+.tb th { border-top:2px solid #333;
+ background:#fff; }
+.tb tbody tr:nth-child(2n) td { background:#d3d3d3; }
+.btn_wrap { width: 320px; margin: 20px auto; display:flex; }
+.btn_wrap .in_btn { display: block; width: 80px; margin: 15px; background-color: #333; color: #fff; 
+   text-align: center; border: 0; outline: 0; float: left; line-height: 38px; }
+   .btn_wrap .in_btn:hover { background-color:#808080; }
+</style>
+</head>
+<body>
+   <link rel="stylesheet" type="text/css" href="./css/admin.css">
+   <div class="wrap">
+      <nav class="nav">
+         <ul>
+            <li><a href="getMemberList.html" class="g1">회원관리</a></li>
+            <li><a href="getProductList.html" class="g1">제품목록</a></li>
+            <li><a href="getNoticeList.html" class="g1">공지사항 관리</a></li>
+            <li><a href="" class="g1">관리자 로그아웃</a></li>
+         </ul>
+       </nav>
+   </div>
+   <h2 class="tit">공지사항</h2>
+   <form action="DeleteNoticeCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)">
+   <table class="tb">
+      <thead>
+         <tr>
+            <th class="item1">작성자</th>
+            <th class="item2">작성자아이디</th>
+            <th class="item3">제목</th>
+            <th class="item4">게시글 내용</th>
+            <th class="item5">작성일시</th>
+            <th class="item6">조회수</th>
+
+         </tr>
+      </thead>
+      <tbody>      
+
+         <tr>
+         	<td class="item1">관리자</td>
+            <td class="item2"><a href="EditNoticeFormCtrl.html">관리자</a></td>
+            <td class="item3">게시글 제목</td>
+            <td class="item4">게시글 내용</td>
+            <td class="item5">2022-01-03</td>
+            <td class="item6">12</td>
+         </tr>   
+
+</tbody>
+</table>
+</form>
+
+   <div class="hr">
+      <hr>
+  <footer class="ft">
+       <div class="ft_wrap">
+          <p class="copyright">  회사명: 프라다 코리아 (유). 사업자등록번호: 213-86-18544. 공동 대표자: 이수진,명민준  개인정보 보호책임자: 이수진대표. 통신판매신고번호: 2017-경기도 일산-04082. 
+      이메일:www.naver.com</p>             
+          <address>경기도 고양시 일산동구 장항동 128</address>
+      </div>
+  </footer>
+</div>
+</body>
+</html>

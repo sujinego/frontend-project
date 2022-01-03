@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 목록</title>
+ <script src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+	.tit { text-align:center; }
+	.lst { list-style:none; clear:both; border-top:1px solid #333; width:900px; margin:0 auto;  
+	height:36px; }
+	.lst li { float:left; width:100px; line-height:36px; }
+	.lst.lh { border-top:3px solid #333; }
+	.lst:last-child { border-bottom:3px solid #333; }
+	.btn_wrap { width:220px; margin:20px auto; }
+	.btn_wrap .in_btn { display:block; width:80px; margin:15px; background-color:#333; color:#fff; 
+	text-align:center; border:0; outline:0; float:left; line-height:38px; }
+	.btn_wrap .in_btn:hover { background-color:deeppink; }
+</style>
+
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="./css/admin.css">
+	<div class="wrap">
+		<nav class="nav">
+			<ul>
+			   <li><a href="getMemberList.html" class="g1">회원관리</a></li>
+			   <li><a href="getProductList.html" class="g1">제품목록</a></li>
+			   <li><a href="getNoticeList.html" class="g1">공지사항 관리</a></li>
+			   <li><a href="index.html" class="g1">관리자 로그아웃</a></li>
+			</ul>
+		 </nav>
+	</div>
+<h2 class="tit">회원 목록</h2>
+<ul class="lst lh">
+	<li class="item1">회원아이디 </li>
+	<li class="item2">회원비밀번호</li>
+	<li class="item3">출생년도</li>
+	<li class="item4">가입일</li>
+	<li class="item5">회원명</li>
+	<li class="item6">포인트</li>
+	<li class="item7">방문횟수</li>
+	<li class="item8">인가</li>
+	<li class="item9">편집</li>
+</ul>
+<form action="DeleteMemberCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)">
+	<ul class="lst">
+		<li class="item1"><a href="">admin</a></li>
+		<li class="item2">1234</li>
+		<li class="item3">2022</li>
+		<li class="item4">2022-01-03</li>
+		<li class="item5"><a href="">관리자</a></li>
+		<li class="item6">200</li>
+		<li class="item7">25</li>
+		<li class="item8"></li>
+		<li class="item9">
+			<input type="checkbox"  name="ck"  id="ck"  class="ck_item" value=""/>
+		</li>
+	</ul>
+
+
+    <hr />
+	<div class="btn_wrap">	
+		<button type="submit" class="in_btn" onclick="">삭제</button>
+		<button type="reset" class="in_btn" onclick="">취소</button>
+	</div>	
+</form>
+<script>
+function frm_submit(f){
+    var sel ='input[name="ck"]:checked';
+    var item = document.querySelectorAll(sel);
+    var cnt = item.length;
+    if(cnt==0){
+       alert("삭제할 요소를 선택하지 않았습니다");
+       return false
+    } else {
+       var qt = confirm("정말로 삭제하시겠습니까?");
+       if(qt){
+          f.submit();
+       } else {
+          return false;
+       }
+    }
+ }
+</script>
+<br><br>
+    <hr>
+ <footer class="ft">
+      <div class="ft_wrap">
+          <p class="copyright">  회사명: 프라다 코리아 (유). 사업자등록번호: 213-86-18544. 공동 대표자: 이수진,명민준  개인정보 보호책임자: 이수진대표. 통신판매신고번호: 2017-경기도 일산-04082. 
+          이메일:www.naver.com</p>             
+          <address>경기도 고양시 일산동구 장항동 128</address>
+      </div>
+  </footer>
+</body>
+</html>
