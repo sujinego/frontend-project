@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시판 글 보기</title>
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<link rel="shortcut icon" href="./img/favicon.ico">
+<meta name="viewport" content="width=device-width; initial-scale=1.0, userscalable=no"/>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<style>
+.title {text-align: center;}
+.table {width: 50%; border-collapse: collapse; margin-left: 510px;}
+.cont {padding: 10px; text-align: center;}
+.tit { font-weight:900; text-align: center; }
+.btn-primary{padding:0 24px;border: 1px solid #666; border-radius: 9px; background-color: white;
+font-size: 15px;}
+.btn-primary:hover{ color: #fff; background-color: #463527;}
+.table td { min-height:42px; padding:5px; }
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="getGoodsList2.html">PRODUCT</a></li>
+						<li><a href="getInformList2.html">FAQ</a></li>
+						<li><a href="getBoardList2.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+	
+			<ul class="right">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="agreement.html">회원가입</a></li>
+					<li><a href="introduce.html">회사소개</a></li>
+			</ul>
+		  </nav>
+		  </div>
+		  </header>
+		</div>
+		<div class="container">
+			<h2 class="tit">게시판 글보기</h2>
+			<div class="content">
+				<div id="board">
+					<table id="detailBoard" class="table">
+						<tr>
+							<td id="title">작성일</td>
+							<td>2021-12-29</td>
+						</tr>
+						<tr>
+							<td id="title">작성자</td>
+							<td>홍길동</td>
+						</tr>
+						<tr>
+							<td id="title">
+								제 목
+							</td>
+							<td>
+								무제
+							</td>        
+						</tr>
+						<tr>
+							<td id="title">
+								내 용
+							</td>
+							<td>
+								무용
+							</td>        
+						</tr>
+						<tr>
+							<td id="title">
+								첨부파일
+							</td>
+							<td>
+								<a href=''>파일명</a>
+							</td>    
+						</tr>
+				
+						<tr align="center" valign="middle">
+							<td colspan="5">    
+								<input type="button" value="목록" 
+									onclick="javascript:location.href='getBoardList.html'" class="btn btn-primary">            
+							</td>
+						</tr>
+					</table>
+	    </div>
+	</div>
+</div>	
+</body>
+</html>

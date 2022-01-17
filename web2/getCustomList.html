@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원목록</title>
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<link rel="shortcut icon" href="./img/favicon.ico">
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+.c_wrap{
+
+height:750px;
+}
+
+.list  {
+	border-bottom: 1px solid #444444;
+	padding: 30px;
+}
+th{
+   width: 500px;
+   text-align: left;
+}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="getGoodsList2.html">PRODUCT</a></li>
+						<li><a href="getInformList2.html">FAQ</a></li>
+						<li><a href="getBoardList2.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+	
+			<ul class="right">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="agreement.html">회원가입</a></li>
+					<li><a href="introduce.html">회사소개</a></li>
+			</ul>
+		  </nav>
+		  </div>
+		  </header>
+		</div>
+		<div class="container">
+	<h2 class="tit">회원 목록</h2>
+	<div class="c_wrap">
+		<table class="table">
+		<thead>
+			<tr>
+				<th>아이디</th>
+				<th>비밀번호</th>
+				<th>이름</th>
+				<th>전화번호</th>
+				<th>우편번호</th>
+				<th>주소1</th>
+				<th>상세주소2</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td><a href="getCustom.html">(아이디)</a></td>
+				<td>(비밀번호)</td>
+				<td>(이름)</td>
+				<td>(전화번호)</td>
+				<td>(우편번호)</td>
+				<td>(주소1)</td>
+				<td>(상세주소2)</td>
+			</tr>
+
+		</table>
+		<!-- 페이지내이션(PageNation) 목록의 값이 한 페이지 분량을 초과할 경우 나누어 표시하고, 해당 페이지 링크를 누르면
+		그 페이지에 해당하는 내용만 표시-->
+		<nav>
+			<ul class="pagination">
+				<li><a href=""arial-label="Previous"><span arial-hidden="true">&laquo;</span></a></li>
+				<li><a href="getCustomList.html">1</a></li>
+				<li><a href=""arial-label="Next"><span arial-hidden="true">&raquo;</span></a></li>	
+			</ul>
+		</nav>
+		<div class="btn-group">
+			<a href="getCustomList.html"class="btn btn-default">목록</a>
+		</div>
+	</div>
+<!-- 푸터 인클루드 -->
+</body>
+</html>

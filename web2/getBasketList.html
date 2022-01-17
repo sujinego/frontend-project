@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>장바구니 목록</title>
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<link rel="shortcut icon" href="./img/favicon.ico">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="datatables.min.css">
+<script src="datatables.min.js"></script>
+<link rel="shortcut icon" href="./img/favicon.ico">
+<style>
+a{color:#463527;}
+.btn-primary{padding:0 24px;border: 1px solid #666; border-radius: 9px;
+background-image: none; background-color: #fff; color:#333;}
+.btn-primary:hover{ color: #fff; background-color: #463527;}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="getGoodsList2.html">PRODUCT</a></li>
+						<li><a href="getInformList2.html">FAQ</a></li>
+						<li><a href="getBoardList2.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+	
+			<ul class="right">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="agreement.html">회원가입</a></li>
+					<li><a href="introduce.html">회사소개</a></li>
+			</ul>
+		  </nav>
+		  </div>
+		  </header>
+		</div>
+	</html>
+ 	<h2 class="tit">장바구니 목록</h2>
+ 		<div class="basketlist_area">
+		<table class="basketid" id="basketid">
+		<thead>
+			<tr>
+			 	<th>장바구니 번호</th>
+				<th>제품 코드</th>
+				<th>제품이름</th>
+				<th>수량</th>
+				<th>가격</th>
+				<th>편집</th>
+			</tr>
+		</thead>
+	<tbody>
+	<c:set var="cnt" value="" />
+	<c:forEach items="" var="basket" varStatus="status">
+	<tr>		
+				<td>1</td>
+				<td>12</td>
+				<td>마그니</td>
+				<td>30</td>
+				<td>150000</td>
+				<td>
+				<a href="" class="btn btn-default">삭제</a>
+				</td>
+	</tr>
+	</c:forEach>
+	</tbody>
+	</table>
+	<script>
+   $(function(){
+	   $("#basketid").DataTable();
+   });
+	  </script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<body>
+	<hr>
+	<footer class="ft">
+		<div class="ft_wrap">
+			<p class="copyright">회사명: S&M 코리아 (주). 사업자등록번호: 213-86-18544. 공동
+				대표자: 명민준,이수진 개인정보 보호책임자: 명민준대표. 통신판매신고번호: 2017-경기도 일산-04082.
+				이메일:S&Minc@gmail.com</p>
+			<address>경기도 고양시 일산동구 장항동 128</address>
+		</div>
+	</footer>
+</body>
+</html>
+</div>
+</body>
+</html>

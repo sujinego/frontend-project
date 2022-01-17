@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제품 보기</title>
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<link rel="shortcut icon" href="./img/favicon.ico">
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="getGoodsList2.html">PRODUCT</a></li>
+						<li><a href="getInformList2.html">FAQ</a></li>
+						<li><a href="getBoardList2.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+	
+			<ul class="right">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="agreement.html">회원가입</a></li>
+					<li><a href="introduce.html">회사소개</a></li>
+			</ul>
+		  </nav>
+		  </div>
+		  </header>
+		</div>
+	<div class="container">
+		<h2 class="tit">회원 보기</h2>
+		<table class="table">
+			<tr>
+				<th class="item1">아이디</th>
+				<td class="item2">
+					<input type="text" name="cusid"value="" readonly/>
+				</td>
+			</tr>
+			<tr>
+				<th class="item2">비밀번호</th>
+				<td class="item2">
+					<input type="password"name="cuspw"id="cuspw"value=""/></td>
+			</tr>
+			<tr>
+				<th class="item3">이름</th>
+				<td class="item2">
+					<input type="text" name="cusname" id="cusname" value=""/><td>
+			</tr>
+			<tr>
+				<th class="item4">전화번호</th>
+				<td class="item2">
+				<input type="text" name="custel" id="custel" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item5">우편번호</th>
+				<td class="item2">
+				<input type="text" name="cuszipcode" id="cuszipcode" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item6">주소1</th>
+				<td class="item2">
+				<input type="text" name="add1" id="add1" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item7">상세주소2</th>
+				<td class="item2">
+				<input type="text" name="add2" id="add2" value=""/></td>
+			</tr>
+		</table>
+		<!-- 버튼 그룹 -->
+		<div class="btn-group">
+			<a href="getCustomList.html"class="btn btn-default">목록</a>
+			
+			<a href="getCustomList.html"class="btn btn-default">삭제</a>
+		</div>
+	</form>
+
+</div>
+<!-- 푸터 인클루드 -->
+</body>
+</html>

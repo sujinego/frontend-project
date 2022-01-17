@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지사항 글 보기</title>
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<link rel="shortcut icon" href="./img/favicon.ico">
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="getGoodsList2.html">PRODUCT</a></li>
+						<li><a href="getInformList2.html">FAQ</a></li>
+						<li><a href="getBoardList2.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+	
+			<ul class="right">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="agreement.html">회원가입</a></li>
+					<li><a href="introduce.html">회사소개</a></li>
+			</ul>
+		  </nav>
+		  </div>
+		  </header>
+		</div>
+	<div class="container">
+		<h2 class="tit">공지사항 보기</h2>
+		<form action="UpdateInformCtrl" method="post"name="frm">
+		<table class="table">
+			<tr>
+				<th class="item1">번호</th>
+				<td class="item2">(번호)
+					<input type="hidden" name="idx"value="(번호)"/>
+				</td>
+			</tr>
+			<tr>
+				<th class="item2">제목</th>
+				<td class="item2">
+					<input type="text"name="intit"value="(제목)"/></td>
+			</tr>
+			<tr>
+				<th class="item3">내용</th>
+				<td class="item2">
+					<textarea name="incon" id="incon" rows="10" cols="100">(내용)</textarea></td>
+			</tr>
+			<tr>
+				<th class="item4">작성자 이름</th>
+				<td class="item2">(작성자)</td>
+			</tr>
+			<tr>
+				<th class="item5">등록일</th>
+				<td class="item2">(작성일)</td>
+			</tr>
+			<tr>
+				<th class="item4">읽은횟수</th>
+				<td class="item2">(조회수)</td>
+			</tr>
+		</table>
+		<!-- 버튼 그룹 -->
+		<div class="btn-group">
+			<input type="submit"class="btn btn-default" value="글 수정"/>
+			<a href="getInformList.html"class="btn btn-default">목록</a>
+			<a href=""class="btn btn-default">글 삭제</a>
+</div>
+<!-- 푸터 인클루드 -->
+
+</body>
+</html>

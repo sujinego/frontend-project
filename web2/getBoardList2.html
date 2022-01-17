@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>관리자 게시판 목록</title>
+<link rel="shortcut icon" href="./img/favicon.ico">
+<meta name="viewport" content="width=device-width; initial-scale=1.0, userscalable=no" />
+<script src="jquery-latest.js"></script>
+<link rel="stylesheet" href="datatables.min.css" />
+<script src="datatables.min.js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/p_common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+.pagenum{text-align: center;}
+.title{text-align: center; padding-top:15px;}
+.table{ width: 50%;  border-collapse: collapse; margin-left: 500px;}
+.tit{ padding: 10px; font-weight: 900; text-align: center; }
+.cont{ padding: 10px; text-align: center; }
+.btn{float: right;margin-top:30px; margin-right:100px;border: 2px solid #666;
+padding:0 24px; border-radius: 9px;}
+.btn:hover{ color: #fff; background-color: #463527;}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="wrap">
+			<header class="hd">
+				<div class="hd_wrap">
+					<nav class="tnb">
+						<ul class="left">
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="getGoodsList2.html">PRODUCT</a></li>
+							<li><a href="getInformList2.html">FAQ</a></li>
+							<li><a href="getBoardList2.html">QNA</a></li>
+						</ul>
+						<a href="index.html" class="logo"> <img src="./img/logo.png"
+							alt="앰블럼이미지"></a>
+		
+				<ul class="right">
+						<li><a href="login.html">로그인</a></li>
+						<li><a href="agreement.html">회원가입</a></li>
+						<li><a href="introduce.html">회사소개</a></li>
+				</ul>
+			  </nav>
+			  </div>
+			  </header>
+			</div>
+<ul>
+<li><img src="./img/banner_1920.jpg" alt="" class="vs_img">
+</ul>		
+		<h2 class="title">게시판 목록</h2>
+		<hr>
+		<div class="content">
+			<div class="borad_area">
+				<table id="bList" class="table">
+					<thead>
+						<tr>
+							<th class="tit">글번호</th>
+							<th class="tit">제목</th>
+							<th class="tit">작성자</th>
+							<th class="tit">작성일</th>
+							<th class="tit">조회수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:set var="cnt" value="" />
+						<c:forEach items="" var="board" varStatus="status">
+							<tr>
+								<td class="cont">1</td>
+								<td class="cont"><a
+									href="getBoard.html">무제</a>
+								</td>
+								<td class="cont">작성자</td>
+								<td class="cont">작성일</td>
+								<td class="cont">조회수</td>
+							</tr>
+							<c:set var="cnt" value="" />
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+			
+	</div>
+
+</body>
+</html>

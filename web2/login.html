@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+<link rel="shortcut icon" href="./img/favicon.ico">
+<link rel="stylesheet"href="./css/p_common.css">
+</head>
+    <style>
+    /* 내부 스타일 */
+    input::placeholder { font-size: 25px; }
+    .content{
+    	background-color: #fff;
+    }
+    .con_tit{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .frm fieldset { 
+        width:600px; 
+        padding:100px; 
+        margin:20px auto; 
+    } 
+    .indata { 
+        display:block; 
+        width:600px; 
+        height:48px; 
+        line-height:48px; 
+        text-indent:16px; 
+        margin:30px auto; 
+    }
+    .btn_fr { 
+        width:600px; 
+    }
+    .btn_fr li:first-child {
+        float:left; 
+        }
+    .btn_fr li:last-child {
+        margin-left:180px;
+        }
+    .inbtn { display:block; 
+        width:240px; 
+        height:48px; 
+        line-height:48px; 
+        text-align:center; 
+        background-color:rgba(70,53,39,0.7); 
+        color:#fff; 
+        border:0; 
+        outline:0; 
+        border-radius:10px; 
+    }
+    </style>
+<body>
+<div class="container">
+    <div class="wrap">
+        <header class="hd">
+            <div class="hd_wrap">
+                <nav class="tnb">
+                    <ul class="left">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="getGoodsList2.html">PRODUCT</a></li>
+                        <li><a href="getInformList2.html">FAQ</a></li>
+                        <li><a href="getBoardList2.html">QNA</a></li>
+                    </ul>
+                    <a href="index.html" class="logo"> <img src="./img/logo.png"
+                        alt="앰블럼이미지"></a>
+    
+            <ul class="right">
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="agreement.html">회원가입</a></li>
+                    <li><a href="introduce.html">회사소개</a></li>
+            </ul>
+          </nav>
+          </div>
+          </header>
+        </div>
+	<section class="login" >
+			<h2 class="con_tit">로그인</h2>
+				<fieldset>
+					<input type="text" class="indata" id="cusid" name="cusid" placeholder="아이디" autofocus required />
+					<input type="password" class="indata" id="cuspw" name="cuspw" placeholder="비밀번호 " required />
+					<br /><br />
+					<ul class="btn_fr">
+						<li><a href="index.html">로그인</a></li>
+					</ul>
+				</fieldset>
+			</form>
+        </section>
+</div>
+</body>
+</html>

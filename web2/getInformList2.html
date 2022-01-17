@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/p_common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+<style>
+.title{text-align: center; padding-top:15px;}
+.table{ width: 50%;  border-collapse: collapse; margin-left: 510px;}
+.tit{ padding: 10px; font-weight: 900; text-align: center; }
+.cont{ padding: 10px; text-align: center; }
+</style>
+<title>S&M 공지사항</title>
+</head>
+<body>
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="getGoodsList2.html">PRODUCT</a></li>
+						<li><a href="getInformList2.html">FAQ</a></li>
+						<li><a href="getBoardList2.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+	
+			<ul class="right">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="agreement.html">회원가입</a></li>
+					<li><a href="introduce.html">회사소개</a></li>
+			</ul>
+		  </nav>
+		  </div>
+		  </header>
+		</div>
+<ul>
+<li><img src="./img/inform_banner.jpg" alt="" class="vs_img">
+</ul>
+	<div class="container">
+		<h2 class="title">공지사항</h2>
+<hr>
+		  <table class="table">
+		  <tbody>
+			<tr>
+				<td class="tit" width="10%">번호</td>
+				<td class="tit" width="15%">이름</td>
+				<td	class="tit" width="30%">제목</td>
+				<td	class="tit" width="20%">작성일 </td>
+				<td	class="tit" width="10%">조회수</td>
+				
+			</tr>
+			<tr>
+				<td class="cont">(번호)</td>
+				<td	class="cont">(작성자)</td>
+				<td	class="cont">
+					<!--제목을 클릭하면 get 방식으로 해당 항목의 no값과 pageNum을 갖고 content.jsp로 이동 -->
+				<a href="getInform2.html">(제목)</a>
+				</td>
+				<td	class="cont">(작성일)</td>
+				<td	class="cont">(조회수)</td>
+
+			</tr>
+		</tbody>	
+		</table>
+	</div>
+</body>
+</html>
