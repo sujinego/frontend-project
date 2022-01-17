@@ -39,10 +39,17 @@
          <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
     <script src="slick/slick.js"></script>
+    <link rel="stylesheet" href="./owl.carousel.css">
+    <script src="./owl.carousel.js"></script>
    <style>
     
-    .vs { clear:both; position:relative; width: 100%; overflow: hidden; margin-top: 100px;}
+    .vs { clear:both; position:relative; width: 100%; overflow: hidden;}
     
+    .owl-prev { display: none; }
+    .owl-next { display: none; }
+    .owl-dots div { display:block; width: 20px; float:left; background-color: rgb(0, 0, 0); border-radius:12px; margin: 10px; }
+    .owl-dots div.active { background:rgb(116, 103, 231); }
+
     button.slick-prev.slick-arrow { 
         display: block; 
         width: 40px;
@@ -98,50 +105,121 @@
     }
     .more_menu{
         max-width: 1200px;
-        padding: 32px 40px;
+        padding: 22px;
         height: 100px;
-        margin-left: 200px;
+        margin-left: 350px;
+    }
+    .more_menu >ul>li >p{
+        color: #fff;
     }
     .menu1, .menu2, .menu3, .menu4, .menu5{
         width: 20%;
         height: 80px;
         float: left;
     }
+    
     .content4{
         width: 100%;
-        height: 400px;
-        background-color: aquamarine;
+        height: 400px;     
     }
     .notice{
         width: 1200px;
         height: 300px;
-        margin-left: 200px;
+        margin-left: 380px;
+
     }
     .notice1{
     position: relative;
     float: left;
-    width: 400px;
+    width: 30%;
+    height: 230px;
     margin-left: 0%;
     margin-right: 30px;
     margin-top: 50px;
-    background-color: red;
+
+    }
+    .ntwrap .ntul {
+        border-top: 2px #000 solid;
     }
     .notice2{
     position: relative;
-    width: 400px;
+    width: 30%;
+    height: 230px;
     float: left;
     margin-right: 30px;
     margin-top: 50px;
-    background-color: yellow;
+
     }
     .notice3{
     position: relative;
-    width: 300px;
-    height: 250px;
+    width: 260px;
+    height: 270px;
     float: left;
     margin-top: 50px;
-    background-color: #1d4bb0;
+    }
+    .notice3 .ntwrap{
+        width: 100%;
+        height: 100%;
+        background: #1d4bb0 url("./source/tel.png") no-repeat 30px bottom;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    .notice3 .ntwrap .telbox{
+        border:  1px solid #c9ccd3;
+        padding: 10px 20px ;
+    }
+    .notice3 .ntwrap > ul >li >a{
+        color: #fff;
+    }
+    .ntwrap .tel{
+        padding-top: 60px;
+        margin-left: 85px;
+    }
+    .content5{
+        width: 100%;
+        height: 100px;
 
+    }
+    .c5wrap{
+        width: 1200px;
+        margin-left: 400px;
+    }
+    .snswrap .sns{
+        width: 400px;
+        height: 70px;
+        float: left;
+
+        
+    }
+    .sns > ul >li{
+        float: left;
+        width: 65px;
+    }
+    .sns > ul >li a{
+
+        display: none;
+        color: #fff;
+    }
+    .linkwrap{
+        width: 800px;
+       
+    }
+    .link1{
+        width: 200px;
+        height: 50px;
+        float: left;
+        background-color: yellow;
+    }
+    .link1 a {
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+
+    }
+    .link2{
+        width: 200px;
+        background-color: blue;
+        float: right;
     }
    </style> 
 	
@@ -173,7 +251,7 @@
                 </div>
             </div>
             <div class="top_menu">
-                <div class="mainmenu" style="border-top: 2px #fff;">
+                <div class="mainmenu" style="border-top: 2px rgb(90, 8, 8);">
                     <ul class="menu">
                         <li class="menu-item">
                             <a href="">정보공개/개방</a>
@@ -283,52 +361,56 @@
                 <div class="more_menu">
                     <ul>
                         <li class="menu1">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon.png" > 법무/검찰</a>
+                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon.png" ></a>
+                            <p>법무/검찰</p>
                         </li>
                         <li class="menu2">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (1).png">범죄예방</a>
+                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (1).png"></a>
+                            <p>범죄예방</p>
                         </li>
                         <li class="menu3">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (2).png">인권</a>
+                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (2).png"></a>
+                            <p>인권</p>
                         </li>
                         <li class="menu4">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (3).png">교정</a>
+                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (3).png"></a>
+                            <p>교정</p>
                         </li>
                         <li class="menu5">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (4).png">출입국/외국인</a>
+                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (4).png"></a>
+                            <p>출입국/외국인</p>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="content3">
                 <figure class="vs_midle">
-                        <div class="img single-item">
+                        <div class="img single-item owl-carousel">
                             <div class="item">
-                                <img src="./source/vs1.jpg" alt="">
+                                <img src="./source/view1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="./source/vs2.jpg" alt="" >
+                                <img src="./source/view2.jpg" alt="" >
                             </div>
                             <div class="item">
-                                <img src="./source/vs3.jpg" alt="" >
+                                <img src="./source/view3.jpg" alt="" >
                             </div>
                             <div class="item">
-                                <img src="./source/vs4.jpg" alt="">
+                                <img src="./source/view4.jpg" alt="">
                             </div>
                         </div>
                 </figure>
-                
+
                     <script>
                         $(function(){
-                            $(".img").slick({
-                                dots:true,  //번호별 버튼 추가
-                                arrows:true,    //좌우 버튼 추가
-                                infinite:true,  //순환 반복
-                                speed:300,  //한 슬라이드당 속도
+                            $(".owl-carousel").owlCarousel({
                                 autoplay:true,  //자동 실행
-                                autoplaySpeed:3500, //한 슬라이딩하고, 기다리는 시간
+                                loop:true,   //순환 반복
+                                margin: 30,   //아이템간 여백
+                                items:3,
+                                dots:true,
                             });
-                        });
+                        });    
                     </script>
                 </div>
             </div>
@@ -336,9 +418,9 @@
                 <div class="notice">
                     <div class="notice1">
                         <div class="ntwrap">
-                            <ul class="ntul"><h2>[공지사항]임명 및 인가공증인 모집 공고</h2>
-                                법무부 법무과에서는 첨부한 공고문에 따라 신규 임명 및 인가공증<br>
-                                인을 공개모집 하오니 자격요건을 충족하는 분들의 많은 신청부탁드립니다.
+                            <h2>[공지사항]</h2>
+                            <a href="">더보기+</a>
+                            <ul class="ntul">
                                 <li class="ntli">[채용정보]&nbsp;[의정부청소년비행에방센터] 2022년 제1회 공무직...</li>
                                 <li class="ntli">[채용정보]&nbsp;[대구보호관찰소] 2022년 제1회 대구...</li>
                                 <li class="ntli">[채용정보]&nbsp;[광주소년원] 2022년 제1회 광주소년...</li>
@@ -348,9 +430,10 @@
                     </div>
                     <div class="notice2">
                         <div class="ntwrap">
-                            <ul class="ntul"><h2>박범계 법무부장관-슈뢰더 전 독일 총리, 아리랑 연주와 한식으로 함께한</h2>
-                            박범계 법무부장관-슈뢰더 전 독일 총리, 아리랑 연주와 한식으로 함께 한<br>
-                            남북관계 법제화 등 논의
+                            <a href="">더보기+</a>
+                            <h2>[보도자료]</h2>
+                            
+                            <ul class="ntul">
                                 <li class="ntli">전자여행허가제(K-EAT),시행 8개월의 성과 및 민원...</li>
                                 <li class="ntli">독일 스타트업 관계자 만난 법무부장관 "법적 지원...</li>
                                 <li class="ntli">법무부장관, 독일 연방의원 간담회에서 인권/법치...</li>
@@ -360,24 +443,67 @@
                     </div>
                     <div class="notice3">
                         <div class="ntwrap">
-                            <ul class="ntul">
-                                <li class="ntli"><a href="">찾아오시는 길</a></li>
-                                <li class="ntli"><a href="">담당자 연락처</a></li>
-                                <li class="ntli"><a href="">설명자료</a></li>
-                                <li class="ntli">대표전화<strong>02-2110-3009</strong></li>
+                            <ul class="telbox">
+                                <li class="ntli"><a href=""><img src="./source/info.png">  찾아오시는 길</a></li>
+                                <li class="ntli"><a href=""><img src="./source/info-tel.png">  담당자 연락처</a></li>
+                                <li class="ntli"><a href=""><img src="./source/info_ad.png"> 설명자료</a></li>
                             </ul>
+                                <div class="tel">
+                                    <h3 style="color: #fff;">대표전화</h3>
+                                    <strong style="color: #fff;">02-2110-3009</strong>
+                                </div>
                         </div>
                     </div>
                 </div>
 
             </div>
             <div class="content5">
-
+                <div class= "c5wrap">
+                <div class="snswrap">
+                    <div class="sns">
+                        <ul>
+                            <li>
+                                <a href="">페이스북</a>
+                                <img src="./source/facebook.png" alt="">
+                            </li>
+                            <li>
+                                <a href="">트위터</a>
+                                <img src="./source/twiter.png" alt="">
+                            </li>
+                            <li>
+                                <a href="">유튜브</a>
+                                <img src="./source/youtube.png" alt="">
+                            </li>
+                            <li>
+                                <a href="">네이버 블로그</a>
+                                <img src="./source/naver.png" alt="">
+                            </li>
+                            <li>
+                                <a href="">다음 블로그</a>
+                                <img src="./source/daum.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="linkwrap">
+                    <div class="link1">
+                        <a href="">법무연수원 바로가기</a>
+                    </div>
+                    <div class="link2">
+                        <div class="sitenav">
+                            <select id="jumpsite" title="관련 사이트" style="width: 200px; height: 50px; font-size: 15px;" >
+                            <option value="">대검찰청</option>
+                            <option value="">광주고등검찰청</option>
+                            <option value="">대구고등검찰청</option>
+                            <option value="">대전고등검찰청</option>
+                            <option value="">부산고등검찰청</option>
+                            <option value="">서울고등검찰청</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
-                
-       
-
-            </div>
+        </div>
         <footer class="ft">
             <div class="ft_wrap">
                 <div class="f_logo">
@@ -400,11 +526,11 @@
                 </div>
                 <div class="wa">
                     <ul>
-                        <li>
+                        <li style="float: left;">
                             <img src="./source/footer_war.png" alt="WA인증로고">
                             <span></span>
                         </li>
-                        <li>
+                        <li  style="float: right; margin-top: 10px;">
                             <img src="./source/footer_open.png" alt="오픈인증로고">
                             <span></span>
                         </li>

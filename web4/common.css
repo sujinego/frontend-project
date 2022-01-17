@@ -84,6 +84,7 @@ background-color: #bbb;
     width: 15%;
     height: 30px;
     margin-top: 10px;
+    z-index: 9999;
     position: relative;
     background: salmon;
 }
@@ -131,13 +132,17 @@ background-color: #bbb;
     z-index:-1; }
 .ft_wrap { 
     width: 1200px; 
-    margin:0 auto;  
+    height: 120px;
+    margin:0 auto;
+    top: 20px;  
     position:relative;
 }
-.f_logo{float: left;}
+.f_logo {float: left; margin-right: 60px;}
+
+.linkbar{float: left;}
 .linkbar_nav { display: block; margin: 0; } 
 
-ft .linkbar_nav ul li{
+.ft .linkbar_nav ul li{
     display: inline-block;
     position: relative;
     
@@ -145,12 +150,13 @@ ft .linkbar_nav ul li{
 .linkbar_nav li { float:left; margin-right:40px; }
 .linkbar_nav li a { display:block; color:gray; line-height:40px; font-size:14px; }
 .copyright {
-    width: 800px; 
     font-size:14px;
     line-height:1.8; }
-.wa { clear: both; height:20px; }
-.wa li {float:left;}
-.ft .wa ul li img, ft .wa ul li span {
-    display: block;
-    float: left;
+.wa{
+    float: right;
 }
+.wa > ul {
+    width: 200px;
+}
+
+
