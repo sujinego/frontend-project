@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="대전관광"> 
+	<meta name="description" content="대전관광,문화행사,대전광역시청,관광">
+	<meta name="keywords" content="대전관광,문화행사,대전광역시청,관광">
+	<meta name="copyright" content="(35242) 대전광역시 서구 둔산로 100, 대표전화:042-120, 관광안내1330">
+	
+	<title>대전관광</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.daejeon.go.kr/images/drh/layout/common/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./대전관광_files/charge.css" media="all">
+	<script type="text/javascript" src="./대전관광_files/jquery-1.11.3.min.js.다운로드"></script>
+	<script type="text/javascript" src="./대전관광_files/html5shiv.js.다운로드"></script>
+	<script type="text/javascript" src="./대전관광_files/common.js.다운로드"></script>
+	<script type="text/javascript" src="./대전관광_files/jquery.easing.1.3.min.js.다운로드"></script>
+	
+	<script type="text/javascript" src="./대전관광_files/commonUtil.js.다운로드"></script>
+	
+	<!-- TODO : ??? main indox 쪽에 영향을 줌 -->
+<script type="text/javascript" src="./대전관광_files/rolling.js.다운로드"></script>
+<script type="text/javascript" src="./대전관광_files/stringUtil.js.다운로드"></script>
+<script type="text/javascript" src="./대전관광_files/commonUtil.js(1).다운로드"></script>
+<script type="text/javascript" src="./대전관광_files/system_util.js.다운로드"></script>
+<script type="text/javascript" src="./대전관광_files/system_board.js.다운로드"></script>
+<script type="text/javascript" src="./대전관광_files/jquery.form.min.js.다운로드"></script>
+<script type="text/javascript" src="./대전관광_files/new_gnb.js.다운로드"></script>
+<script type="text/javascript" src="./대전관광_files/namo_scripteditor.js.다운로드"></script>
+
+<script type="text/javascript" src="./대전관광_files/script.js.다운로드"></script>
+<script type="text/javascript" src="./대전관광_files/jquery.easing.1.3.min.js(1).다운로드"></script>
+<script type="text/javascript" src="./대전관광_files/jquery.bxslider.min.js.다운로드"></script>
+
+
+<script type="text/javascript" src="./대전관광_files/new_gnb.js(1).다운로드"></script>
+
+
+
+
+<!--[if IE 7]>
+   <link rel="stylesheet" type="text/css" href="/css/ie.css" />
+<![endif]-->
+<script type="text/javascript">
+$(function() {
+	//헤더메뉴
+    var siteCd = ("TOU").toUpperCase();
+
+    var Tmenu_setting_type   = "";		// "all_menu_view" or ""
+    var Tmenu_setting_line   = "";		// line counter("",1,2,3,4...9)
+    var Tmenu_setting_height = "156";	//2deps backBox(gnb_bg) height value
+    var Tmenu_setting_code   = "0101";	//menu code
+
+    if(siteCd == "ADA") {
+        Tmenu_setting_type   = "all_menu_view";
+        Tmenu_setting_height = "166";
+    } else if(siteCd == "ADM") {
+        Tmenu_setting_type   = "all_menu_view";
+        Tmenu_setting_height = "0";
+    } else if(siteCd == "ANI") {
+        Tmenu_setting_type   = "all_menu_view";
+    } else if(siteCd == "EDU") {
+        Tmenu_setting_type   = "all_menu_view";
+        Tmenu_setting_height = "216";
+    } else if(siteCd == "FOD") {
+    	Tmenu_setting_type   = "all_menu_view";
+    	Tmenu_setting_height = "176";
+    } else if(siteCd == "HEA") {
+    	Tmenu_setting_type   = "all_menu_view";
+    	Tmenu_setting_height = "216";
+    } else if(siteCd == "MAY") {
+    	Tmenu_setting_type   = "all_menu_view";
+    	Tmenu_setting_height = "256";
+    } else if(siteCd == "SUP" || siteCd == "HAP") {
+    	Tmenu_setting_type   = "all_menu_view";
+    	Tmenu_setting_height = "161";
+    } else if(siteCd == "UFA") {
+    	Tmenu_setting_type   = "all_menu_view";
+    	Tmenu_setting_height = "186";
+    } else if(siteCd == "DRE") {
+    	Tmenu_setting_type   = "en";
+    	Tmenu_setting_height = "";
+    	Tmenu_setting_code   = "";
+    } else if(siteCd == "DRC") {
+    	Tmenu_setting_type   = "en";
+    	Tmenu_setting_height = "";
+    	Tmenu_setting_code   = "";
+    } else if(siteCd == "DRJ") {
+    	Tmenu_setting_type   = "en";
+    	Tmenu_setting_height = "";
+    	Tmenu_setting_code   = "";
+    } else {
+    	/*
+    	** CONS, BUD, EXA, FAR, GAR
+    	** GUN , HIS, LIF, NOE, OHJ
+    	** PAR , PRE, RIV, SAF, STA
+    	** SUP , TOE, TOU, UIC, URB
+    	** VEH , TOJ, DRC, DRJ
+    	*/
+    	
+    	Tmenu_setting_line   = "4";
+    }
+
+    Tmenu_setting(Tmenu_setting_type,Tmenu_setting_line,Tmenu_setting_height,Tmenu_setting_code);//실행    
+    $("#gnb li ul").css("visibility", "visible");
+    
+});
+</script>
+<script type="text/javascript">
+	// Onload Event Handler
+	$(function(){
+		// Message Common
+		
+		
+	});
+	</script>
+	
+	<link type="text/css" rel="stylesheet" href="./대전관광_files/css.css" media="all">
+
+	<script type="text/javascript" src="./대전관광_files/sdk.js.다운로드"></script><script charset="UTF-8" src="./대전관광_files/kakao.js.다운로드"></script><script charset="UTF-8" src="./대전관광_files/services.js.다운로드"></script><!-- 챗봇s -->
+	<!-- <script src="https://nurichat.daejeon.go.kr/js/dj-nuribot-plugin-1.0.min.js"></script> -->
+	<!-- 챗봇e -->
+	
+<script type="text/javascript">
+<!--
+if(navigator.userAgent.match('iPad')){
+	var w = $(window).width();
+}else{
+	var w = screen.width;
+}
+
+$(document).ready(function(){
+	var resizeClear;
+	if(w > 310){
+		openlayer("#familyset button");
+		$(window).resize(function(){ 
+			if(navigator.userAgent.match('iPad')){
+				w = $(window).width();
+			}else{
+				w = screen.width;
+			}
+			clearTimeout(resizeClear);
+			//resizeClear = setTimeout(mediaRespond,100);
+			return false;
+		});
+	}
+	
+	// 챗봇
+	//$('#dj_nuribot_div').dj_nuribot();
+});
+-->
+</script>
+
+</head>
+
+<body>
+	<!-- skipNavi -->
+	<div class="skiptoContent">
+		<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#contents">본문내용 바로가기</a>
+		<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#gnb">메인메뉴 바로가기</a>
+	</div>
+	<!-- //skipNavi -->
+
+	<div id="wrap" class="skin01">
+	<!-- header : s -->
+	<script type="text/javascript">
+function getItSearch2(){
+	
+	var searchWord = $("#qt").val();
+	var category = $("#menu2").val();
+	if(searchWord == ""){
+		alert("검색어를 입력하십시오.");
+		$("#qt").focus();
+		return false;
+	}
+	$.ajax({
+			url:'/drh/totalSearch.do',
+			type: "post",
+			data: {"totalSearch_keyword" : searchWord,
+				"totalSearch_category" : category},
+			dataType: 'json',
+			async:false,
+			success:function(data, status){
+				$("#searchEngine").attr("action", "https://search.daejeon.go.kr/RSA/front/Search.jsp");
+				$("#searchEngine").attr("target", "_blank");
+				$("#searchEngine").submit();
+				//return true;
+			},
+			error: function(request, status, opt){
+				alert("서버와의 연결에 실패했습니다. Error Code ["+status+"]");
+				return false;
+			}
+		});
+}
+</script>
+
+<header class="header tou_navi">
+	<div class="container">
+		<h1 class="logo">
+			<a href="https://www.daejeon.go.kr/tou/index.do">
+				<img src="./대전관광_files/gnb_logo.png" alt="대전관광 Daejeon Metropolitan City">
+			</a>
+		</h1>
+		<div class="btnToggleMn hidePc"><a href="javascript:;">전체메뉴 열기</a></div>
+		<div class="btnSrch hidePc"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">검색하기</a>
+			<!-- 검색하기 레이어 -->
+			<div class="layerSrch">
+				<h2 class="hidden">통합검색</h2>
+				<div class="form">
+					<form id="searchEngine2" name="searchEngine2" action="https://www.daejeon.go.kr/">
+						<input type="hidden" name="menu" value="통합검색">
+						<input type="text" style="ime-mode:active" name="qt" id="qt2" class="input" onfocus="this.value=&#39;&#39;" title="검색어를 입력하세요" placeholder="검색어를 입력하세요.">
+						<p><button onclick="javascript:getItMobileSearch(searchEngine2); return false;">검색</button></p>
+						<input type="hidden" name="__encrypted" value="0yX0Wf5EGArubXm7p1Cum1gDyKXUEuP1tlZRHbdP+fEygHxMimjzrczKai2dhXuW">
+					</form>
+				</div>
+			</div>
+			<!-- //검색하기 레이어 -->
+		</div>
+		<div class="cnt forPc">
+			
+<nav class="gnb" id="gnb">
+    <ul>
+        <li class="gnbon">
+            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891" target="_self" title="">관광명소</a>
+<div class="layerSnb" id="snb01" style="display: none;">
+    <div class="wrapCnt">
+        <nav class="snb">
+            <ul style="visibility: visible;">
+                <li class="gnb01" style="display: none;">
+                    <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">관광명소</a>
+                    <ul class="depth2" style="visibility: visible;">
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891" target="_self" title="">대전 주요 관광지</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4123&amp;categorySeq=487" target="_self" title="">대전의 꼭 가볼만한 곳 40선</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0101&amp;menuSeq=3263" target="_self" title="">분야별관광명소</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5709" target="_self" title="">이달의 테마여행</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0016&amp;menuSeq=5738" target="_self" title="">니즈여행</a>
+                        </li>
+<li class="point_link01">
+<div class="gnb_smenu01">
+<em><img src="./대전관광_files/img_gnb01_stit.png" alt="한국관광 100선"></em>
+<ul style="visibility: visible;"><li><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=885" class="s_link01">계족산 황톳길</a></li></ul></div></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+        </li>
+        <li>
+            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4087" target="_self" title="">축제/행사</a>
+<div class="layerSnb" id="snb02" style="display: none;">
+    <div class="wrapCnt">
+        <nav class="snb">
+            <ul style="visibility: visible;">
+                <li class="gnb02" style="display: none;">
+                    <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">축제/행사</a>
+                    <ul class="depth2" style="visibility: visible;">
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4087" target="_self" title="">대표축제</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouEventList.do?menuSeq=4085" target="_self" title="">공연/전시/행사</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/galleryBoardList.do?boardId=tou_0005&amp;menuSeq=4122" target="_self" title="">사진으로 보는 축제</a>
+                        </li>
+<li class="point_link02">
+<div class="gnb_smenu02">
+<ul style="visibility: visible;"><li><a href="http://www.dime.or.kr:81/kor/eventList.do?menuIdx=698&amp;sort_type=start_dt&amp;sort_order=asc" target="_blank" title="새창으로 이동" class="s_link01">월별 축제/행사</a></li></ul></div></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+        </li>
+        <li>
+            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=965" target="_self" title="">추천여행코스</a>
+<div class="layerSnb" id="snb03" style="display: none;">
+    <div class="wrapCnt">
+        <nav class="snb">
+            <ul style="visibility: visible;">
+                <li class="gnb03" style="display: none;">
+                    <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">추천여행코스</a>
+                    <ul class="depth2" style="visibility: visible;">
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=965" target="_self" title="">테마별관광코스</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5963" target="_self" title="">권역별관광코스</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4902" target="_self" title="">목적별관광코스</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=901" target="_self" title="">수학여행코스</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0013&amp;menuSeq=5721" target="_self" title="">투어프로그램</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+        </li>
+        <li>
+            <a href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;menuSeq=903" target="_self" title="">숙박·음식·쇼핑</a>
+<div class="layerSnb" id="snb04" style="display: none;">
+    <div class="wrapCnt">
+        <nav class="snb">
+            <ul style="visibility: visible;">
+                <li class="gnb04" style="display: none;">
+                    <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">숙박·음식·쇼핑</a>
+                    <ul class="depth2" style="visibility: visible;">
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;searchCondition2=C0201&amp;menuSeq=4133" target="_self" title="">숙박</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouTourRepresentativeFoodList.do?menuSeq=1087" target="_self" title="">음식</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouTourShoppingList.do?menuSeq=1090" target="_self" title="">쇼핑</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+        </li>
+        <li>
+            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4912" target="_self" title="">도보여행길</a>
+<div class="layerSnb" id="snb05" style="display: none;">
+    <div class="wrapCnt">
+        <nav class="snb">
+            <ul style="visibility: visible;">
+                <li class="gnb05" style="display: none;">
+                    <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">도보여행길</a>
+                    <ul class="depth2" style="visibility: visible;">
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4912" target="_self" title="">대전둘레산길</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4926" target="_self" title="">대청호반길</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4937" target="_self" title="">대덕사이언스길</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4941" target="_self" title="">걷고싶은길</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4959" target="_self" title="">세종유성바램길</a>
+                        </li>
+<li class="point_link05">
+<div class="gnb_smenu05">
+<ul style="visibility: visible;"><li><a href="http://www.dc500.org/" class="s_link01" target="_blank" title="새창으로 이동">대청호 오백리</a></li></ul></div></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+        </li>
+        <li>
+            <a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0010&amp;menuSeq=5124" target="_self" title="">여행도우미</a>
+<div class="layerSnb" id="snb06" style="display: none;">
+    <div class="wrapCnt">
+        <nav class="snb">
+            <ul style="visibility: visible;">
+                <li class="gnb06" style="display: none;">
+                    <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">여행도우미</a>
+                    <ul class="depth2" style="visibility: visible;">
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0010&amp;menuSeq=5124" target="_self" title="">여행소식</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=907" target="_self" title="">관광안내소</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouTourinfoRequestList.do?menuSeq=909" target="_self" title="">관광자료 신청</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=908" target="_self" title="">문화관광해설사</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=906" target="_self" title="">1330전국관광안내</a>
+                        </li>
+                        <li>
+                            <a href="https://korean.visitkorea.or.kr/other/otherService.html?otdid=b55ffe10-84c3-11e8-8165-020027310001" target="_blank" title="새창으로 이동">무장애여행(한국관광공사)</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0014&amp;menuSeq=5722" target="_self" title="">여행관련책자</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/tourVideoList.do?boardId=tou_0015&amp;menuSeq=5723" target="_self" title="">여행지영상</a>
+                        </li>
+                        <li>
+                            <a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0017&amp;menuSeq=5842" target="_self" title="">시민서포터즈</a>
+                        </li>
+<li class="point_link06">
+<div class="gnb_smenu06">
+<ul style="visibility: visible;"><li><a href="https://www.daejeon.go.kr/his/board/musBoardDataList.do?bbsCode=hisrelic&amp;menuSeq=667" class="s_link01" target="_blank" title="새창으로 이동">대전의 문화재</a></li><li><a href="http://traffic.daejeon.go.kr/mainFront/atmsMain.do" class="s_link02" target="_blank" title="새창으로 이동">대전의 교통정보</a></li></ul></div></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+        </li>
+    </ul></nav>
+
+<!-- TODO : !!! common_contents.jsp 에서 만들어짐 -->
+			<div class="btnSrch"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">검색하기</a>
+				<!-- 검색하기 레이어 -->
+				<div class="layerSrch">
+					<form name="searchEngine" id="searchEngine"> 
+					<input type="hidden" name="menu" id="menu2" value="통합검색">
+						<span>
+							<input type="text" name="qt" id="qt" value="검색어 입력" title="검색어를 입력하세요">
+							<button onclick="javascript:getItSearch2(); return false;">검색</button>
+						</span> 
+					</form> 
+				</div>
+				<!-- //검색하기 레이어 -->
+			</div>
+			<div class="btnAllMn"><a href="https://www.daejeon.go.kr/tou/sitemap.do">전체메뉴 보기</a></div>
+			<div class="util">
+				<!-- <p class="login"><a href="#">로그인</a></p> -->
+				
+				<!-- <li class="home"><a href="/tou/index.do" >HOME</a></li> -->
+				<p class="login"><a href="https://www.daejeon.go.kr/cmm/memberLogin.do?siteCd=TOU">로그인</a></p>
+					<p class="site"><a href="https://www.daejeon.go.kr/">대전광역시청</a></p>
+				<div style="margin-top:-5px;">
+					<div class="lang">
+						<span class="selected"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">LANGUAGE</a></span>
+						<ul class="list">
+							<li><a href="https://www.daejeon.go.kr/toe/index.do" target="_blank">ENGLISH</a></li>
+							<li><a href="https://www.daejeon.go.kr/toj/index.do">JAPANESE</a></li>
+							<li><a href="https://www.daejeon.go.kr/toc/index.do">CHINESE</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</header>
+<!-- header : e -->
+	<!-- layoutSnb_mo : s -->
+	<div class="layerSnb_mo">
+	<div class="wrapCnt_mo">
+		<div class="util">
+			<p class="login"><a href="https://www.daejeon.go.kr/cmm/memberLogin.do?siteCd=TOU">로그인</a></p>
+			<p class="sitemap2"><a href="https://www.daejeon.go.kr/tou/sitemap.do">사이트맵</a></p>
+			<div class="lang">
+				<span class="selected"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#">LANGUAGE</a></span>
+				<ul class="list">
+					<li><a href="https://www.daejeon.go.kr/toe/index.do" target="_blank" title="새창">ENGLISH</a></li>
+					<li><a href="https://www.daejeon.go.kr/toj/index.do" target="_blank" title="새창">JAPANESE</a></li>
+					<li><a href="https://www.daejeon.go.kr/toc/index.do" target="_blank" title="새창">CHINESE</a></li>
+				</ul>
+			</div>
+		</div>
+		
+<nav class="snb_mo">
+    <ul style="display: block;">
+<li class="gnb01 on">
+            <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891" target="_self" title="">관광명소</a>
+<ul class="depth2 dep2" style="display: none;">
+<li class="on">
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891" target="_self" title="">대전 주요 관광지</a>
+<ul class="depth3 dep3" style="display: block;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=881" target="_self" title="">오-월드</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=882" target="_self" title="">뿌리공원</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=883" target="_self" title="">엑스포과학공원</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=884" target="_self" title="">한밭수목원</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=885" target="_self" title="">계족산황톳길</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=886" target="_self" title="">대청호반</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=887" target="_self" title="">장태산휴양림</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=888" target="_self" title="">대전둘레산길</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=889" target="_self" title="">동춘당</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=890" target="_self" title="">대전문화예술단지</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=892" target="_self" title="">으능정이문화의거리</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=893" target="_self" title="">유성온천</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4123&amp;categorySeq=487" target="_self" title="">대전의 꼭 가볼만한 곳 40선</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4123&amp;categorySeq=487" target="_self" title="">역사명소</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4124&amp;categorySeq=488" target="_self" title="">문화명소</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4125&amp;categorySeq=489" target="_self" title="">생태환경명소</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4126&amp;categorySeq=490" target="_self" title="">과학명소</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0101&amp;menuSeq=3263" target="_self" title="">분야별관광명소</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0101&amp;menuSeq=3263" target="_self" title="">자연생태</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0102&amp;menuSeq=960" target="_self" title="">첨단과학</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0104&amp;menuSeq=962" target="_self" title="">문화유산</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0103&amp;menuSeq=3262" target="_self" title="">문화시설</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5709" target="_self" title="">이달의 테마여행</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5709" target="_self" title="">1월, 겨울방학 더 즐겁게!</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5776" target="_self" title="">2월, 추운 겨울엔 따뜻한 실내여행!</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5119" target="_self" title="">3월, 오늘 더 예쁜 대전</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5096" target="_self" title="">4월, 꽃 지도 위 걸어요</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5131" target="_self" title="">5월, 과학과 놀이 사이</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5185" target="_self" title="">6월, 상큼한 숲그늘 속으로</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5280" target="_self" title="">7월, 대전의 즐길거리</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5379" target="_self" title="">8월, 첨벙첨벙! 물놀이</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5452" target="_self" title="">9월,  예술, 숲속을 걸어요</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5627" target="_self" title="">10월, 프레임에 담는 대전</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5643" target="_self" title="">11월, 낙엽밟고, 책도보고</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5654" target="_self" title="">12월, 반짝반짝 대전의 밤</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0016&amp;menuSeq=5738" target="_self" title="">니즈여행</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+</ul>
+</li>
+<li class="gnb02">
+            <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4087" target="_self" title="">축제/행사</a>
+<ul class="depth2 dep2" style="display: none;">
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4087" target="_self" title="">대표축제</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4087" target="_self" title="">대전사이언스페스티벌</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4103" target="_self" title="">대청호 대덕뮤직페스티벌</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4091" target="_self" title="">효문화뿌리축제</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4095" target="_self" title="">대전국제와인페스티벌</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4099" target="_self" title="">유성온천문화축제</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4107" target="_self" title="">디쿠페스티벌</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4111" target="_self" title="">계족산맨발축제</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4763" target="_self" title="">서구힐링아트페스티벌</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=6636" target="_self" title="">대청호 벚꽃축제</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=6664" target="_self" title="">대전 토토즐 페스티벌</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=6637" target="_self" title="">유성 국화 페스티벌</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouEventList.do?menuSeq=4085" target="_self" title="">공연/전시/행사</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/galleryBoardList.do?boardId=tou_0005&amp;menuSeq=4122" target="_self" title="">사진으로 보는 축제</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+</ul>
+</li>
+<li class="gnb03">
+            <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=965" target="_self" title="">추천여행코스</a>
+<ul class="depth2 dep2" style="display: none;">
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=965" target="_self" title="">테마별관광코스</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4893" target="_self" title="">과학관광</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4894" target="_self" title="">역사문화관광</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4895" target="_self" title="">생태웰빙관광</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4896" target="_self" title="">어린이관광</a></li>
+<li class="activeanchor_link"><a href="http://www.djmeditour.kr/ko/index.do" target="_blank" title="새창으로 이동">의료관광</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5963" target="_self" title="">권역별관광코스</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5963" target="_self" title="">권역별 관광코스 소개</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5965" target="_self" title="">장태산·보문산·만인산 권역</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5970" target="_self" title="">계족산 권역</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5975" target="_self" title="">원도심 권역</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5978" target="_self" title="">대청호·식장산 권역</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5983" target="_self" title="">서구(문화예술중심) 권역</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5988" target="_self" title="">유성 권역</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4902" target="_self" title="">목적별관광코스</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4903" target="_self" title="">자전거코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4904" target="_self" title="">도보여행코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4905" target="_self" title="">함께하기 좋은 코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4899" target="_self" title="">유성권온천여행</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4900" target="_self" title="">보문산권 가족여행</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4901" target="_self" title="">대청호수의 힐링여행</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=901" target="_self" title="">수학여행코스</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=969" target="_self" title="">수학여행 1코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=970" target="_self" title="">수학여행 2코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=971" target="_self" title="">수학여행 3코스</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0013&amp;menuSeq=5721" target="_self" title="">투어프로그램</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+</ul>
+</li>
+<li class="gnb04">
+            <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;menuSeq=903" target="_self" title="">숙박·음식·쇼핑</a>
+<ul class="depth2 dep2" style="display: none;">
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;searchCondition2=C0201&amp;menuSeq=4133" target="_self" title="">숙박</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;searchCondition2=C0201&amp;menuSeq=4133" target="_self" title="">관광호텔</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;searchCondition2=C0202&amp;menuSeq=4134" target="_self" title="">일반호텔</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;searchCondition2=C0207&amp;menuSeq=5057" target="_self" title="">게스트하우스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;searchCondition2=C0203&amp;menuSeq=4135" target="_self" title="">중저가숙박업소</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;searchCondition2=C0204&amp;menuSeq=4136" target="_self" title="">유스호스텔</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourLodgingList.do?viewName=2&amp;searchCondition2=C0205&amp;menuSeq=4137" target="_self" title="">수련원</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouTourRepresentativeFoodList.do?menuSeq=1087" target="_self" title="">음식</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourRepresentativeFoodList.do?menuSeq=1087" target="_self" title="">대표음식</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourRepresentativeFoodList.do?menuSeq=4139" target="_self" title="">특색음식</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/touTraditionList.do?menuSeq=4140" target="_self" title="">3대30년</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/fod/index.do" target="_blank" title="새창으로 이동">대전의맛</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=6639" target="_self" title="">시청직원 추천맛집</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouTourShoppingList.do?menuSeq=1090" target="_self" title="">쇼핑</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourShoppingList.do?menuSeq=1090" target="_self" title="">분야별쇼핑공간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouTourSpecialProductList.do?menuSeq=1092" target="_self" title="">대전의특산물</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=1091" target="_self" title="">전통시장현황</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=1093" target="_self" title="">관광공예품</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="gnb05">
+            <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4912" target="_self" title="">도보여행길</a>
+<ul class="depth2 dep2" style="display: none;">
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4912" target="_self" title="">대전둘레산길</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4912" target="_self" title="">소개</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4913" target="_self" title="">1구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4914" target="_self" title="">2구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4915" target="_self" title="">3구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4916" target="_self" title="">4구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4917" target="_self" title="">5구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4918" target="_self" title="">6구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4919" target="_self" title="">7구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4920" target="_self" title="">8구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4921" target="_self" title="">9구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4922" target="_self" title="">10구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4923" target="_self" title="">11구간</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4924" target="_self" title="">12구간</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4926" target="_self" title="">대청호반길</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4926" target="_self" title="">소개</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4927" target="_self" title="">1코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4928" target="_self" title="">2코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4929" target="_self" title="">3코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4930" target="_self" title="">4코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4931" target="_self" title="">5코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4932" target="_self" title="">6코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4933" target="_self" title="">자전거1코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4934" target="_self" title="">자전거2코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4935" target="_self" title="">자전거3코스</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4937" target="_self" title="">대덕사이언스길</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4937" target="_self" title="">소개</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4938" target="_self" title="">제1코스</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4939" target="_self" title="">제2코스</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4941" target="_self" title="">걷고싶은길</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4941" target="_self" title="">소개</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4943" target="_self" title="">웰빙길</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4947" target="_self" title="">낭만길</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4952" target="_self" title="">역사문화길</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4955" target="_self" title="">생태환경길</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4959" target="_self" title="">세종유성바램길</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4959" target="_self" title="">소개</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4961" target="_self" title="">1코스-징검다리 길</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4965" target="_self" title="">2코스-산들바람 길</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4966" target="_self" title="">3코스-사이언스 길</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=4967" target="_self" title="">거북이 투어존</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="gnb06">
+            <a class="snbLeftA" href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0010&amp;menuSeq=5124" target="_self" title="">여행도우미</a>
+<ul class="depth2 dep2" style="display: none;">
+<li>
+<a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0010&amp;menuSeq=5124" target="_self" title="">여행소식</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=907" target="_self" title="">관광안내소</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouTourinfoRequestList.do?menuSeq=909" target="_self" title="">관광자료 신청</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=908" target="_self" title="">문화관광해설사</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=906" target="_self" title="">1330전국관광안내</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+<li>
+<a href="https://korean.visitkorea.or.kr/other/otherService.html?otdid=b55ffe10-84c3-11e8-8165-020027310001" target="_blank" title="새창으로 이동">무장애여행(한국관광공사)</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0014&amp;menuSeq=5722" target="_self" title="">여행관련책자</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/tourVideoList.do?boardId=tou_0015&amp;menuSeq=5723" target="_self" title="">여행지영상</a>
+<ul class="depth3 noData"><li>하위 메뉴 없음</li></ul>
+</li>
+<li>
+<a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0017&amp;menuSeq=5842" target="_self" title="">시민서포터즈</a>
+<ul class="depth3 dep3" style="display: none;">
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0017&amp;menuSeq=5842" target="_self" title="">공지사항</a></li>
+<li class="activeanchor_link"><a href="http://djsupporters.com/" target="_blank" title="새창으로 이동">가입신청</a></li>
+<li class="activeanchor_link"><a href="http://naver.me/5d1H4U1v" target="_blank" title="새창으로 이동">인증게시판</a></li>
+<li class="activeanchor_link"><a href="http://naver.me/GgZc0oof" target="_blank" title="새창으로 이동">프로그램신청</a></li>
+<li class="activeanchor_link"><a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0018&amp;menuSeq=5846" target="_self" title="">명예의 전당</a></li>
+<li class="activeanchor_link"><a href="http://naver.me/5MuJKN3o" target="_blank" title="새창으로 이동">리워드 신청</a></li>
+</ul>
+</li>
+</ul>
+</li>
+    </ul></nav>
+
+<!-- TODO : !!! common_contents.jsp 에서 만들어짐 -->
+	</div>
+</div>
+<!-- layoutSnb_mo : e -->
+
+	<!-- 챗봇 -->
+	<!-- <div id="dj_nuribot_div"></div> -->
+	<!-- 챗봇 -->
+
+	<!-- content_body : s -->
+	<div class="container_wrap">
+		<div class="container">
+			<!-- leftmenu : s-->
+				<nav class="snb">
+<h2 class="tit01">관광명소</h2>
+<ul>
+<li class="on">
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891" target="_self" title="">대전 주요 관광지</a>
+<ul class="depth2 dep2">
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=881" target="_self" title="">오-월드</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=882" target="_self" title="">뿌리공원</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=883" target="_self" title="">엑스포과학공원</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=884" target="_self" title="">한밭수목원</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=885" target="_self" title="">계족산황톳길</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=886" target="_self" title="">대청호반</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=887" target="_self" title="">장태산휴양림</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=888" target="_self" title="">대전둘레산길</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=889" target="_self" title="">동춘당</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=890" target="_self" title="">대전문화예술단지</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=892" target="_self" title="">으능정이문화의거리</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=893" target="_self" title="">유성온천</a></li>
+</ul>
+</li>
+<li class="anchor_link">
+<a href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4123&amp;categorySeq=487" target="_self" title="">대전의 꼭 가볼만한 곳 40선</a>
+<ul class="depth2 dep2">
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4123&amp;categorySeq=487" target="_self" title="">역사명소</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4124&amp;categorySeq=488" target="_self" title="">문화명소</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4125&amp;categorySeq=489" target="_self" title="">생태환경명소</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/gallery40BoardList.do?boardId=tou_0001&amp;menuSeq=4126&amp;categorySeq=490" target="_self" title="">과학명소</a></li>
+</ul>
+</li>
+<li class="anchor_link">
+<a href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0101&amp;menuSeq=3263" target="_self" title="">분야별관광명소</a>
+<ul class="depth2 dep2">
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0101&amp;menuSeq=3263" target="_self" title="">자연생태</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0102&amp;menuSeq=960" target="_self" title="">첨단과학</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0104&amp;menuSeq=962" target="_self" title="">문화유산</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouTourList.do?dCode=C0103&amp;menuSeq=3262" target="_self" title="">문화시설</a></li>
+</ul>
+</li>
+<li class="anchor_link">
+<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5709" target="_self" title="">이달의 테마여행</a>
+<ul class="depth2 dep2">
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5709" target="_self" title="">1월, 겨울방학 더 즐겁게!</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5776" target="_self" title="">2월, 추운 겨울엔 따뜻한 실내여행!</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5119" target="_self" title="">3월, 오늘 더 예쁜 대전</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5096" target="_self" title="">4월, 꽃 지도 위 걸어요</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5131" target="_self" title="">5월, 과학과 놀이 사이</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5185" target="_self" title="">6월, 상큼한 숲그늘 속으로</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5280" target="_self" title="">7월, 대전의 즐길거리</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5379" target="_self" title="">8월, 첨벙첨벙! 물놀이</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5452" target="_self" title="">9월,  예술, 숲속을 걸어요</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5627" target="_self" title="">10월, 프레임에 담는 대전</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5643" target="_self" title="">11월, 낙엽밟고, 책도보고</a></li>
+<li class="anchor_link"><a class="anchor_link" href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=5654" target="_self" title="">12월, 반짝반짝 대전의 밤</a></li>
+</ul>
+</li>
+<li class="anchor_link">
+<a href="https://www.daejeon.go.kr/tou/boardNormalList.do?boardId=tou_0016&amp;menuSeq=5738" target="_self" title="">니즈여행</a>
+</li>
+</ul>
+</nav>
+<!-- TODO : !!! common_contents.jsp 에서 만들어짐 -->
+			<!-- leftmenu : e-->
+			
+			<!--contents : s -->
+			<div class="contents_wrap">
+				<section class="location">
+					<ul class="navi">
+						<li><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#"><img src="./대전관광_files/home.png" alt="홈으로"></a></li>
+						<li>
+									<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891">관광명소</a>
+										</li>
+							<li>
+									<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891">대전 주요 관광지</a>
+													</li>
+							</ul>
+					<ul class="sns">
+						<li>
+							
+							<a href="https://blog.naver.com/daejeontour" target="_blank" title="대전광역시 블로그 새 창으로 이동">
+							<img src="./대전관광_files/btn_blog_new.gif" alt="블로그"></a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/daejeondime" target="_blank" title="대전광역시 페이스북 새 창으로 이동">
+							<img src="./대전관광_files/btn_facebook_new.gif" alt="페이스북"></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/daejeon_dime" target="_blank" title="대전광역시 인스타그램 새 창으로 이동">
+							<img src="./대전관광_files/btn_instagram_new.gif" alt="인스타그램"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/channel/UCzRPq736TUcnIIDdfapXXZw" target="_blank" title="대전광역시 유튜브 새 창으로 이동">
+							<img src="./대전관광_files/btn_youtube_new.gif" alt="유튜브"></a>
+						</li>
+						<li>
+							<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#none" onclick="javascript:printPart(&#39;contents&#39;); return false;">
+							<img src="./대전관광_files/btn_print.gif" alt="프린터"></a>
+						</li>
+					</ul>
+				</section>
+				<div id="contents">
+					<h3>대전 주요 관광지</h3>
+<script type="text/javascript">
+//길찾기
+function searchRoad(){
+	var searchText = $("#start_area").val();
+	var searchDestination =  $("#end_area").val();
+// 	alert(searchText);
+
+	$.ajax({
+		url:"/tou/TouTourLodgingSearchRoad.do",
+		type:"post",
+		data : {"searchText": searchText},
+		contentType:"application/text; charset=UTF-8",
+		beforeSend:function(request){
+			//showProgress();
+		},
+		success : function(data, status){
+			if(searchText.length>50){
+				alert('출발지를 정확히 입력해주세요(ex.대전역,대전시청)');
+				return false;
+			}else{
+			/* var temp = data.result.split('-');
+			var lat = $("#lat").val();
+			var lng = $("#lng").val(); */
+// 			window.open("http://map.naver.com/index.nhn?slat="+temp[0]+"&slng="+temp[1]+"&eslat="+temp[0]+"&eslng="+temp[1]+"&stext="+searchText+"&elat="+lat+"&elng="+lng+"&eelat="+lat+"&eelng="+lng+"&etext="+searchDestination+"&menu=route&pathType=0");
+			window.open("http://map.daum.net/?&sName="+searchText+"&eName="+searchDestination);
+			}
+			},
+		error : function(request, status, opt){
+			//closeProgress();
+			alert("출발지를 정확히 입력해주세요(ex.대전역,대전시청)");
+		},
+		complete: function(request,status){
+			//closeProgress();
+		} 
+	 });
+}
+
+function getURLParameter(sParam){
+	 var sPageURL = window.location.search.substring(1);
+	 var sURLVariables = sPageURL.split('&');
+	 for (var i = 0; i < sURLVariables.length; i++)
+	 {
+		 var sParameterName = sURLVariables[i].split('=');
+		 if (sParameterName[0] == sParam)
+		 {	 
+			   return sParameterName[1]; 
+		 }
+	  }
+} 
+
+function chk_Member(){
+	$.ajax({
+		url:"/tou/TouTourLodgingAnswerAdd.do",
+		type:"post",
+// 		data : {"searchText": searchText},
+		contentType:"application/text; charset=UTF-8",
+		success : function(data, status){
+			
+			if(data.result==""){
+// 				alert("로그인이 필요한 서비스입니다.");
+// 				$("#delchek").hide();
+				return false;
+			}else{
+// 				$("#delchek").show();
+				var result = data.result.split("-");
+				$("#memId").val(result[0]);
+			}
+		},
+		error : function(request, status, opt){
+			//closeProgress();
+			alert("실패"+status+request);
+		}
+	 });
+}
+
+function chk_Insert(){
+	$.ajax({
+		url:"/tou/TouTourLodgingAnswerAdd.do",
+		type:"post",
+ 		//data : {"data": result},
+		contentType:"application/text; charset=UTF-8",
+		beforeSend:function(request){
+			//showProgress();
+		},
+		success : function(data, status){
+			//alert(data.result);
+			if(data.result==""){
+				alert("로그인이 필요한 서비스입니다.");
+				return false;
+			}else{
+			//Insert ajax
+			var result = data.result.split("-");
+			if($("#score").val()==null || $("#score").val()==''){
+				alert("별점을 선택해주세요");
+				return false;
+			}
+			if($("#review").val()==null || $("#review").val()==''){
+				alert("평가내용을 입력해주세요");
+				return false;
+			}
+
+			var frm = document.starInsert;
+			frm.id.value = result[0];
+			frm.content.value = $("#review").val();
+			frm.starScore.value = $("#score").val();
+			frm.idx.value = getURLParameter("idx"); 
+			frm.menuSeq.value = getURLParameter("menuSeq"); 
+			frm.viewName.value = getURLParameter("viewName");
+			frm.viewName.value = getURLParameter("viewName");
+// 			alert(getURLParameter("idx"));
+// 			alert(getURLParameter("menuSeq"));
+// 			alert(getURLParameter("viewName"));
+			
+			frm.submit();
+			}
+// 			alert(status);
+			},
+		error : function(request, status, opt){
+			//closeProgress();
+			alert("실패"+status);
+		},
+		complete: function(request,status){
+			//closeProgress();
+		} 
+	 });
+}
+
+function delAnswer(e){
+	var chk = confirm('삭제하시겠습니까?');
+	if(chk){
+// 		alert('ok');
+		var frm = document.answerDel;
+		frm.idx.value = getURLParameter("idx"); 
+		frm.menuSeq.value = getURLParameter("menuSeq"); 
+		frm.viewName.value = getURLParameter("viewName");
+		var mon1 = $(e.target).html();
+		var mon2 = mon1.split('"');
+		var mon3 = mon2[1];
+		var mon4 = mon3.split('"');
+		frm.compareId.value = mon4[0];
+// 		alert(mon4[0]);
+		frm.submit();
+	}else{
+		return false;
+	}
+}
+
+
+</script>
+
+<!--content_txt : s-->
+<div id="txt">
+                    <!--content_txt : s-->
+                    <div id="txt">
+                        <script type="text/javascript">
+                        $(function(){
+                            $('.tourist_map_area').each(function(){
+                                var $ul = $(this).find('ul');
+                                var $li = $(this).find('li');
+                                var $select = $(this).find('a');
+                                var $span = $(this).find('span');
+
+                                $select.click(function(){
+                                    $li.removeClass('on');
+                                    $(this).parent().addClass('on');
+
+                                    var $liClass = $(this).parent().attr('class');
+                                    var $liNum = $liClass.slice(9,11);
+                                    var cnt = 12;
+            
+                                    $span.removeClass('click');
+                                    $(this).children().addClass('click');
+                                    
+                                    for (var i = 0; i <= cnt; i++){
+                                        $('.tourist_map_txt').hide();
+                                    }
+                                    var $selectClass = $(".tourist_map_txt"+ $liNum);
+                                        $selectClass.show();
+                                });
+                            });
+
+                            $('.tourist_map_area .tourist_map ul li a').mouseover(function(){
+                                var $overli = $(this).parent();
+                                $overli.css('background','url(/images/tou/2017images/contents/attractions/icon_location_on.png) no-repeat');
+                    
+                                var overliNum = $overli.attr('class').slice(9,11);
+                                var overClass = ".location0"+ overliNum;
+                                $(overClass).children().children().addClass('over');
+
+                            }).mouseout(function(){
+                                var $overli = $(this).parent();
+                                $overli.css('background','url(/images/tou/2017images/contents/attractions/icon_location_off.png) no-repeat');
+
+                                var overliNum = $overli.attr('class').slice(9,11);
+                                var overClass = ".location0"+ overliNum;
+                                $(overClass).children().children().removeClass('over');
+                            });
+
+                        });
+                        if($(window).width() <= 800){
+                            $('.tourist_map_txt').show();
+                        }
+                        </script>
+
+                        <div class="tourist12_warp">
+                            <div class="tourist12_map" id="tourist12_map">
+                                <div class="tourist12_map_txt">
+                                    <img src="./대전관광_files/tourist_.jpg" alt="대전 주요 관광지">
+                                    <p>대전의 꼭 가봐야 할 <br>관광명소를 소개합니다</p>
+                                </div>
+                                <div class="tourist_map_area">
+                                    <div class="tourist_map">
+                                        <ul>
+                                            <li class="location01 on" style="background: url(&quot;/images/tou/2017images/contents/attractions/icon_location_off.png&quot;) no-repeat;"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span class="click">오-월드</span></a></li>
+                                            <li class="location02"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>뿌리공원</span></a></li>
+                                            <li class="location03"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>엑스포과학공원</span></a></li>
+                                            <li class="location04"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>한밭수목원</span></a></li>
+                                            <li class="location05"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>계족산황톳길</span></a></li>
+                                            <li class="location06"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>대청호반</span></a></li>
+                                            <li class="location07"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>장태산</span></a></li>
+                                            <li class="location08"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>대전둘레산길</span></a></li>
+                                            <li class="location09"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>동춘당</span></a></li>
+                                            <li class="location010"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>대전문화예술단지</span></a></li>
+                                            <li class="location011"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>으능정이문화의거리</span></a></li>
+                                            <li class="location012"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#tourist12_map"><span>유성온천</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt1" style="display:block">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images01.png" alt="오월드"></p>
+                                            <p class="pt20 pb10">중부 이남의 최대규모인 종합 테마파크</p>
+                                            <strong>오-월드</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>오!월드는 “주랜드+플라워랜드+조이랜드+버드랜드”가 복합적으로 어우러진 온 가족이 함께 즐길수 있는 종합테마 공원으로 2002년 5월5일 개장한 대전동물원과 2009년 5월 1일 개장한 플라워랜드를 통합하였으며, 2016년 9월 30일 버드랜드를 오픈하여, 총 783,897㎡(동물원 608,283 ㎡)로 확장된 중부권 이남 최대규모로 새롭게 태어나고 있다...</p>
+                                            <p class="mt25">위치 : 중구 사정공원로 70 (사정동)</p>
+                                            <p class="mt10">문의처 : 042-580-4820</p>
+                                            <div class="btn_area">
+                                                <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=881">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt2">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images02.png" alt="뿌리공원"></p>
+                                            <p class="pt20 pb10">전국 유일의 ‘효’ 테마공원</p>
+                                            <strong>뿌리공원</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>뿌리공원은 모든 사람들에게 자신의 뿌리를 알게하여 경로효친사상을 함양시키고 한겨레의 자손임을 일깨우기 위하여 세계 최초로 성씨를 상징하는 조형물을 세운 충효의 산 교육장이다.<br>자신의 뿌리를 되찾을 수 있는 성씨별 조형물과 사신도 및 12지지를 형상화한 뿌리 깊은 샘물, 각종행사를 할 수 있는 수변무대, 잔디광장과 공원을 한눈에...</p>
+                                            <p class="mt25">위치 : 중구 뿌리공원로 79</p>
+                                            <p class="mt10">문의처 : 042-581-4445</p>
+                                            <div class="btn_area">
+                                                <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=882">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt3">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images03.png" alt="엑스포과학공원"></p>
+                                            <p class="pt20 pb10">과학을 주제로 한 테마공원</p>
+                                            <strong>엑스포과학공원</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>엑스포과학공원은 1993년에 개최되었던 대전세계박람회인 엑스포가 끝난 뒤 그 시설과 부지를 국민과학교육의 장으로 활용하기 위하여 조성된 과학공원이다. 영화를 보면서 의자가 움직이는 시뮬레이션 영상관과 전기 에너지관 등 볼거리가 많다.<br>엑스포과학공원의 상징탑인 한빛탑에서 대전시의 주요지역을 한눈에 조망 할 수 있으며...</p>
+                                            <p class="mt25">위치 : 유성구 대덕대로 480</p>
+                                            <p class="mt10">문의처 : 042-250-1111</p>
+                                            <div class="btn_area">
+                                                <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=883">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt4">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images04.png" alt="한밭수목원"></p>
+                                            <p class="pt20 pb10">중부권 최대의 수목원</p>
+                                            <strong>한밭수목원</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>한밭수목원은 정부대전청사와 엑스포과학공원의 중앙부분에 위치하고 있고 대전예술의전당, 평송청소년문화센터, 시립미술관, 이응노미술관 등이 있어 문화 예술의 메카이며, 수목원과 어우러져 문화가 가장 잘 갖추어져 있는 곳이다.<br>도심 속의 한밭수목원은 정부대전청사와 과학공원의 녹지축을 연계한 전국 최대의 도심 속 인공 수목원으로 ...</p>
+                                            <p class="mt25">위치 : 서구 둔산대로 169</p>
+                                            <p class="mt10">문의처 : 042-270-8452</p>
+                                            <div class="btn_area">
+                                                <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=884">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt5">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images05.png" alt="계족산 황톳길"></p>
+                                            <p class="pt20 pb10">호젓하면서 비범한 산길</p>
+                                            <strong>계족산 황톳길</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>계족산 숲속 황톳길은 국내 그 어느 곳에서도 경험할 수 없는 자연이 주는 건강을 경험할 수는 세계 유일의 공간으로. 대전을 방문하게 되면 계족산, 대청댐과 더불어 반드시 가보아야 할 관광명소이다.<br> 해발 200M ~ 300M에서 펼쳐지는 14km의 짜릿한 황톳길을 걷거나 뛰다 보면 몸과 마음의 건강을 찾을 수 있을 것 같으며 봄, 가을에는 자전거를 타며...</p>
+                                            <p class="mt25">위치 : 대덕구 대청로</p>
+                                            <p class="mt10">문의처 : 042-623-9909</p>
+                                            <div class="btn_area">
+                                                <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=885">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt6">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images06.png" alt="대청호반"></p>
+                                            <p class="pt20 pb10">걸으며 사색하는 그림 속 호수, 대청호반</p>
+                                            <strong>대청호반</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>대청호는 1980년 대청댐이 완공되면서 조성되어 대전광역시·청주시의 식수와 생활용수·공업용수를 공급하고 있다. 호수 위로 해발고도 200∼300m의 야산과 수목이 펼쳐져 드라이브 코스로 잘 알려져 있다.<br>철새와 텃새가 많이 날아들어 여름에는 상류에서 백로를 쉽게 볼 수 있다. 전망대에 오르면 주변 경관이 한눈에 내려다보이며...</p>
+                                            <p class="mt25">위치 : 대전시 대덕구 대청로</p>
+                                            <p class="mt10">문의처 : 042-930-7240</p>
+                                            <div class="btn_area">
+                                                <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=886">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt7">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images07.png" alt="장태산휴양림"></p>
+                                            <p class="pt20 pb10">자연과 하나되는 메타세콰이아 숲</p>
+                                            <strong>장태산휴양림</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>장태산자연휴양림은 대전광역시 서구 장안동에 위치하고 있으며, 주변 경관이 수려하여 대전관광명소 12선의 한곳이기도 합니다.<br>이곳은 국내 유일의 메타세퀘이아 숲이 울창하게 형성되어 있어 이국적인 경관과 더불어 가족단위의 이용객이 산림욕을 즐기는 휴양림으로 유명하다 장태산자연휴양림은 전국 최초의 민간인이 조성, 운영하여 왔으나 ...</p>
+                                            <p class="mt25">위치 : 서구 장안로</p>
+                                            <p class="mt10">문의처 : 042-270-7883</p>
+                                            <div class="btn_area">
+                                               <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=887">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt8">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images08.png" alt="대전둘레산길"></p>
+                                            <p class="pt20 pb10">133km, 300리를 두르는 길</p>
+                                            <strong>대전둘레산길</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>대전둘레산길은 산들이 길게 뻗어 대전을 감싸고 그 사이로 3대 하천인 대전천, 유등천, 갑천이 차례로 만나 금강으로 흐른다.<br>시내에서 바라보면 서쪽으로 금남정맥의 명산 계룡산을 배경으로 금수봉, 도덕봉이 삽재 건너 갑하산, 우산봉으로 이어져 북쪽의 금병산으로 흐른다. 동으로는 계족의 능선이 길게 뻗어 식장산에 ...</p>
+                                            <p class="mt25">위치 : 중구 보문산 공원로</p>
+                                            <p class="mt10">문의처 : 042-270-5544</p>
+                                            <div class="btn_area">
+                                                <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=888">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt9">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images09.png" alt="동춘당"></p>
+                                            <p class="pt20 pb10">자연스럽지 아니한 家</p>
+                                            <strong>동춘당</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>동춘당은 동춘당 송준길 선생이 아버지가 처음 세웠던 건물을 옮겨지은 것이다. 동춘이란 ‘살아 움직이는 봄과 같아라’ 는 뜻으로 선생은 이곳에서 독서와 교육을 하면서 인재를 양성하고 회덕향약을 만들었다.<br> 국가지정문화재 보물 제209호인 동춘당은 우암 송시열이 쓴 현판이 걸려 있다. 구조는 비교적 간소하고 규모도 과히 크지 않다. 오른쪽 4칸이 대청이 ...</p>
+                                            <p class="mt25">위치 : 대덕구 동춘당로 80</p>
+                                            <p class="mt10">문의처 : 042-607-6575</p>
+                                            <div class="btn_area">
+                                                <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=889">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt10">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images10.png" alt="대전문화예술단지"></p>
+                                            <p class="pt20 pb10">사계절 바탕색이 바뀌다</p>
+                                            <strong>대전문화예술단지</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>대전문화예술단지은 대전예술의 전당, 시립미술관, 이응노미술관으로 이어지는 문화벨트 지역 예술의 전당 아트홀은 1,546석의 객석과 300명이 동시출연 가능한 대규모 공연장으로 그랜드오페라·발레·뮤지컬 등 종합문화예술공간이며. 시립미술관은 여유롭고 깊이 있는 삶을 공유하는데 품격을 더해 주는 곳.<br>이응노 미술관은 지역이 낳은 세계적인 작가 고암 ...</p>
+                                            <p class="mt25">위치 : 서구 둔산대로 169</p>
+                                            <p class="mt10">문의처 : 042-270-8333</p>
+                                            <div class="btn_area">
+                                               <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=890">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt11">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images11.png" alt="으능정이 문화의거리"></p>
+                                            <p class="pt20 pb10">청춘과 문화의 놀이터</p>
+                                            <strong>으능정이문화의거리</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>으능정이 문화의거리은 60년대부터 80년대까지 한때 중부권의 행정과 상권·전통문화의 메카로 불리었던 이곳이 지금은 문화예술 거리로 새롭게 떠오르고 있다 .<br> 화랑·공연장·소극장·전시 및 공연시설·화랑·표구사·화실·도예점·골동품점 등 문화예술 관련업종 150여 업소가 성업 중이며, 으능정이 페스티벌. 청소년 마임페스티벌, 문화예술거리축제 등 다양한 축제가 열린다.</p>
+                                            <p class="mt25">위치 : 중구 중앙로 170 </p>
+                                            <p class="mt10">문의처 : 042-252-7100</p>
+                                            <div class="btn_area">
+                                               <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=892">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tourist_map_txt tourist_map_txt12">
+                                        <div class="tourist_map_ttxt">
+                                            <p class="tumimg"><img src="./대전관광_files/thum_images12.png" alt="유성온천"></p>
+                                            <p class="pt20 pb10">몸으로 마시는 보약</p>
+                                            <strong>유성온천</strong>
+                                        </div>
+                                        <div class="tourist_map_btxt">
+                                            <p>유성온천거리에는 눈을 닮은 하얀 꽃잎이 아름다운 이팝나무가 가로수로 많이 심어져 있고, 눈꽃거리가 조성되어 매우 아름답다.<br>지하 200M에서 끌어올린 41~43도를 유지하는 100% 온천수에 80명이 발을 담글 수 있는 두 개의 족욕탕과 수로시설을 갖추고 있는 족욕체험장이 무료로 개방되어 있어 이곳에 오는 관광객은 물론 이곳 주민들까지 늦은시간임에도 이용이 많다. </p>
+                                            <p class="mt25">위치 : 유성구 봉명동 574</p>
+                                            <p class="mt10">문의처 : 042-611-2114</p>
+                                            <div class="btn_area">
+                                                <a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=893">바로가기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- map txt e -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--content_txt : e--><!-- 해당메뉴 담당부서 출력 -->
+	</div>
+<!--content_txt : e-->
+
+<!--charge s-->
+					<!--charge e-->
+					<!--top_btn s-->
+					<div class="top_btn">
+						<a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#"><img src="./대전관광_files/btn_top.gif" alt="위로"></a>
+					</div>
+					<!--top_btn e-->
+				</div>
+				
+			</div>
+			<!-- contents : e-->
+		</div>
+	</div>
+	<!-- content_body e -->
+
+	<!-- footer : s-->
+	<footer id="footer_wrap">
+		<div class="link_area">
+			<div class="container">
+				<ul class="site_link">
+					<li><a href="http://www.daejeoncitytour.co.kr/smain.html" target="_blank" title="새창"><strong>대전시티투어</strong></a></li>
+					<li><a href="http://www.dc500.org/" target="_blank" title="새창">대청호 오백리길</a></li>
+					<li><a href="http://www.daejeon.go.kr/his/board/musBoardDataList.do?bbsCode=hisrelic&amp;menuSeq=667" target="_blank" title="새창">대전의 문화재</a></li>
+					<li><a href="http://www.daejeon.go.kr/fod/index.do" target="_blank" title="새창">대전의 맛집</a></li>
+					<li><a href="http://traffic.daejeon.go.kr/mainFront/atmsMain.do" target="_blank" title="새창">대전의 교통정보</a></li>
+					<li><a href="http://www.dime.or.kr/" target="_blank" title="새창">대전마케팅공사</a></li>
+				</ul>
+				<div id="familyset">
+					<button id="btn3" class="btn3"><span>유관기관 사이트</span><span class="arrow"></span></button>
+					<ul class="obj set3" style="display: none;">
+						<li>
+							<h4>유관기관 사이트</h4>
+							<ul class="column">
+								<li><a href="http://tour.donggu.go.kr/html/tour/" target="_blank" title="새창">동구문화관광</a></li>
+								<li><a href="http://tour.djjunggu.go.kr/html/tour/" target="_blank" title="새창">중구문화관광</a></li>
+								<li><a href="http://www.seogu.go.kr/tour/main.do" target="_blank" title="새창">서구문화체육관광</a></li>
+								<li><a href="http://tour.yuseong.go.kr/index.yuseong" target="_blank" title="새창">유성구문화관광</a></li>
+								<li><a href="http://www.daedeok.go.kr/ect/ECT.do" target="_blank" title="새창">대덕구문화관광</a></li>
+								<li><a href="http://www.dime.or.kr/" target="_blank" title="새창">대전마케팅공사</a></li>
+								<li><a href="http://kto.visitkorea.or.kr/kor.kto" target="_blank" title="새창">한국관광공사</a></li>
+								<li><a href="https://korean.visitkorea.or.kr/main/main.do#home" target="_blank" title="새창">대한민국구석구석</a></li>
+							</ul>
+						</li>
+						<li class="closeFamlayer"><a href="https://www.daejeon.go.kr/tou/TouContentsHtmlView.do?menuSeq=891#btn3"><img src="./대전관광_files/btn_linksite.gif" alt="유관기관 사이트 모음 숨기기"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="fl">
+					<ul class="btmMenu">
+						<li><a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=2062" class="point">개인정보처리방침</a></li>
+						<li><a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=1757">영상정보처리기기 운영·관리방침</a></li>
+						<li><a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=1507">홈페이지 개선의견</a></li>
+					</ul>
+					<address>(35242) 대전광역시 서구 둔산로 100 /<a href="http://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=1759" target="_blank" title="새창으로 이동">콜센터 (042) 120</a></address>
+					<p class="copy">COPYRIGHT 2017 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.</p>
+				</div>
+				<div class="fr">
+					<ul class="ft_tel">
+						<li>관광안내<br>전화번호</li>
+						<li class="num_1330">1330</li>
+					</ul>
+					<ul class="ft_logo">
+						<li><img src="./대전관광_files/img_ft_logo.jpg" alt="공공누리 오픈마크"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer><!--footer : e -->
+	</div>
+
+</body></html>

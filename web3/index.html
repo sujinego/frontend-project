@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대전 관광 문화</title>
+    <!-- 파비콘 설정 -->
+    <!-- <link rel="shortcut icon" href="./source/favicon.ico"> -->
+    <link rel="shortcut icon" href="/img/favicon.ico.jpg">
+    <!-- 메타포 설정 -->
+    <meta name="title" content="대전 관광 문화 홈페이지">
+    <meta name="keywords" content="대전관광문화, 대전시청 관광문화, 대전시 여행정보">
+    <meta name="description" content="대전관광문화 홈페이지">
+    <!-- 오픈그래프 설정 -->
+    <meta property="og:title" content="대전 관광문화 웹애플리케이션">
+    <meta property="og:type" content="website"> 
+    <meta property="og:url" content="https://www.daejeon.go.kr">
+    
+    <!-- 폰트 로딩 -->
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="fonts.css">
+    <!-- 필수 API 로딩 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- 외부 스타일 연결 -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <script src="slick/slick.js"></script>
+   
+    <style>
+    /* font-family: 'TTTogether'; */
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    #item1 {  background-color: #bda082cb;}
+    #item2 { background-image: url("./img/item2.png");}
+    #item3 { background-image: url("./img/item3.jpg");}
+    #item4 { background-color: #f18921;}
+    #item5 { background-image: url("./img/item5.jpg");}
+    #item8 { background-color: #4a5378;}
+    #item9 { background-image: url("./img/sungsimdang.jpg");}
+    #item10 { background-image: url("./img/sciancefestaval.jpg");}
+    #item11 { background-color: #fff; }
+
+    #vs { clear:both; position:relative; width: 100%; }
+
+    #vs .img_box { width: 400%; }
+    #vs .img_box li { width: 25%; float:left;  } 
+    #vs .img_box li a {display:block; position:relative; }
+    #vs .img_box .vs_img { display:block; } 
+    #vs .img_box li { position:relative;  } 
+    #vs .img_box .tit_box { position:absolute; top:100px; left: 0; z-index:4;
+    padding:60px 280px; color:#fff; text-align: center; }
+    #vs .img_box .vs_tit { font-family: 'TTTogether'; font-size:80px; font-weight:400; text-shadow:2px 2px 2px #333; }
+    #vs .img_box .vs_com { font-size:18px; text-shadow:-1px -1px 2px #333;}
+
+    .btn_box li button {  background-color:transparent; display:block; width: 40px; height: 280px; background-repeat: no-repeat; background-position: center center; 
+    background-size:100% 100%; position:absolute; top:160px; z-index:5; 
+    text-indent:-10000px; cursor:pointer; display:none; }
+    .btn_box li.btn1 button { left:50px; background-image: url("./source/arrow1.png");}
+    .btn_box li.btn2 button { right:50px; background-image: url("./source/arrow2.png");}
+
+    #page1 { position:relative; background:url("./img/bg_section02.gif") center top no-repeat #faf3e1; background-size:120% auto; }
+    .page:before { content:""; display:block; width: 440px; height: 440px; 
+    position:absolute; background-color:#a0b3ab; border-radius:50%; 
+    left:50%; margin-left: -210px; margin-top: -490px;  opacity:0.7;   }
+    .ptit_box { width: 440px; height: 440px; background-color:#e5b382; color:#fff; 
+    text-align: center; padding-top: 330px; box-sizing: border-box; position:absolute; left: 50%; margin-left: -222px; border-radius:50%; margin-top: -492px;   }
+    .pg_tit2 {  font-family: 'TTTogether'; font-size:36px; font-weight:400; }
+
+    .col_tit { color:#fff; text-align: center; line-height:3; width: 100%; clear:both; margin-top: 28px; }
+    .col_tit:after { content:""; display:block; width: 40px; height: 2px; 
+background-color: #fff; clear:both; margin:0px auto; margin-bottom: 20px; }
+    .col_com { color:#fff; padding: 20px 60px; font-size:14px; text-align: center;}
+    .col_coms {margin-left: 30px;}
+    #page1 .col_link, #page2 .col_link { display:block;  clear:both; float:none; width: 38px; height: 38px; 
+    margin: 10px auto; background-image: url("./img/ico_go.png");
+    border-radius:21px; border:2px solid #fff;  text-indent:-10000px;
+background-repeat: no-repeat; background-position:center center;  }
+    #page2 .col_links {display:block;  clear:both; float:none; width: 38px; height: 38px; 
+    margin: 196px 135px; background-image: url("./img/ico_go.png");
+    border-radius:21px; border:2px solid #fff;  text-indent:-10000px;
+background-repeat: no-repeat; background-position:center center;}
+    .half_tit1 { font-size:24px; padding-left: 100px; padding-top:120px; color:#fff; text-shadow:1px 1px 2px #333; }
+    .half_tit2 { font-size:48px; padding-left: 100px; padding-top:40px; color:#fff; 
+        font-family: 'TTTogether';  font-weight:400; text-shadow:2px 2px 2px #333; }
+    .half_com { color:#fff; padding:40px 100px; font-size:18px; text-shadow:1px 1px 1px #000, -1px -1px 1px #000; }
+
+
+    #page2 { position:relative; 
+        background-image:url("./img/bg_section03.gif");
+        background-size:120% auto;
+        background-position:center top, center bottom;
+        background-repeat: no-repeat;
+        background-color:#a7b1db; 
+    }
+    #page2 .ptit_box { background-color: #301c77;}
+    #item6 { width: 400%;  transition-delay:0.05s; 
+    transition-duration:0.6s; }
+    #item6 li { width: 25%; float:left; }
+    .thumb_vs_wrap { position:absolute; right:0; bottom: 0; overflow:hidden; width: 300px; height: 277px; }
+    #item7 { width: 400%; margin-left: 0; transition-delay:0.05s; 
+    transition-duration:0.6s; }
+    #item7 li { width: 25%; float:left; }
+    #item7 li label { display:block; width: 18px; height: 36px; 
+    background-repeat: no-repeat; background-position:center center; position:absolute; bottom:100px; text-indent:-10000px; cursor:pointer; }
+    #item7 li label.lb1 { left:24px; background-image: url("./img/prevbt.png"); }
+    #item7 li label.lb2 { right:24px; background-image: url("./img/nextbt.png"); }
+    #item7 .tbox { width: 140px; height: 140px; clear:both;overflow:hidden;   margin:20px auto; top: 50px;  border-radius:75px; border:3px solid #fff; }
+    .thumb_vs_wrap #item7 li label { display:none; }
+    .ra { display:none; }
+    #ra1:checked ~ .thumb_vs_wrap #item7 .item1 label { display:block; }
+    #ra2:checked ~ .thumb_vs_wrap #item7 .item2 label { display:block; }
+    #ra3:checked ~ .thumb_vs_wrap #item7 .item3 label { display:block; }
+    #ra4:checked ~ .thumb_vs_wrap #item7 .item4 label { display:block; }
+    #ra1:checked ~ .thumb_vs_wrap #item7 { margin-left: 0; }
+    #ra2:checked ~ .thumb_vs_wrap #item7 { margin-left:-100%; }
+    #ra3:checked ~ .thumb_vs_wrap #item7 { margin-left:-200%; }
+    #ra4:checked ~ .thumb_vs_wrap #item7 { margin-left:-300%; }
+    #ra1:checked ~ #item6 { margin-left: 0; }
+    #ra2:checked ~ #item6 { margin-left:-100%; }
+    #ra3:checked ~ #item6 { margin-left:-200%; }
+    #ra4:checked ~ #item6 { margin-left:-300%; }
+    .col_vs_tit_box { position:absolute; top: 0; left: 0; }
+    .col_vs_tit { clear:both; width: 100%;  padding-top: 50px;  }
+    .col_vs_tit span { display:block; font-family: 'TTTogether';  font-weight:400; 
+padding-left:120px; font-size:48px;}
+    .col_vs_tit .row1 { color:#efedf5; }
+    .col_vs_tit .row2 { color:#007bbf; }
+    .col_vs_com { padding-left: 140px; padding-top: 5px; color:#efedf5; }
+    #item8 .col_tit, #item9 .col_tit { line-height: 1.6; } 
+    #item9 .col_com img { border:2px solid #fff; border-radius:100px; }
+    #page2 .col_com { clear:both; float:none; width:auto; margin:0px auto; }
+    .col_tit.black_txt { color:#000; line-height: 1.6; padding-top: 12px; }
+    .col_tit.black_txt:after { background-color: #00b2a3; }
+    #item11 { position:relative; }
+    #item11 .link_box { position:absolute; bottom: 0; left: 0; width: 100%; }
+    #item11 .link_box li { display:block; width: 50%; float:left; }
+    #item11 .link_box li a { display:block; line-height: 65px; height: 65px; color:#fff; background-color: #488195; padding-left:64px; font-size:14px; border-top:1px solid #fff; border-left:1px solid #fff; 
+    background-repeat: no-repeat; background-position:18px center; }
+    #item11 .link_box li:nth-child(2n+1) a { border-left:0px; }
+    #item11 .link_box li.item1 a { background-image: url("./img/foodicon.png"); }
+    #item11 .link_box li.item2 a { background-image: url("./img/homeicon.png"); }
+    #item11 .link_box li.item3 a { background-image: url("./img/touricon.png"); }
+    #item11 .link_box li.item4 a { background-image: url("./img/campicon.png"); }
+
+    #page3 { background-image:url("./img/bg_section04.gif");
+        background-position:center bottom, left top;
+        background-repeat:no-repeat, repeat;
+        background-color:#d8dcec;  }
+    #page3 .ptit_box { background-color: #3a5c82;}
+    .icon_lst { clear:both; width: 100%; padding-bottom: 50px; }
+    .icon_lst:after { content:""; display:block; clear:both; }
+    .icon_lst li { float:left; width: 25%; }
+    .icon_lst li a { display:block; text-align: center; color:#222; font-size:17px; }
+    .icon_lst li a .ico_box { display:block; width: 80px; height: 80px; 
+    margin:10px auto; border:5px solid transparent; box-sizing:border-box; 
+    border-radius:48px; overflow:hidden; }
+    .icon_lst li a:hover { text-decoration:underline; }
+    .icon_lst li a:hover .ico_box { border:5px solid #007bbf; }
+    .icon_lst li a .ico_box img { display:block; width: 48px; height: 48px; margin: 0 auto; margin-top: 11px; }
+    #page3 .news_lst { clear:both; background-color: #fff; width: 1200px; 
+    margin: 0 auto; }
+    #page3 .news_lst:after { content:""; display:block; clear:both; }
+    #page3 .news_lst > .col6 { float:left; box-sizing:border-box; position:relative;
+    height: 420px; height:390px; overflow:hidden; }
+    .news_tit { font-size:24px; line-height: 3; padding-left: 24px; }
+    .al_tit {padding-top: 50px; font-size:24px; line-height: 3; padding-left: 26px; color: rgba(255, 255, 255, 0.849);}
+    .news_lst .more { display:block; width: 40px; height: 24px;  background-repeat: no-repeat;
+background-position:center center; position:absolute; top:10px; right:20px; z-index:10; font-size: 45px; color: rgb(95, 95, 105);}
+    .noti_lst { clear:both; height: 390px; }
+    .noti_lst li { clear:both; padding: 10px 24px; }
+    .noti_lst li a { display:block; color:#666; font-size:16px; }
+    .noti_lst li a .noti_tit { float:left; font-weight:400; width: 420px; padding-right: 20px; text-overflow: ellipsis; overflow:hidden; white-space:nowrap;}
+    .noti_lst li a .noti_date { float:right; width: 110px; text-align:center; }
+    .noti_lst li:hover a .noti_tit { text-decoration: underline; }
+    .noti_lst li:hover a .noti_date { text-decoration: underline; }
+    .noti_lst li.act:before { content:""; display:block; width: 80px; height: 80px;   background-image: url("./img/Notice.png"); background-repeat: no-repeat; 
+    background-position:center center; float:left;  }
+    .noti_lst li:nth-child(2) { padding-top: 30px; }
+    .noti_lst li.act a { float:left; width: 460px; overflow:hidden; }
+    .noti_lst li.act a .noti_tit { width:auto; clear:both; font-size:20px; color:#333; margin-left: 10px; }
+    .noti_lst li.act a .noti_com { width:auto; clear:both;  border-bottom:1px solid #999; white-space: pre; width: 460px; display:-webkit-box; 
+    -webkit-line-clamp:3; -webkit-box-orient: vertical; }
+
+    .al_box { width: 199px; float:left; background-color: #23729d; height: 390px; }
+    .al_com { padding:5px 15px; color: rgba(255, 255, 255, 0.849); padding-left: 30px;}
+    .al_btn_fr { clear:both; width:168px; margin: 20px auto; margin-top: 100px; }
+    .al_btn_fr li { float:left; margin:8px; }
+    .al_btn_fr li button { display:block; width: 40px; height: 40px; 
+    background-repeat: no-repeat; background-position:center center; }
+    .al_btn_fr li button.prev { background-image: url("./img/picLeft.jpg"); }
+    .al_btn_fr li button.play { background-image: url("./img/picPlay.jpg");  }
+    .al_btn_fr li button.next { background-image: url("./img/picRight.jpg");  }
+    .photo_box { width: 399px; float:right; height:390px; overflow:hidden; }
+    .photo_fr { width: 400%; }
+    .photo_fr li { width: 25%; float:left; position:relative; }
+    .photo_tit { padding-top: 200px; position:absolute; top:90px; font-size:28px; color:rgba(0, 0, 0, 0.842); text-align: center; 
+    width: 395px; }
+    .photo_com { padding-top: 70px; bottom:90px; font-size:20px; color:rgba(0, 0, 0, 0.842); text-align: center; 
+        width: 395px;  }
+    .photo_img { display: block; width: 80%; height: auto; margin: 0 auto; margin-top: 40px;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd fix">
+        <div class="hd_wrap">
+      <a href="index.html" class="logo">
+        <h2 class="logo_tit"> 대전 관광</h2>
+        <img src="/img/logo.jpg" alt="대전관광 Daejeon Metropolitan City">
+
+        </a>
+        <nav class="tnb">
+            <ul>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a href="logout.html">로그아웃</a></li>
+            </ul>
+        </nav>
+        <nav class="gnb">
+            <ul>
+                <li><a href="tour1.html" class="g1">관광명소</a>
+                    <ul class="sub">
+                        <li><a href="tour1.html" class="s1">대전 주요 관광지</a></li>
+                        <li><a href="tour2.html" class="s1">대전의 꼭 가볼만한 곳 40선</a></li>
+                        <li><a href="tour3.html" class="s1">분야별관광명소</a></li>
+                        <li><a href="tour4.html" class="s1">이달의 테마여행</a></li>
+                        <li><a href="tour5.html" class="s1">니즈여행</a></li>
+                    </ul>  
+                </li>
+                <li><a href="festival.html" class="g1">축제/행사</a>
+                    <ul class="sub">
+                        <li><a href="festi1.html" class="s1">대표축제</a></li>
+                        <li><a href="festi2.html" class="s1">공연/전시/행사</a></li>
+                        <li><a href="festi3.html" class="s1">사진으로 보는 축제</a></li>
+                    </ul>
+                </li>
+                <li><a href="recommend.html" class="g1">추천여행코스</a>
+                    <ul class="sub">
+                        <li><a href="recom1.html" class="s1">테마별 관광코스</a></li>
+                        <li><a href="recom2.html" class="s1">권역별 관광코스</a></li>
+                        <li><a href="recom3.html" class="s1">목적별 관광코스</a></li>
+                        <li><a href="recom4.html" class="s1">수학여행코스</a></li>
+                        <li><a href="recom5.html" class="s1">투어프로그램</a></li>
+                    </ul></li>
+                <li><a href="shopping.html" class="g1">숙박/음식/쇼핑</a>
+                    <ul class="sub">
+                        <li><a href="sho1.html" class="s1">숙박</a></li>
+                        <li><a href="sho2.html" class="s1">음식</a></li>
+                        <li><a href="sho3.html" class="s1">쇼핑</a></li>
+                    </ul></li>
+                <li><a href="road.html" class="g1">도보여행길</a>
+                    <ul class="sub">
+                        <li><a href="road1.html" class="s1">대전둘레산길</a></li>
+                        <li><a href="road2.html" class="s1">대청호반길</a></li>
+                        <li><a href="road3.html" class="s1">대덕사이언스길</a></li>
+                        <li><a href="road4.html" class="s1">걷고싶은길</a></li>
+                        <li><a href="road5.html" class="s1">세종유성바램길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="community.html" class="g1">여행 도우미</a>
+                    <ul class="sub">
+                        <li><a href="community.html">여행소식</a>
+                        <li><a href="">관광안내소</a></li>
+                        <li><a href="">관광자료 신청</a></li>
+                        <li><a href="">문화관광해설사</a></li>
+                        <li><a href="">1330전국관광안내</a></li>
+                        <li><a href="">무장애여행(한국관광공사)</a></li>
+                        <li><a href="">여행관련책자</a></li>
+                        <li><a href="">여행지영상</a></li>
+                        <li><a href="">서민서포터즈</a></li>
+                    </ul>
+                </li>
+            </nav>
+        </div>  
+    </header> 
+    <div class="content fix">
+        <figure class="vs" id="vs">
+            <ul class="img_box">
+                <li>
+                    <img src="./img/visual01.jpg" alt="생태" class="vs_img">
+                    <div class="tit_box">
+                        <h2 class="vs_tit"></h2>
+                        <p class="vs_com">대전의 색에 물들다</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/visual02.jpg" alt="문화" class="vs_img">
+                    <div class="tit_box">
+                        <h2 class="vs_tit"></h2>
+                        <p class="vs_com">대전의 색에 물들다</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/visual03.jpg" alt="과학" class="vs_img">
+                     <div class="tit_box">
+                        <h2 class="vs_tit"></h2>
+                        <p class="vs_com">대전의 색에 물들다</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/visual04.jpg" alt="자연" class="vs_img">
+                    <div class="tit_box">
+                         <h2 class="vs_tit"></h2>
+                        <p class="vs_com">대전의 색에 물들다</p>
+                    </div>
+                </li>
+            </ul>
+            <script>
+                $(function(){
+                    $(".img_box").slick({
+                        dots:true,  //번호별 버튼 추가
+                        arrows:true,    //좌우 버튼 추가
+                        infinite:true,  //순환 반복
+                        speed:300,  //한 슬라이드당 속도
+                        autoplay:true,  //자동 실행
+                        autoplaySpeed:3500, //한 슬라이딩하고, 기다리는 시간
+                    });
+                });
+            </script>
+            <ul class="btn_box">
+                <li class="btn1"><button>이전</button></li>
+                <li class="btn2"><button>다음</button></li>
+            </ul>
+        </figure>
+        <section class="page fix" id="page1" >
+            <div class="ptit_box">
+                <h4 class="pg_tit1">대전의 다양한 관광명소를 T.P.O에 맞게 즐겨보세요</h4>
+                <h2 class="pg_tit2">대전의 여행정보</h2>
+            </div>
+            <div class="page_wrap">
+                <ul class="grid">
+                    <li class="col6">
+                        <div class="col6 col_item col277" id="item1">
+                            <h3 class="col_tit">대전 교통정보</h3>
+                            <p class="col_com">다양한 교통 데이터를 확인할 수 있습니다.</p>
+                            <a href="" class="col_link">더보기</a>
+                        </div>
+                        <div class="col6 col_item col277" id="item2">
+                            <h3 class="col_tit">여행지영상</h3>
+                            <p class="col_com">여행지의 소개 동영상을 감상하실 수 있습니다.</p>
+                            <a href="" class="col_link">더보기</a>
+                        </div>
+                        <div class="col6 col_item col277" id="item3">
+                            <h3 class="col_tit">숲속여행길</h3>
+                            <p class="col_com">자연과 하나되는 메타세콰이아 숲</p>
+                            <a href="" class="col_link">더보기</a>
+                        </div>
+                        <div class="col6 col_item col277" id="item4">
+                            <h3 class="col_tit">도보여행길</h3>
+                            <p class="col_com">대전시가 선정한 "걷고 싶은 길 12선"을    소개합니다.</p>
+                            <a href="" class="col_link">더보기</a>
+                        </div>
+                    </li>
+                    <li class="col6">
+                        <div class="half_box col_item col554" id="item5">
+                            <h1 class="half_tit2">대청호반</h1>
+                            <p class="half_com">걸으며 사색하는 그림 속 호수</p>
+                            <a href="" class="col_link half_more">더보기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="page fix" id="page2" style="background-color: #a7b1db;">
+            <div class="ptit_box">
+                <h4 class="pg_tit1">축제.행사 및 다양한 정보</h4>
+                <h2 class="pg_tit2">대전의 테마여행</h2>
+            </div>
+            <div class="page_wrap">
+                <ul class="grid">
+                    <li class="col6 col554">
+                        <div class="half_box col_item col554" style="position:relative;">
+                            <input type="radio" class="ra" name="ra" id="ra1" checked>
+                            <input type="radio" class="ra" name="ra" id="ra2">
+                            <input type="radio" class="ra" name="ra" id="ra3">
+                            <input type="radio" class="ra" name="ra" id="ra4">
+                            <ul class="pic_ban col554" id="item6">
+                                <li class="item1">
+                                    <img src="./img/tema1.jpg" alt="남선공원 종합체육관">
+                                </li>
+                                <li class="item2">
+                                    <img src="./img/tema2.jpg" alt="호수대청호,신탄지KT&G">
+                                </li>
+                                <li class="item3">
+                                    <img src="./img/tema3.jpg" alt="오월드 워터랜드">
+                                </li>
+                                <li class="item4">
+                                    <img src="./img/tema4.jpg" alt="가을 명품출사지">
+                                </li>
+                            </ul>   
+                            <div class="thumb_vs_wrap">
+                                <ul class="thumb_ban col6 col277 col_item" id="item7" style="background-color: #b394ab">
+                                    <li class="item1">
+                                        <h3 class="col_tit">남선공원 종합체육관</h3>
+                                        <label for="ra4" class="lb1">이전</label>
+                                        <div class="tbox"><img src="./img/tema1_1.jpg" alt="남선공원 종합체육관"></div>
+                                        <label for="ra2" class="lb2">다음</label>
+                                    </li>
+                                    <li class="item2">
+                                        <h3 class="col_tit">호수대청호,신탄지KT&G</h3>
+                                        <label for="ra1" class="lb1">이전</label>
+                                        <div class="tbox"><img src="./img/tema2_2.jpg" alt="호수대청호,신탄지KT&G"></div>
+                                        <label for="ra3" class="lb2">다음</label>
+                                    </li>
+                                    <li class="item3">
+                                        <h3 class="col_tit">오월드 워터랜드</h3>
+                                        <label for="ra2" class="lb1">이전</label>
+                                        <div class="tbox"><img src="./img/tema3_3.jpg" alt="오월드 워터랜드"></div>
+                                        <label for="ra4" class="lb2">다음</label>
+                                    </li>
+                                    <li class="item4">
+                                        <h3 class="col_tit">가을 명품출사지</h3>
+                                        <label for="ra3" class="lb1">이전</label>
+                                        <div class="tbox"><img src="./img/tema4_4.jpg" alt="가을 명품출사지"></div>
+                                        <label for="ra1" class="lb2">다음</label>
+                                    </li>
+                                </ul>
+                            </div>   
+                            <div class="col_vs_tit_box">
+                                <h2 class="col_vs_tit">
+                                    <span class="row1">대전에서 힐링하자</span>
+                                </h2>
+                                <p class="col_vs_com">대전의 사 계절을 모두 즐기자</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col6 col554">
+                        <div class="col6 col277 col_item" id="item8">
+                            <h3 class="col_tit">시민서포터즈</h3>
+                            <p class="col_coms">
+                                <img src="./img/support.png" alt="캠페인로고">
+                                <a href="" class="col_link">더보기</a>
+                            </p>
+                        </div>
+                        <div class="col6 col277 col_item" id="item9">
+                            <a href="" class="col_links">더보기</a>
+                            
+                        </div>
+                        <div class="col6 col277 col_item" id="item10">
+                            <h3 class="col_tit">사이언스 페스티벌</h3>
+                            <p class="col_com">엑스포시민광장에서 펼쳐지는 향연을 느끼세요.</p>
+                                <a href="" class="col_link">더보기</a>
+                        </div>
+                        <div class="col6 col277 col_item" id="item11">
+                            <h3 class="col_tit black_txt">먹고, 자고, 즐기는<br>알찬 대전여행</h3>
+                            <ul class="link_box">
+                                <li class="item1 col6"><a href="">음식</a></li>
+                                <li class="item2 col6"><a href="">숙박</a></li>
+                                <li class="item3 col6"><a href="">투어</a></li>
+                                <li class="item3 col6"><a href="">캠핑</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="page fix" id="page3">
+            <div class="ptit_box">
+                <h4 class="pg_tit1">최고의 여행을 위한 </h4>
+                <h2 class="pg_tit2">대전의 여행도우미</h2>
+            </div>
+            <div class="page_wrap">
+                <ul class="icon_lst">
+                    <li class="item1">
+                        <a href="">
+                            <div class="ico_box"><img src="./img/btn_mcont0501_on.png" alt="관광안내지도"></div>
+                            <span class="ico_txt">관광자료신청</span>
+                        </a>
+                    </li>
+                    <li class="item2">
+                        <a href="">
+                            <div class="ico_box"><img src="./img/btn_mcont0502_on.png" alt="관광안내소"></div>
+                            <span class="ico_txt">문화관광해설사</span>
+                        </a>
+                    </li>
+                    <li class="item3">
+                        <a href="">
+                            <div class="ico_box"><img src="./img/btn_mcont0505_on.png" alt="관광지요금"></div>
+                            <span class="ico_txt">삼색미각지도</span>
+                        </a>
+                    </li>
+                    <li class="item4">
+                        <a href="">
+                            <div class="ico_box"><img src="./img/btn_mcont0506_on.png" alt="문화관광해설사"></div>
+                            <span class="ico_txt">대전의 맛 이야기</span>
+                        </a>
+                    </li>
+                   
+                </ul>
+                <ul class="news_lst">
+                    <li class="col6">
+                        <h3 class="news_tit">여행 소식</h3>
+                        <a href="" class="more">+</a>
+                        <ul class="noti_lst">
+                            <li class="act">
+                                <a href="">
+                                    <h4 class="noti_tit">
+                                        관광택시여행!"어디로 모실까요?"<br>(대전MBC)많은 시청부탁드립니다
+                                    </h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h4 class="noti_tit">대전사랑 스마트엔지니어링 대회</h4>
+                                    <p class="noti_date">2022-01-07</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h4 class="noti_tit">문화체육관광부"대한민국 안전여행 참여 이벤트" 홍보 안내</h4>
+                                    <p class="noti_date">2022-01-03</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h4 class="noti_tit">2021년 대전관광 실태조사 및 발전방향 연구결과</h4>
+                                    <p class="noti_date">2021-12-27</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h4 class="noti_tit">코로나바이러스감염증 예방주의 안내문(입국,출국자용)</h4>
+                                    <p class="noti_date">2021-10-23</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="col6">
+                        <div class="al_box">
+                            <h3 class="al_tit">내가 찍은 대전</h3>
+                            <p class="al_com">나만 알고 있던 숨은<br>대전의 핫플레이스</p>
+                            <ul class="al_btn_fr">
+                                <li><button class="prev"></button></li>
+                                <li><button class="play"></button></li>
+                                <li><button class="next"></button></li>
+                            </ul>
+                        </div>
+                        <div class="photo_box">
+                            <ul class="photo_fr">
+                                <li>
+                                    <img src="./img/myavi1.jpg" alt="사진1" class="photo_img">
+                                    <h4 class="photo_tit">대전의 인생스콘 카페</h4>
+                                    <p class="photo_com">2021-12-23</p>
+                                </li>
+                                <li>
+                                    <img src="./img/myavi2.jpg" alt="사진2" class="photo_img">
+                                    <h4 class="photo_tit">사진제목2</h4>
+                                    <p class="photo_com">2021-12-23</p>
+                                </li>
+                                <li>
+                                    <img src="./img/myavi3.jpg" alt="사진3" class="photo_img">
+                                    <h4 class="photo_tit">사진제목3</h4>
+                                    <p class="photo_com">2021-12-23</p>
+                                </li>
+                                <li>
+                                    <img src="./img/myavi4.jpg" alt="사진4" class="photo_img">
+                                    <h4 class="photo_tit">사진제목4</h4>
+                                    <p class="photo_com">2021-12-23</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <nav class="linkbar1">
+                <ul>
+                    <li><a href="">대전시티투어</a></li>
+                    <li><a href="">대청호 오백리길</a></li>
+                    <li><a href="">대전의 문화재</a></li>
+                    <li><a href="">대전의 맛집</a></li>
+                    <li><a href="">대전의 교통정보</a></li>
+                    <li><a href="">대전마케딩공사</a></li>
+                </ul>
+            </nav>
+        <div class="ft_wrap">
+            <nav class="linkbar2">
+                <ul>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                    <li><a href="">저작권정책</a></li>
+                    <li><a href="">홈페이지 의견접수</a></li>
+                    <li><a href="">뷰어다운로드</a></li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <p class="add">(35242) 대전광역시 서구 둔산로 100 /콜센터 (042) 120</p>
+                <p class="copy">COPYRIGHT 2017 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="wa"><img src="./source/wacc-logo.png" alt="WA인증로고"></div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

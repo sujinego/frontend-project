@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <script src="slick/slick.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="jquery.bxslider/jquery.bxslider.css">
+    <script src="jquery.bxslider/jquery.bxslider.js"></script>
+    <title>Document</title>
+    <style>
+.vs{clear: both; width: 100%; background-image: url();background-position: center center; background-repeat: no-repeat;}
+.content_wrap {clear: both; width: 1200px; margin: 0 auto; margin-top: -150px;  height: 1000px;}
+.sub_tit{height: 144px;  font-size: 30px; line-height: 144px; background-color: rgb(92, 94, 104);text-align: center; width: 190px; float: left;
+color: #fff;}
+.bread_box { height: 120px; background-color: #fff; width: 980px; float: right; padding-left:30px; padding-top: 24px; border-bottom: 1px solid #000;}
+ .bread a, .bread span { color: #999; float: left;}  
+ .bread { padding-top: 24px; line-height: 1.6; position: 16px;}
+ .bread span.cur{color: rgb(110, 88, 88); font-weight: 600;}
+ .cate_tit { color: black; font-style: 24px; float: left; }  
+ .sub_tit_ico_box{ float: left;}
+ .sub_tit_ico_box li a{ display: block; color: #fff;}
+ .sub_tit_ico_box li a.ico{ width: 34px; height: 34px; background-position: center center; background-repeat: no-repeat; border-radius: 18px; bottom: 1px  #222;}
+ .sub_tit_ico_box li a.ico.item1{background-image: url(./img/favicon.ico.jpg);}
+ .sub_tit_ico_box li a.ico.item2{background-image: url(./img/favicon.ico.jpg);}
+ .sub_tit_ico_box li a.btn{background-repeat: 18px; padding: 10px; width: auto;background-color: #999;}
+.leftbar{width: 190px; float:left; min-height: 100vh;background-color: #F0F0F0;}
+.lnb{clear: both;}
+.lnb li{clear: both; margin: 5px 6px; bottom: 1px solid #aaa; line-height: 3;}
+.lnb li a{color: #222; font-style: 14px; padding-left: 1em;} 
+.page_box{ width: 980px; float:left; padding-left: 30px; background-color: antiquewhite;}
+
+.page { padding-top: 40px; overflow: visible; height: auto; min-height: 100px;}
+.page_wrap {width: 960px;}
+.page_tit {font-size: 40px; }
+.tour_map{padding-top: 40px; overflow: auto; height: auto;  background-image: url(./img/tourist12_images.png);}
+.tour_map .tour_map_tit{padding-bottom: 24px 0 0 37px; color: #666; display: inline-flex;}
+.tour_map_tit{ float: left;}
+.tour_map_tit p{margin-top: 40px;}
+.tour_map2{ display: block;  width: 500px; background-image: url(./img/tourist12_map.png); height: 500px; background-color: antiquewhite;}
+.sub_pic img {display: block; width: 100%; height: auto; }
+.sub_pic_tit{ padding-bottom: 36px; color: #666;}
+.sub_pic_com{font-style: 14px; line-height: 1.6; padding-bottom: 24px;}
+.sub_full_tit{ color: pink; line-height: 3; font-style: 32px; text-align: center;}
+.sub_con img{ display: block; min-width: 100%; }
+.sub_cate_com { padding: 14px; font-style: 14px; color: rgb(141, 122, 122); line-height: 1.8; width: 900px;}
+.form_group li .control_wrap { display: table-cell; padding: 10px; padding-top: 20px;}
+.form_control { display: block; width: 800px; height: 52px; line-height: 42px; padding-left: 15px; font-style: 20px; font-weight: bolder; text-align: center;}
+.form_group li { display: table-row;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <script>
+        $(document).ready(function(){
+            $(".lnb ul li").click(function(){
+                $(".lnb ul li").removeClass("act");
+                $(this).addClass("act");
+            });
+            $(".sub > li").click(function(){
+                $(".lnb ul li").removeClass("act");
+                var t = $(this).index();
+                $(".lnb ul li").eq(t).addClass("act");
+            });
+        }); 
+        </script>   
+    <header class="hd fix">
+        <div class="hd_wrap">
+      <a href="index.html" class="logo">
+        <h2 class="logo_tit"> 대전 관광</h2>
+        <img src="/img/logo.jpg" alt="대전관광 Daejeon Metropolitan City">
+
+        </a>
+        <nav class="tnb">
+            <ul>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a href="logout.html">로그아웃</a></li>
+            </ul>
+        </nav>
+        <nav class="gnb">
+            <ul>
+                <li><a href="tour1.html#page1" class="g1">관광명소</a>
+                    <ul class="sub">
+                        <li><a href="tour1.html" class="s1">대전 주요 관광지</a></li>
+                        <li><a href="tour2.html" class="s1">대전의 꼭 가볼만한 곳 40선</a></li>
+                        <li><a href="tour3.html" class="s1">분야별관광명소</a></li>
+                        <li><a href="tour4.html" class="s1">이달의 테마여행</a></li>
+                        <li><a href="tour5.html" class="s1">니즈여행</a></li>
+                    </ul>  
+                </li>
+                <li><a href="festival.html#page2" class="g1">축제/행사</a>
+                    <ul class="sub">
+                        <li><a href="festi1.html" class="s1">대표축제</a></li>
+                        <li><a href="festi2.html" class="s1">공연/전시/행사</a></li>
+                        <li><a href="festi3.html" class="s1">사진으로 보는 축제</a></li>
+                    </ul>
+                </li>
+                <li><a href="recommend.html#page3" class="g1">추천여행코스</a>
+                    <ul class="sub">
+                        <li><a href="recom1.html" class="s1">테마별 관광코스</a></li>
+                        <li><a href="recom2.html" class="s1">권역별 관광코스</a></li>
+                        <li><a href="recom3.html" class="s1">목적별 관광코스</a></li>
+                        <li><a href="recom4.html" class="s1">수학여행코스</a></li>
+                        <li><a href="recom5.html" class="s1">투어프로그램</a></li>
+                    </ul></li>
+                <li><a href="shopping.html#page4" class="g1">숙박/음식/쇼핑</a>
+                    <ul class="sub">
+                        <li><a href="sho1.html" class="s1">숙박</a></li>
+                        <li><a href="sho2.html" class="s1">음식</a></li>
+                        <li><a href="sho3.html" class="s1">쇼핑</a></li>
+                    </ul></li>
+                <li><a href="road.html#page5" class="g1">도보여행길</a>
+                    <ul class="sub">
+                        <li><a href="road1.html" class="s1">대전둘레산길</a></li>
+                        <li><a href="road2.html" class="s1">대청호반길</a></li>
+                        <li><a href="road3.html" class="s1">대덕사이언스길</a></li>
+                        <li><a href="road4.html" class="s1">걷고싶은길</a></li>
+                        <li><a href="road5.html" class="s1">세종유성바램길</a></li>
+                    </ul></li>
+            </ul>
+        </nav>
+            </div>
+    
+    </header>
+    <div class="content fix">
+        <figure class="vs" id="vs">
+
+        </figure>
+    </div>
+    <div class="content_wrap">
+        <div class="sub_box">
+            <h2 class="sub_tit">로그인</h2>  
+            <div class="bread_box">
+                <h3 class="cate_tit">로그인</h3>
+                <p class="bread">
+                    <a chref ="" class="home">홈&gt;</a><a href="">회원&gt;</a><span class="cur">로그인</span>
+                </p>
+            </div>
+        </div>
+        </ul>
+        <saide class="leftbar">
+            <nav class="lnb">
+                <ul>
+                    <li class="act"><a href="#page1">로그인</a></li>
+                    <li><a href="#page2">회원약관</a></li>
+                    <li><a href="#page3">회원안내</a></li>
+                    <li><a href="#join.html">회원가입</a></li>
+                </ul>
+            </nav>
+        </saide>
+        <div class="page_box">
+            <div class="onepage">
+                <div class="" style="height: 20px;" ></div>
+                    <h2 class="page_tit">로그인</h2>
+                    <div class="pageg_wrap">
+                        <div class="login_frm_box">
+                            <form action="" method="post" id="login_frm" class="form">
+                                <div class="from_wrap">
+                                    <ul class="form_group">
+                                        <li class="form_row">
+                                            <div class="control_wrap">
+                                            <input type="text" class="form_control" name="userid" id="userid" placeholder="아이디를 입력하세요">
+                                        </div>
+                                        </li> 
+                                        <li class="form_row">
+                                            <div class="control_wrap">
+                                            <input type="password" id="passwd" name="passwd" class="form_control" placeholder="비밀번호를 입력하세요" maxlength="20" required />
+                                            <!-- <input type="hidden" name="passwd" value=""> -->
+                                            </div>
+                                        </li> 
+                                        <li class="form_row">
+                                            <div class="control_wrap">
+                                                <input type="submit" class="btn btn-left" value="로그인" id="login_submit" />
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <button type="button" class="btn btn-right" onclick="">회원가입</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                        <section class="page" id="page2">
+                            <h2 class="page_tit">회원약관</h2>
+                            <div class="page_wrap">
+        
+                            </div>
+                        </section>
+                        <section class="page" id="page3">
+                            <h2 class="page_tit">회원혜택</h2>
+                            <div class="page_wrap">
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="ft fix">
+            <div class="ft_wrap">
+                <nav class="linkbar1">
+                 <ul>
+                    <li><a href="" class="l1">대전시티투어</a></li>
+                    <li><a href="" class="l1">대전의 문화재</a></li>
+                    <li><a href="" class="l1">대전의 맛집</a></li>
+                    <li><a href="" class="l1">대전의 교통정보</a></li>
+                    <li><a href="" class="l1">대전마케딩공사</a></li>
+                  </ul>
+                  </nav>
+                <nav class="linkbar2">
+                  <ul>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">영상정보처리기기 운영 관리방침</a></li>
+                    <li><a href="">홈페이지 개선의견</a></li>
+                   </ul>
+                </nav>
+              <div class="copyright">
+                  <p class="add">(35242) 대전광역시 서구 둔산로 100 /콜센터 (042) 120</p>
+                  <p class="copy">COPYRIGHT 2017 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.</p>
+              </div>
+            </div>
+          </footer>

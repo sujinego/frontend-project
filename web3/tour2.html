@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <script src="slick/slick.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="jquery.bxslider/jquery.bxslider.css">
+    <script src="jquery.bxslider/jquery.bxslider.js"></script>
+    <title>Document</title>
+    <style>
+        .vs { clear:both; width: 100%; height: 460px; 
+        background-image:url("./img/tour.jpg"); background-position:center center; 
+    background-repeat: no-repeat; }
+        .content_wrap { clear:both; width: 1200px; margin: 0 auto; margin-top: -150px; }
+        .sub_tit { height: 144px; line-height: 144px; font-size:22px; background-color: #2e70b4; text-align:center; width: 190px; float:left; color:#fff; }
+        .bread_box { height: 119px; background-color: #fff; width: 980px; float:right; padding-left: 30px; padding-top: 24px; border-bottom:1px solid #999; 
+        position:relative; }
+        .cate_tit { color:#999; font-size:24px; }
+        .bread { padding-top:24px; line-height: 1.6; font-size: 16px; }
+        .bread a, .bread span { color:#999; }
+        .bread span.cur { color:#222; font-weight:600;}
+        .sub_tit_ico_box { position:absolute; right:30px; bottom:18px; }
+        .sub_tit_ico_box li { float:left; margin-left:10px; }
+        .sub_tit_ico_box li a { display:block; color:#fff; }
+        .sub_tit_ico_box li a.ico { width: 34px; height: 34px; background-position:center center; background-repeat: no-repeat; border-radius:18px; border:1px solid #ccc; }
+        .sub_tit_ico_box li a.ico.item1 { background-image: url("./source/ico_sns.gif"); }
+        .sub_tit_ico_box li a.ico.item2 { background-image: url("./source/ico_print.gif"); }
+        .sub_tit_ico_box li a.btn { border-radius:18px; padding: 6px 12px; width:auto; background-color: #999; }
+    
+        .leftbar { width:190px; float:left; min-height: 100vh; background-color: #f0f0f0; }
+        .lnb { clear:both; }
+        .lnb li { clear:both; margin: 5px 6px; border:1px solid #aaa; line-height: 52px;  }
+        .lnb li a { color:#222; font-size:14px; padding-left:1em; }
+        .lnb li.act a { color:#0e3257; font-size:18px; font-weight:bold; }
+        .page_box { width:980px; float:right; padding-left: 30px; }
+    
+        .page { padding-top:40px; overflow:visible; height:auto; min-height:100vh; }
+        .page_wrap {width: 960px; }
+        .page_tit { padding-bottom: 36px; color:#666; }
+        .sub_pic img { display:block; max-width:940px; height:auto;   }
+        .pic_lst { clear: both; }
+        .pic_lst li { float:left; margin-right: 15px; margin-bottom: 15px; }
+        .pic_lst li img { max-width:460px; }
+        .sub_pic_tit { clear:both; font-size:20px; line-height: 1.6; }
+        .sub_pic_com { clear:both; font-size:14px; line-height: 1.6; padding-bottom: 24px; }
+        .sub_full_tit { clear:both; color:#2e70b4; line-height: 3; font-size:32px; text-align: center; }
+        .sub_con img { display:block; max-width:940px; }
+        .sub_cate_com { clear:both; padding: 14px; font-style: 12px; color:#666; line-height:1.8; 
+        width: 940px; font-weight:300; }
+        .map_area { clear:both; position:relative;     overflow: hidden;
+        width: 940px; }
+        .map_tit, .sub_cate_tit { clear:both; padding-left: 32px; line-height: 2.4; font-size:20px; 
+        background-repeat: no-repeat; background-position:left center; 
+        background-image: url("./source/bull_h5.gif"); color:#134980; }
+    
+        #page2, #page3 { padding-top:130px; margin-top: 40px; border-top:5px solid deepskyblue; }
+        .onepage { clear:both; width: 100%; padding-top: 50px; padding-bottom: 50px; }
+        .onepage img { display:block; width: 100%; }
+        .page { display:none; }
+        .page:target { display:block; }
+        </style>
+    </head>
+    <body>
+    <div class="wrap">
+        <script>
+        $(document).ready(function(){
+            $(".lnb ul li").click(function(){
+                $(".lnb ul li").removeClass("act");
+                $(this).addClass("act");
+            });
+            $(".sub > li").click(function(){
+                $(".lnb ul li").removeClass("act");
+                var t = $(this).index();
+                $(".lnb ul li").eq(t).addClass("act");
+            });
+        });    
+        </script>
+    <header class="hd fix">
+        <div class="hd_wrap">
+      <a href="index.html" class="logo">
+        <h2 class="logo_tit"> 대전 관광</h2>
+        <img src="/img/logo.jpg" alt="대전관광 Daejeon Metropolitan City">
+
+        </a>
+        <nav class="tnb">
+            <ul>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a href="logout.html">로그아웃</a></li>
+            </ul>
+        </nav>
+        <nav class="gnb">
+            <ul>
+                <li><a href="tour1.html" class="g1">관광명소</a>
+                    <ul class="sub">
+                        <li><a href="tour1.html" class="s1">대전 주요 관광지</a></li>
+                        <li><a href="tour2.html" class="s1">대전의 꼭 가볼만한 곳 40선</a></li>
+                        <li><a href="tour3.html" class="s1">분야별관광명소</a></li>
+                        <li><a href="tour4.html" class="s1">이달의 테마여행</a></li>
+                        <li><a href="tour5.html" class="s1">니즈여행</a></li>
+                    </ul>  
+                </li>
+                <li><a href="festival.html" class="g1">축제/행사</a>
+                    <ul class="sub">
+                        <li><a href="festi1.html" class="s1">대표축제</a></li>
+                        <li><a href="festi2.html" class="s1">공연/전시/행사</a></li>
+                        <li><a href="festi3.html" class="s1">사진으로 보는 축제</a></li>
+                    </ul>
+                </li>
+                <li><a href="recommend.html" class="g1">추천여행코스</a>
+                    <ul class="sub">
+                        <li><a href="recom1.html" class="s1">테마별 관광코스</a></li>
+                        <li><a href="recom2.html" class="s1">권역별 관광코스</a></li>
+                        <li><a href="recom3.html" class="s1">목적별 관광코스</a></li>
+                        <li><a href="recom4.html" class="s1">수학여행코스</a></li>
+                        <li><a href="recom5.html" class="s1">투어프로그램</a></li>
+                    </ul></li>
+                <li><a href="shopping.html" class="g1">숙박/음식/쇼핑</a>
+                    <ul class="sub">
+                        <li><a href="sho1.html" class="s1">숙박</a></li>
+                        <li><a href="sho2.html" class="s1">음식</a></li>
+                        <li><a href="sho3.html" class="s1">쇼핑</a></li>
+                    </ul></li>
+                <li><a href="road.html" class="g1">도보여행길</a>
+                    <ul class="sub">
+                        <li><a href="road1.html" class="s1">대전둘레산길</a></li>
+                        <li><a href="road2.html" class="s1">대청호반길</a></li>
+                        <li><a href="road3.html" class="s1">대덕사이언스길</a></li>
+                        <li><a href="road4.html" class="s1">걷고싶은길</a></li>
+                        <li><a href="road5.html" class="s1">세종유성바램길</a></li>
+                    </ul></li>
+            </ul>
+        </nav>
+            </div>
+    
+    </header>
+    <div class="content fix">
+        <figure class="vs" id="vs">
+            <!--배경 이미지로 채움-->
+        </figure>
+    </div>
+    <div class="content_wrap">
+        <div class="sub_box">
+            <h2 class="sub_tit">관광명소</h2>  
+            <div class="bread_box">
+                <h3 class="cate_tit">대전 주요 관광지</h3>  
+                <p class="bread">
+                    <a chref ="" class="home">홈&gt;</a><a href="">관광 명소&gt;</a><span class="cur">대전 주요 관광지</span></p>
+                <ul class="sub_tit_ico_box">
+                <li><a href="" class=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+        </ul>
+        </div>
+        </div>
+        <saide class="leftbar">
+            <nav class="lnb">
+                <ul>
+                    <li class="act"><a href="#page1">대전 주요 관광지</a></li>
+                    <li><a href="#page2">대전의 꼭 가볼만한 곳 40선</a></li>
+                    <li><a href="#page3">분야별 관광명소</a></li>
+                    <li><a href="#page4">이달의 테마여행</a></li>
+                    <li><a href="#page5">니즈여행</a></li>
+                </ul>
+            </nav>
+        </saide>
+        <div class="page_box">
+            <section class="onepage">
+                <h2 class=""></h2>
+                <img src="" alt="대전 주요 관광지">
+            </section>
+            <section class="page" id="page1">
+                <h2 class="page_tit">대전 주요 관광지</h2>
+                <div class="page_wrap">
+                    <figure class="sub_pic">
+                        <img src="./source/sub1_img_gt1.jpg" alt="외도보타니아 전경">
+                        <h3 class="sub_pic_tit">외도보타니아</h3>
+                        <p class="sub_pic_com">정녕 여기가 대한민국이란 말인가? 지중해를 옮겨와, 어디서 찍든 화보급!</p>
+                    </figure>
+                    <h3 class="sub_full_tit">외도 보타니아(밖섬, 조라도)</h3>
+                    <article class="sub_con">
+                        <h3 class="sub_cate_tit">위치 : 거제시 일운면 외도길 17</h3>
+                        <img src="./source/sub1_img_gt2.jpg" alt="하늘에서 본 보타니아">
+                        <p class="sub_cate_com">
+                            거제도와 4㎞ 정도 떨어져 있는 외도는 지리적 여건에도 불구하고 물이 풍부하고 기후가 온난하며, 강우량이 많아서 여러 가지 난대 및 열대성 식물이 자라고 있으며, 맑고 푸른 바다에 둘러싸여 거제해금강, 홍도, 대마도 등을 관망할 수 있다.
+                            <br>
+                            1969년부터 소유자 (고)이창호, 최호숙 부부가 145,002㎡의 부지에 희귀 아열대 식물 740여 종과 리스하우스 등 7동의 편의시설을 설치하였으며, 1년 내내 꽃이 지지 않는 곳으로, 지중해의 어느 한 해변을 옮겨 놓은 듯 이국적인 모습의 건물과 조경으로 가꾸어져 있다.
+                            <br>
+                            한려해상국립공원 내 위치한 외도는 동도와 서도로 나뉘어져 있고, 수심이 30~50m, 해발 84m로, 서도에 식물원과 편의시설이 조성되어 있으며, 동도는 자연 상태 그대로 보존되고 있다.
+                            <br>
+                            2002년 3월 KBS 드라마 ‘겨울연가’ 마지막회 촬영지로 알려지면서 국내외 관광객들이 많이 찾는다.
+                            <br>
+                            1995년 4월 25일 ‘외도자연농원’이란 이름으로 개원한 지 2년 만에 연간 백만 명 이상의 관광객이 찾는 관광명소로 자리매김했고, 최근에는 한국관광공사, 네티즌에 의해 한국 최고의 관광지로 선정되기도 했다.
+                        </p>
+                    </article>
+                    <!-- 1. 지도 표시할 영역 확보 -->
+                    <div class="map_area">
+                        <h4 class="map_tit">위치 : 거제시 일운면 외도길 17</h4>
+                        <div id="daumRoughmapContainer1555398604259" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100% !important;"></div>
+                    </div>
+                    <!-- <script src="https://t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/c6dc0bd8/roughmapLander.js"></script> -->
+                    <!-- 2. 지도 API 연결-->
+                    <script class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                    <!-- 3. 실행 스크립트 -->
+                    <script>
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1555398604259",
+                            "key" : "t5by",
+                            "mapWidth" : "",
+                            "mapHeight" : "360"
+                        }).render();
+                    </script>
+                </div>
+            </section>
+            <section class="page" id="page2">
+                <h2 class="page_tit">체험관광</h2>
+                <div class="page_wrap">
+                    <figure class="sub_pic">
+                        <img src="./source/sub1_2_1.jpg" alt="요트투어">
+                        <h3 class="sub_pic_tit">요트투어</h3>
+                        <p class="sub_pic_com">대명 리조트 | 거제 | 마리나베이 | 요트투어</p>
+                    </figure>
+                    <h3 class="sub_full_tit">소노캄 거제 요트 투어</h3>
+                    <article class="sub_con">
+                        <h3 class="sub_cate_tit">위치 : 경남 거제시 일운면 거제대로 2660(일운면 소동리 115) 소노캄 거제</h3>
+                        <img src="./source/sub1_2_2.jpg" alt="요트사진1" style="float:left;">
+                        <img src="./source/sub1_2_3.jpg" alt="요트사진2" style="float:right">
+                        <p class="sub_cate_com" style="clear:both;">
+                            소노캄 거제는 전체 객실이 한려해상국립공원을 바라보는 오션뷰(Ocean View), 동시수용 3.500명의 대단위 워터파크 오션베이(Ocean Bay), 700석 규모의 대연회장과 각종 부대시설을 갖추고 있습니다. 국제적인 마리나 시설을 추가하여 해양관광도시 거제의 명실상부한 최고의 해양리조트로 자리 매김 할 예정입니다.
+                        </p>
+                    </article>
+            </section>
+            <section class="page" id="page3">
+                <h2 class="page_tit">캠핑 여행</h2>
+                <div class="page_wrap">
+                    <figure class="sub_pic">
+                        <ul class="pic_lst">
+                            <li><img src="./source/sub1_3_1.jpg" alt="학동자동차야영장"></li>
+                            <li><img src="./source/sub1_3_2.jpg" alt="학동자동차야영장"></li>
+                            <li><img src="./source/sub1_3_3.jpg" alt="학동자동차야영장"></li>
+                            <li><img src="./source/sub1_3_4.jpg" alt="야영장조리시설"></li>
+                        </ul>
+                        <h3 class="sub_pic_tit">학동자동차야영장</h3>
+                        <p class="sub_pic_com">흑진주 같은 몽돌이 '자글자글' 아름다운 소리를 내는 학동 해변 옆에 자리한 학동자동차야영장은  카라반, 샤워장, 식기세척실, 야외공연장 등 안전하고 쾌적한 시설을 갖추고 있습니다. 총 99동 규모(6인용 카라반 4개소, 카라반 겸용 영지 11개소, 자동차 야영 영지 84개소)로 연중무휴 운영되는 한려해상국립공원 학동자동차야영장에서 편안하고 즐거운 추억 남기세요.</p>
+                    </figure>
+                    <article class="sub_con">
+                        <h3 class="sub_cate_tit">위치 : 경상남도 거제시 동부면 학동리 276-5</h3>
+                        <img src="./source/sub1_3_5.jpg" alt="위치">
+                        <p class="sub_cate_com" style="clear:both;">
+                            위치: 경상남도 거제시 거제대로 981<br>
+                            면적: 28,170㎡<br>
+                            오토캠핑장 : 97동<br>
+                            규모: 자동차 야영 영지 84동, 카라반 겸용 영지 11동, <br>카라반 4대<br>
+                            부대시설: 샤워장 2개소, 화장실 2개소, 식기세척실 3개소, 다목적 운동장, 야외무대<br>
+                            이용시간: 15:00~익일 12:00<br>
+                            이용요금(성수기 : 5.1. ~ 11.30. 비수기: 12.1. ~ 4.30.)<br>
+                        </p>
+                    </article>
+            </section>
+            <section class="page" id="page4">
+                <div class="page_wrap">
+                    <h2 class="page_tit">추천 코스</h2>
+                    <div class="page_wrap">
+                        <figure class="sub_pic">
+                            <h3 class="sub_pic_tit">당일 코스</h3>
+                            <ul class="course_lst">
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                            </ul>
+                        </figure>
+                        <figure class="sub_pic">
+                            <h3 class="sub_pic_tit">2일 코스</h3>
+                            <ul class="course_lst">
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                                <li>
+                                    <img src="" alt="">
+                                    <h6 class="course_tit">거제대교</h6>
+                                </li>
+                            </ul>
+                        </figure>
+                        <article class="sub_con">
+                            <h3 class="sub_cate_tit">위치 : 경상남도 거제시 동부면 학동리 276-5</h3>
+                            <img src="./source/sub1_3_5.jpg" alt="위치">
+                            <p class="sub_cate_com" style="clear:both;">
+                                위치: 경상남도 거제시 거제대로 981<br>
+                                면적: 28,170㎡<br>
+                                오토캠핑장 : 97동<br>
+                                규모: 자동차 야영 영지 84동, 카라반 겸용 영지 11동, <br>카라반 4대<br>
+                                부대시설: 샤워장 2개소, 화장실 2개소, 식기세척실 3개소, 다목적 운동장, 야외무대<br>
+                                이용시간: 15:00~익일 12:00<br>
+                                이용요금(성수기 : 5.1. ~ 11.30. 비수기: 12.1. ~ 4.30.)<br>
+                            </p>
+                        </article>
+                </div>
+            </section>
+        </div>
+    </div>    
+</div>
+        <footer class="ft fix">
+            <div class="ft_wrap">
+                <nav class="linkbar1">
+                 <ul>
+                    <li><a href="" class="l1">대전시티투어</a></li>
+                    <li><a href="" class="l1">대전의 문화재</a></li>
+                    <li><a href="" class="l1">대전의 맛집</a></li>
+                    <li><a href="" class="l1">대전의 교통정보</a></li>
+                    <li><a href="" class="l1">대전마케딩공사</a></li>
+                  </ul>
+                  </nav>
+                <nav class="linkbar2">
+                  <ul>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">영상정보처리기기 운영 관리방침</a></li>
+                    <li><a href="">홈페이지 개선의견</a></li>
+                   </ul>
+                </nav>
+              <div class="copyright">
+                  <p class="add">(35242) 대전광역시 서구 둔산로 100 /콜센터 (042) 120</p>
+                  <p class="copy">COPYRIGHT 2017 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.</p>
+              </div>
+            </div>
+          </footer>

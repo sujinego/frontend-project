@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>허브 페이지</title>
+</head>
+<body>
+    <script>
+        //모바일인지 데스크탑인지 여부를 판단하여 
+        //모바일이면, mobile.html로 접속
+        //데스크탑이면, desktop.html로 접속
+        var os = "win16|win32|win64|mac|macintel|linux";
+        if(navigator.platform){
+            if(os.indexOf(navigator.platform.toLowerCase()) < 0){  //해당 운영체제가 없으면 -1을 반환
+                console.log("모바일");
+            }else{
+                console.log("데스크탑");
+            }
+        }
+        var telList = new Array('iPhone', 'iPod', 'BlackBerry','Android','Window CE','LG','MOT','SAMSUNG');
+        for(var tel in telList){
+            if(navigator.userAgent.match(telList[tel]) !=null){
+                console.log("모바일");
+        }else{
+                console.log("데스크탑");
+            }
+        }
+    </script>
+</body>
+</html>

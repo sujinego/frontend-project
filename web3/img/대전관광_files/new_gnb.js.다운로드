@@ -1,0 +1,259 @@
+var Tbox, Tmenu, Tblind;
+function Tmenu_setting(str,str2,str3,str4){
+	/***************************************
+					설정값
+	***************************************/
+	Tbox = $("#gnb_wrap");//top menu box layout
+	Tbox.max_width = Tbox.width();//top menu box width
+	Tbox.type = str; //all menu view : not!!
+	Tblind = $(".gnb_bg");//2deps menu back
+	Tblind.speed = 500; //2deps menu back 반응속도
+	Tblind.max_height = str3; //2deps menu back height
+	Tmenu = $("#gnb");//1deps box
+	Tmenu.lineup = str2;//2deps menu line수
+	Tmenu.code1 = str4.substr(0,2)-1;
+	Tmenu.code2 = str4.substr(2,2)-1;
+	Tmenu.li = Tmenu.find(">li");//1deps menu
+	Tmenu.li.a = Tmenu.li.find(">a");//1deps link
+	Tmenu.li.a.end = Tmenu.li.last().find(">a");//1deps link
+	Tmenu.li.cnt = Tmenu.li.size();//1deps count
+	Tmenu.li.tot_width = 0;//1deps total width
+
+	Tmenu.li.ul = Tmenu.li.find(">ul");//2deps box
+	Tmenu.li.ul.li = Tmenu.li.ul.find(">li");//2deps menu
+	Tmenu.li.ul.li.a = Tmenu.li.ul.li.find(">a");//2deps link
+	/***************************************
+					설정값
+	***************************************/
+
+
+
+	/***********************************************************
+		좌,우 padding값을 구한다.
+		a : 마지막 1deps 메뉴의 우측여백은 0값으로 처리한다.
+		b : 메뉴의 좌우측 균일 하게 여백을 준다.
+		c : padding -> width값으로 변경 메뉴 마지막 우측은 우측정렬한다.
+	************************************************************/
+	
+	Tmenu_1deps_padding("c");
+	
+	
+	if(Tbox.type == "all_menu_view"){//전체메뉴사용시
+		Tmenu_2deps_position();//2deps position
+	} else if(Tbox.type == "en"){
+
+	} else {//일반메뉴사용시
+		Tmenu_2deps_li_lineup(Tmenu.lineup); //2deps line up
+		Tmenu.li.ul.addClass("sline").width(500);
+		Tmenu.li.ul.height(Tblind.max_height);
+	}
+
+	Tmenu_on_setting();
+
+	
+	//마우스이벤트
+	Tmenu.li.a.mouseover(function(){Tmenu_1deps_over($(this));}); //1deps 메뉴의 over	
+	Tblind.mouseleave(function(){Tblind.interval = setTimeout(Tmenu_blind,500);}); //2deps blind창에서 마우스가 벗어날시(딜레이추가 0.5초)
+	Tmenu.li.a.mouseout(function(){Tblind.mouseleave();}); //상속
+	Tmenu.li.ul.mouseleave(function(){Tblind.mouseleave();});//상속
+	Tblind.mouseenter(function(){clearTimeout(Tblind.interval);}); //2deps blind창에 마우스 접근시 메뉴 over 효과 유지
+	Tmenu.li.ul.mouseenter(function(){Tblind.mouseenter();});//상속
+	Tmenu.li.ul.mouseenter(function(){Tblind.mouseenter();}); //상속
+	
+	//키보드이벤트(Tep키)
+	Tmenu.li.a.focus(function(){Tmenu_1deps_over($(this));});
+	Tmenu.li.a.blur(function(){Tblind.interval = setTimeout(Tmenu_blind,500);});
+	Tmenu.li.ul.li.a.focus(function(){clearTimeout(Tblind.interval);});
+	Tmenu.li.ul.li.a.blur(function(){Tblind.interval = setTimeout(Tmenu_blind,500);});
+
+	//Tmenu_blind("open");//테스트용
+
+}
+
+function Tmenu_on_setting(){
+	//if(Tmenu.code1 >= 0) Tmenu.li.eq(Tmenu.code1).find(">a").addClass("on");//1deps on
+	//if(Tmenu.code2 >= 0) Tmenu.li.eq(Tmenu.code1).find(">ul>li").eq(Tmenu.code2).find(">a").addClass("on");//2deps on
+	if(Tmenu.code1 < 0 && Tmenu.code2 < 0) Tmenu.li.ul.hide();
+}
+
+function Tmenu_1deps_padding(str){
+	//1deps 총너비를 구한다.
+	//균형적인 padding값을 주기위해 값을 구한다.
+	for(var i=0; i<Tmenu.li.cnt; i++){		
+		Tmenu.li.tot_width += Tmenu.li.eq(i).width();
+	}
+	
+	//적용
+	if(str == "a"){
+		Tmenu.li.padding_x = ((Tbox.max_width - Tmenu.li.tot_width) / ((Tmenu.li.cnt*2)-1));
+		Tmenu.li.padding_x = parseInt(Tmenu.li.padding_x);
+		Tmenu.li.a.css({"padding-left":Tmenu.li.padding_x+"px" , "padding-right":Tmenu.li.padding_x+"px"});
+		Tmenu.li.a.end.css({"padding-right":"0px"});
+	} else if(str == "b"){
+		Tmenu.li.padding_x = ((Tbox.max_width - Tmenu.li.tot_width) / Tmenu.li.cnt) / 2;
+		Tmenu.li.padding_x = parseInt(Tmenu.li.padding_x);
+		Tmenu.li.a.css({"padding-left":Tmenu.li.padding_x+"px" , "padding-right":Tmenu.li.padding_x+"px"});
+	} else if(str == "c"){
+		/*Tmenu.li.padding_x = Tbox.max_width / Tmenu.li.cnt;
+		Tmenu.li.padding_x = parseInt(Tmenu.li.padding_x);
+		Tmenu.li.a.css({"display":"block","width":Tmenu.li.padding_x+"px","text-align":"center"});
+		Tmenu.li.a.end.css({"text-align":"right"});*/
+
+		if(Tbox.type == "en"){
+			//영문 border 2px 여유공간 제공
+			var en_border = 2;
+		} else {
+			var en_border = 0;
+		}
+
+		Tmenu.li.padding_x = (Tbox.max_width - Tmenu.li.tot_width) / Tmenu.li.cnt;
+		Tmenu.li.padding_x = parseInt(Tmenu.li.padding_x);
+		for(var r=0;r<Tmenu.li.cnt; r++){
+			var totsum = 0;
+			if(r != Tmenu.li.cnt-1){
+				totsum = Tmenu.li.eq(r).width() + Tmenu.li.padding_x + ((Tmenu.li.padding_x / 2) / (Tmenu.li.cnt-1));
+			} else {
+				totsum = Tmenu.li.eq(r).width() + (Tmenu.li.padding_x / 2);
+			}
+
+			if(Tbox.type == "en"){
+				totsum = Tmenu.li.eq(r).width() + (Tmenu.li.padding_x);
+			}
+			Tmenu.li.eq(r).find(">a").css({"display":"block","width":(totsum-en_border)+"px","text-align":"center"});
+		}
+		Tmenu.li.a.end.css({"text-align":"right"});
+		if(Tbox.type == "en"){
+			Tmenu.li.a.end.css({"text-align":"center"});
+		}
+		//Tmenu.li.a.css({"padding-left":Tmenu.li.padding_x+"px" , "padding-right":Tmenu.li.padding_x+"px"});
+	} else {
+		return false;
+	}
+}
+
+function Tmenu_2deps_position(){
+	//2deps의 위치를 설정한다.
+	for(var i=0; i<Tmenu.li.cnt; i++){
+		var li = Tmenu.li.eq(i);
+		li.ul = li.find(">ul");
+
+		if(li.ul.size() != 0){
+			li.ul.css("left",li.position().left+"px");
+		}
+	}
+	Tmenu.li.ul.hide();
+}
+
+function Tmenu_1deps_over(str,str2){
+	var idx = Tmenu.li.a.index(str);
+	clearTimeout(Tblind.interval);	
+	Tmenu_blind("open",idx); //2deps 배경창을 운용한다.		
+}
+
+function Tmenu_blind(str,str2){
+
+	if(!str2) str2 = 0;
+	
+	if(Tbox.type == "en"){
+		//영문 예외처리
+		Tmenu.li.ul.hide();
+		if(str == "open"){
+			Tmenu.li.eq(str2).find(">ul").show();
+			Tmenu.li.a.removeClass("on");
+			Tmenu.li.eq(str2).find(">a").addClass("on");
+		} else {
+			Tmenu.li.ul.hide();
+			Tmenu.li.a.removeClass("on");
+		}
+	} else {
+		if(Tblind.max_height == 0) return false;//설정값중 배경의 높이값이 0 값을 주었을경우 해당 펑션은 생략한다.
+
+		var h = 0;
+		var speed = Tblind.speed;
+		
+		if(str == "open"){
+			if(Tblind.height() > 10) speed = 1;
+			else speed = Tblind.speed;
+			Tblind.show();
+
+			h = Tblind.max_height;
+		} else {		
+			h = 0;
+			
+		}
+		if(Tbox.type != "all_menu_view"){//전체메뉴사용시
+			Tmenu.li.ul.hide();
+		}
+		
+		if($(".gnb_sub_title").size() != 0){
+			$(".gnb_sub_title").text("");
+		}
+		$(".gnb_bg2").height(h);
+		Tblind.stop().animate(
+			{height:h+"px"},
+			speed,
+			function(){
+				if(str == "open"){
+					if(!Tbox.type){
+						var ul = Tmenu.li.eq(str2).find(">ul");
+						if(ul.size() != 0){
+							ul.show();
+
+							//서브타이틀제공
+							if($(".gnb_sub_title").size() == 0){
+								$('<span />').prependTo(Tbox).addClass("gnb_sub_title");							
+							}
+
+							Tmenu.li.ul.title = $(".gnb_sub_title");
+							Tmenu.li.ul.title.text(Tmenu.li.eq(str2).find(">a").text());
+							
+						}
+					} else {
+						Tmenu.li.ul.show();
+					}
+				} else {
+					Tmenu.li.ul.hide();
+					Tblind.hide();
+				}
+			}
+		);
+	}
+}
+
+function Tmenu_2deps_li_lineup(str){		
+	var deps1_cnt="", deps2="";
+	
+	deps1_cnt = Tmenu.li.cnt;
+
+	
+	
+	//각메뉴의 가장 큰 너비의 width값을 구한다.
+	for(var i=0; i<deps1_cnt; i++){
+		deps2 = Tmenu.li.eq(i).find(">ul");
+		if(deps2.size() != 0){
+			deps2.li = deps2.find(">li");
+			deps2.li.cnt = deps2.li.size();
+			deps2.max_width = 0;
+			for(var r=0; r<deps2.li.cnt; r++){					
+				var setwidth = deps2.li.eq(r).innerWidth() + Number(deps2.li.eq(r).css("margin-left").replace("px","")) + Number(deps2.li.eq(r).css("margin-right").replace("px",""));
+				if(deps2.max_width < setwidth){
+					deps2.max_width = setwidth;
+				}
+			}
+			deps2.max_width = deps2.max_width+15;//오차로인한 +5px정도의 여유제공
+			var x = 0, y = 18;
+			for(var r=0; r<deps2.li.cnt; r++){				
+				if(r%str == 0 && r != 0){
+					x = (r / str) * deps2.max_width;
+					y = 18;
+				} else {
+					y = ((r%str) * deps2.li.eq(r).innerHeight()) + Number(deps2.li.eq(r).css("margin-top").replace("px","")) + Number(deps2.li.eq(r).css("margin-bottom").replace("px",""));
+					y = y+18;
+				}
+				deps2.li.eq(r).css({"position":"absolute","left":x+"px","top":y+"px","width":deps2.max_width+"px"});
+			}
+		}		
+	}
+
+	Tmenu.li.ul.hide();	
+}
