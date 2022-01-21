@@ -30,21 +30,21 @@
     </script>
      
      <!-- 폰트 로딩 -->
-     <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
-     <link rel="stylesheet" href="/css/typo.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/typo.css">
      <!-- 필수 API 로딩 -->
-     <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
      <!-- 외부 스타일 연결 -->
-     <link rel="stylesheet" href="common.css">
-         <link rel="stylesheet" href="slick/slick.css">
-    <link rel="stylesheet" href="slick/slick-theme.css">
-    <script src="slick/slick.js"></script>
-    <link rel="stylesheet" href="./owl.carousel.css">
-    <script src="./owl.carousel.js"></script>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/slick/slick.css">
+    <link rel="stylesheet" href="/slick/slick-theme.css">
+    <script src="/slick/slick.js"></script>
+    <link rel="stylesheet" href="/owl.carousel.css">
+    <script src="/owl.carousel.js"></script>
+
    <style>
     
-    .vs { clear:both; position:relative; width: 100%; overflow: hidden;}
-    
+    /*contetn1*/
     .owl-prev { display: none; }
     .owl-next { display: none; }
     .owl-dots div { display:block; width: 20px; float:left; background-color: rgb(0, 0, 0); border-radius:12px; margin: 10px; }
@@ -57,7 +57,10 @@
         position: absolute; 
         bottom: 42vh; 
         z-index: 10; 
-        text-indent: -10000px;}
+        text-indent: -10000px;
+        background-image: url(./source/visualhanbler_left.png);
+    }
+
     button.slick-next.slick-arrow{
         display: block; 
         width: 40px;
@@ -66,6 +69,7 @@
         bottom: 42vh; 
         z-index: 10; 
         text-indent: -10000px;
+        background-image: url(./source/visualhanbler_right.png);
         }
     button.slick-prev.slick-arrow { left: 60px; }
 
@@ -81,7 +85,7 @@
 
 
 
-
+    .vs { clear:both; position:relative; width: 100%; overflow: hidden;}
     #vs .img_box li a {display:block; position:relative; }
     #vs .img_box .vs_img { display:block;  width: 100%;} 
     #vs .img_box li { position:relative;  } 
@@ -89,10 +93,7 @@
     #vs .img_box, .vs_tit { font-family: 'TTTogether'; font-size:140px; font-weight:400; text-shadow:2px 2px 2px rgb(199, 98, 98); }
     #vs .img_box, .vs_com {font-size: 24px;text-align: right; text-shadow: -2px -2px 2px #666;}
 
-    .content{
-        width: 100%;
-        height: 1500px;
-    }
+    /*contetn2*/
     .content2{
     background-color: rgba(0, 73, 141, 0.7);
     height: 130px;
@@ -105,9 +106,25 @@
         max-width: 1200px;
         padding: 22px;
         height: 100px;
-        margin-left: 350px;
+        margin-left: 390px;
     }
-    .more_menu >ul>li >p{
+    .more_menu >ul>li a{
+        float: left;
+    }
+    .more_menu >ul>li > strong{
+        clear: both;
+        display: block;
+        float: left;
+        margin-left: 80px;
+        margin-top: -65px;
+        color: #fff;
+    }
+    .more_menu >ul>li > span{
+        clear: both;
+        display: block;
+        float: left;
+        margin-left: 80px;
+        margin-top: -35px;
         color: #fff;
     }
     .menu1, .menu2, .menu3, .menu4, .menu5{
@@ -133,7 +150,6 @@
     width: 30%;
     height: 230px;
     margin-right: 100px;
-
     }
     .ntwrap .ntul {
         margin-top: 10px;
@@ -181,7 +197,8 @@
     }
     .c5wrap{
         width: 1200px;
-        margin-left: 400px;
+        height: 80px;
+        padding: 10px 352px;
     }
     .snswrap .sns{
         width: 400px;
@@ -200,19 +217,23 @@
         color: #fff;
     }
     .linkwrap{
-        width: 800px;
+        float: right;
        
     }
     .link1{
         width: 200px;
         height: 50px;
+        line-height: 50px;
         float: left;
-        background-color: yellow;
+        border: 1px solid #666;
+        margin-right: 10px;
     }
     .link1 a {
         font-weight: bold;
         font-size: large;
-        text-align: center;
+        color: #000;
+        padding: 12px 20px 12px 25px;
+
 
     }
     .link2{
@@ -228,7 +249,7 @@
         <header class="hd">
             <div class="hd_wrap">
                 <div class="logo">
-                    <a href="">
+                    <a href="index.html">
                         <img src="./source/logo_main.png" alt="로고이미지">
                     </a>
                         <div class="top_right">
@@ -250,71 +271,204 @@
                 </div>
             </div>
             <div class="top_menu">
-                <div class="mainmenu" style="border-top: 2px rgb(90, 8, 8);">
+                <div class="mainmenu">
                     <ul class="menu">
                         <li class="menu-item">
-                            <a href="">정보공개/개방</a>
+                            <a href="menu1.html">정보공개/개방</a>
                             <ul class="menu-sub">
-                                <li><a href="">정보공개청구 안내</a></li>
-                                <li><a href="">사전정보공표</a></li>
-                                <li><a href="">정보공개목록</a></li>
-                                <li><a href="">정보공개청구</a></li>
-                                <li><a href="">공개여부 및 불복 신청 사례</a></li>
-                                <li><a href="">정책실명제</a></li>
-                                <li><a href="">공공데이터 개방</a></li>
-                                <li><a href="">청렴자료공개</a></li>
-                                <li><a href="">국고보조금</a></li>
+                                <li>
+                                    <a href="menu1.html?page=1">정보공개청구 안내</a>
+                                    <dl class="sub">
+                                        <dd><a href="">정보공개제도</a></dd>
+                                        <dd><a href="">비공개 대상 정보 안내</a></dd>
+                                        <dd><a href="">수수료 안내</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="menu1.html?page=2">사전정보공표</a>
+                                    <dl class="sub">
+                                        <dd><a href="">공표대상 법무행정정보의 목록</a></dd>
+                                        <dd><a href="">주요정책 추친과정 공개</a></dd>
+                                        <dd><a href="">행정자료실</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="menu1.html?page=3">정보공개목록</a>
+                                </li>
+                                <li><a href="menu1.html?page=4">정보공개청구</a>
+                                    <dl class="sub">
+                                        <dd><a href="">정보공개청구신청</a></dd>
+                                        <dd><a href="">정보공개담당자</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="menu1.html?page=5">공개여부 및 불복 신청 사례</a></li>
+                                <li><a href="menu1.html?page=6">정책실명제</a>
+                                    <dl class="sub">
+                                        <dd><a href="">국민신청실명제</a></dd>
+                                        <dd><a href="">정책실명 공개과제</a></dd>
+                                    </dl>
+                                </li>
                             </ul>
                         </li>
                         <li class="menu-item"><a href="">법무정책서비스</a>
                             <ul class="menu-sub">
-                                <li><a href="">법무/검찰</a></li>
-                                <li><a href="">범죄예방</a></li>
-                                <li><a href="">인권</a></li>
-                                <li><a href="">교정</a></li>
-                                <li><a href="">출입국 외국인</a></li>
-                                <li><a href="">시험정보</a></li>
-                                <li><a href="">정책참여</a></li>
-                                <li><a href="">국민이 함께하는 법무행정현장</a></li>
+                                <li><a href="">법무/검찰</a>
+                                    <dl class="sub">
+                                        <dd><a href="">상가건문임대차법령정보</a></dd>
+                                        <dd><a href="">주택임대차법령정보</a></dd>
+                                        <dd><a href="">공증</a></dd>
+                                        <dd><a href="">재외공관공증</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">범죄예방</a>
+                                    <dl class="sub">
+                                        <dd><a href="">법교육</a></dd>
+                                        <dd><a href="">사회봉사 국민공모제</a></dd>
+                                        <dd><a href="">전자감독제도</a></dd>
+                                        <dd><a href="">범죄예방 환경개선 사업</a></dd>
+                                        <dd><a href="">신상정보 등록제도</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">인권</a>
+                                    <dl class="sub">
+                                        <dd><a href="">국가인권정책기본계획</a></dd>
+                                        <dd><a href="">국제인권규범</a></dd>
+                                        <dd><a href="">인권보호제도</a></dd>
+                                        <dd><a href="">번죄피해자 보호/지원제도</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">교정</a>
+                                    <dl class="sub">
+                                        <dd><a href="">수형자 집중인성교육</a></dd>
+                                        <dd><a href="">구인/구직 만남의 날</a></dd>
+                                        <dd><a href="">스마트접견제도</a></dd>
+                                        <dd><a href="">교정시설 원격의료시스템</a></dd>
+                                        <dd><a href="">심리치료프로그램 운영</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">출입국 외국인</a>
+                                    <dl class="sub">
+                                        <dd><a href="">사회통합 정책</a></dd>
+                                        <dd><a href="">전자비자센터</a></dd>
+                                        <dd><a href="">외국인 계절근로자 프로그램</a></dd>
+                                        <dd><a href="">우수 인재 특별귀화</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">시험정보</a>
+                                    <dl class="sub">
+                                        <dd><a href="">변호사 시험</a></dd>
+                                        <dd><a href="">법조 윤리 시험</a></dd>
+                                        <dd><a href="">사법시험</a></dd>
+                                        <dd><a href="">시험자료실</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">정책참여</a>
+                                    <dl class="sub">
+                                        <dd><a href="">정책참여</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">국민이 함께하는 법무행정현장</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="menu-item"><a href="">법령/자료</a>
                             <ul class="menu-sub">
-                                <li><a href="">법령정보</a></li>
-                                <li><a href="">통계정보</a></li>
-                                <li><a href="">자료실</a></li>
-                                <li><a href="">해외자료</a></li>
+                                <li><a href="">법령정보</a>
+                                    <dl class="sub">
+                                        <dd><a href="">훈령</a></dd>
+                                        <dd><a href="">예규</a></dd>
+                                        <dd><a href="">고시</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">통계정보</a>
+                                    <dl class="sub">
+                                        <dd><a href="">통계자료</a></dd>
+                                        <dd><a href="">교정 통계</a></dd>
+                                        <dd><a href="">출입국 통계</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">자료실</a>
+                                    <dl class="sub">
+                                        <dd><a href="">업무자료</a></dd>
+                                        <dd><a href="">간행물</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">해외자료</a>
+                                    <dl class="sub">
+                                        <dd><a href="">해외 법제 자료 및 최신 동향</a></dd>
+                                    </dl>
+                                </li>
                             </ul>
                         </li>
                         <li class="menu-item"><a href="">법무뉴스</a>
                             <ul class="menu-sub">
-                                <li><a href="">보도자료</a></li>
-                                <li><a href="">공지사항</a></li>
-                                <li><a href="">코로나 19 대응상황</a></li>
-                                <li><a href="">홍보자료</a></li>
-                                <li><a href="">국민을 위한 수사권 개혁</a></li>
+                                <li><a href="">보도자료</a>
+                                    <dl class="sub">
+                                        <dd><a href="">보도자료</a></dd>
+                                        <dd><a href="">해명자료</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">공지사항</a>
+                                    <dl class="sub">
+                                        <dd><a href="">공지사항</a></dd>
+                                        <dd><a href="">법무행사</a></dd>
+                                        <dd><a href="">채용정보</a></dd>
+                                        <dd><a href="">입찰정보</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">코로나 19 대응상황</a>
+                                </li>
+                                <li><a href="">홍보자료</a>
+                                    <dl class="sub">
+                                        <dd><a href="">동영상</a></dd>
+                                        <dd><a href="">카드뉴스</a></dd>
+                                        <dd><a href="">홍보책자</a></dd>
+                                        <dd><a href="">소식지</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">국민을 위한 수사권 개혁</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="menu-item"><a href="">국민참여</a>
                             <ul class="menu-sub">
-                                <li><a href="">칭찬합시다</a></li>
-                                <li><a href="">포상참여</a></li>
-                                <li><a href="">제안합시다</a></li>
-                                <li><a href="">신고센터</a></li>
-                                <li><a href="">규제개혁</a></li>
-                                <li><a href="">협동조합 경영공시</a></li>
-                                <li><a href="">청렴생각함</a></li>
+                                <li><a href="">칭찬합시다</a>
+                                </li>
+                                <li><a href="">포상참여</a>
+                                    <dl class="sub">
+                                        <dd><a href="">포상대상자공개</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">제안합시다</a>
+                                </li>
+                                <li><a href="">신고센터</a>
+                                </li>
+                                <li><a href="">규제개혁</a>
+                                    <dl class="sub">
+                                        <dd><a href="">자료마당</a></dd>
+                                        <dd><a href="">알림마당</a></dd>
+                                        <dd><a href="">규제혁파</a></dd>
+                                    </dl>
+                                </li>
+                                <li><a href="">협동조합 경영공시</a>
+                                </li>
+                                <li><a href="">청렴생각함</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="menu-item"><a href="">법무부 소개</a>
                             <ul class="menu-sub">
-                                <li><a href="">장관소개</a></li>
-                                <li><a href="">차관소개</a></li>
-                                <li><a href="">기관소개</a></li>
-                                <li><a href="">조직과 기능</a></li>
-                                <li><a href="">청사안내</a></li>
+                                <li><a href="">장관소개</a>
+                                </li>
+                                <li><a href="">차관소개</a>
+                                </li>
+                                <li><a href="">기관소개</a>
+                                </li>
+                                <li><a href="">조직과 기능</a>
+                                </li>
+                                <li><a href="">청사안내</a>
+                                </li>
                             </ul>
                         </li>
+                        <li class="menu-item"><a href="">사이트 안내</a></li>
                     </ul>
                 </div>
             </div>
@@ -325,16 +479,24 @@
                         <div class="vs_wrap">
                             <div class="img_box single-item">
                                 <div class="item">
-                                    <img src="./source/vs1.jpg" alt="">
+                                    <h1>박범계 법무부장관-슈뢰더 전 총리, 아리랑 연주와 한식으로 함께한</h1>
+                                    <img src="./source/view1.jpg" alt="박범계 법무부장관-슈뢰더 전 총리, 아리랑 연주와 한식으로 함께한">
+                                    
                                 </div>
                                 <div class="item">
-                                    <img src="./source/vs2.jpg" alt="" >
+                                    <h1>스타트업 법률지원을 위한 청년 창업가와의 대화</h1>
+                                    <img src="./source/view2.jpg" alt="스타트업 법률지원을 위한 청년 창업가와의 대화" >
+                                    
                                 </div>
                                 <div class="item">
-                                    <img src="./source/vs3.jpg" alt="" >
+                                    <h1>허구연 MBC해설위원, 소년원생을 위한 티볼세트 기증식</h1>
+                                    <img src="./source/view3.jpg" alt="허구연 MBC해설위원, 소년원생을 위한 티볼세트 기증식" >
+                                    
                                 </div>
                                 <div class="item">
-                                    <img src="./source/vs4.jpg" alt="">
+                                    <h1>법무부, 부패방지 시책평가 3년 연속 1등급 달성</h1>
+                                    <img src="./source/view4.jpg" alt="법무부, 부패방지 시책평가 3년 연속 1등급 달성">
+                                    
                                 </div>
                             </div>
                         </div>
@@ -361,23 +523,28 @@
                     <ul>
                         <li class="menu1">
                             <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon.png" ></a>
-                            <p>법무/검찰</p>
+                            <strong>법무/검찰</strong>
+                            <span>더보기</span>
                         </li>
                         <li class="menu2">
                             <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (1).png"></a>
-                            <p>범죄예방</p>
+                            <strong >범죄예방</strong>
+                            <span>더보기</span>
                         </li>
                         <li class="menu3">
                             <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (2).png"></a>
-                            <p>인권</p>
+                            <strong>인권</strong>
+                            <span>더보기</span>
                         </li>
                         <li class="menu4">
                             <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (3).png"></a>
-                            <p>교정</p>
+                            <strong >교정</strong>
+                            <span>더보기</span>
                         </li>
                         <li class="menu5">
                             <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (4).png"></a>
-                            <p>출입국/외국인</p>
+                            <strong>출입국/외국인</strong>
+                            <span>더보기</span>
                         </li>
                     </ul>
                 </div>
@@ -386,16 +553,16 @@
                 <figure class="vs_midle">
                         <div class="img single-item owl-carousel">
                             <div class="item">
-                                <img src="./source/view1.jpg" alt="">
+                                <img src="./source/sl1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="./source/view2.jpg" alt="" >
+                                <img src="./source/sl2.jpg" alt="" >
                             </div>
                             <div class="item">
-                                <img src="./source/view3.jpg" alt="" >
+                                <img src="./source/sl3.jpg" alt="" >
                             </div>
                             <div class="item">
-                                <img src="./source/view4.jpg" alt="">
+                                <img src="./source/sl5.jpg" alt="">
                             </div>
                         </div>
                 </figure>
@@ -405,7 +572,7 @@
                             $(".owl-carousel").owlCarousel({
                                 autoplay:true,  //자동 실행
                                 loop:true,   //순환 반복
-                                margin: 30,   //아이템간 여백
+                                margin: 3,   //아이템간 여백
                                 items:3,
                                 dots:true,
                             });
@@ -501,7 +668,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
             <footer class="ft">
                 <div class="ft_wrap">
                     <div class="f_logo">
