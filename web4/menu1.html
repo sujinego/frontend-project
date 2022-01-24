@@ -62,7 +62,12 @@
     .con_wrap { clear:both; width: 100%; min-height:100vh; }
     .con_wrap:after { content:""; display:block; clear:both; } /* clear-fix */
     .page { clear:both; width: 100%; min-height:100vh; }
-    .page_tit { text-align: center; line-height: 300px; font-size:32px;; color:navy; }
+    .page_tit { text-align: center; line-height: 100px; font-size:32px;; color:navy; }
+    .page_wrap{
+        width: 1200px;
+        clear: both;
+        padding: 100px 500px;
+    }
     .bread_box { 
         clear:both; 
         width: 1200px; 
@@ -106,8 +111,9 @@
     #sel3 dl { width: 120px; }
     #sel3 dt, #sel3 dd { line-height: 40px; height: 40px; padding-left: 14px; 
     width: 120px; } 
-
+    select option:first-child{display: none;}
     ::marker {  color:rgb(0, 0, 0); }
+
     </style>
 </head>
 <body>
@@ -115,7 +121,7 @@
         <script>
             $(document).ready(function(){
                 var loc = location.href;
-                var page = loc.substring(loc.indexOf("=")+1, loc.length) -1;
+                var page = loc.substring(loc.indexOf("=")+1, loc.length)-9;
                 $(".page").css("display", "none");
                 $(".page").eq(page).css("display","block");
             });
@@ -127,12 +133,10 @@
                         <img src="./source/logo_main.png" alt="로고이미지">
                     </a>
                         <div class="top_right">
-                            <nav class="top_nav">
-                                 <li><a href="" target="_blank">English</a>                           
-                                </li>
-                                <li><a href="" target="_blank">Chinese</a>                                
-                                </li>
-                            </ul>           
+                            <div class="top_nav">
+                                 <a href="" target="_blank">English</a>                           
+                                <a href="" target="_blank">Chinese</a>                                        
+                        </div>
                     </div>
                 </div>
                 <div class="searchbar">
@@ -357,6 +361,7 @@
                     </li>
                     <li>
                         <select name="sel1" id="sel1">
+                            <option value="">정보공개/개방</option>
                             <option value="menu1.html">정보공개/개방</option>
                             <option value="menu2.htm1">법무정책서비스</option>
                             <option value="menu3.htm1">법령/자료</option>
@@ -367,18 +372,20 @@
                     </li>
                     <li>
                         <select name="sel2" id="sel2">
-                            <option value="menu1.html#page1">정보공개청구 안내</option>
-                            <option value="menu1.html#page2">사전정보공표</option>
-                            <option value="menu1.html#page3">정보공개목록</option>
-                            <option value="menu1.html#page4">정보공개청구</option>
-                            <option value="menu1.html#page5">공개여부 및 불복 신청 사례</option>
+                            <option value="">정보공개청구 안내</option>
+                            <option value="menu1.html?page=1">정보공개청구 안내</option>
+                            <option value="menu1.html?page=2">사전정보공표</option>
+                            <option value="menu1.html?page=3">정보공개목록</option>
+                            <option value="menu1.html?page=4">정보공개청구</option>
+                            <option value="menu1.html?page=5">공개여부 및 불복 신청 사례</option>
                         </select>
                     </li>
                     <li class="cate2">
                         <select name="sel3" id="sel3">
-                                <option value="menu1.html#page11">정보공개제도</option>
-                                <option value="menu1.html#page12">비공개 대상 정보 안내</option>
-                                <option value="menu1.html#page13">수수료 안내</option>
+                                <option value="">정보공개제도</option>
+                                <option value="menu1.html?page=6">정보공개제도</option>
+                                <option value="menu1.html?page=7">비공개 대상 정보 안내</option>
+                                <option value="menu1.html?page=8">수수료 안내</option>
                         </select>
                     </li>
                 </ul>
@@ -401,33 +408,60 @@
             });
             </script>
             <div class="con_wrap">
-                <section class="page" id="page11">
+                <section class="page" id="page1">
                     <h2 class="page_tit">정보공개제도</h2>
                     <div class="page_wrap">
-                        <div><h2>정보공개 제도란?</h2>
-                            각기관·지방자치단체 등 공공기관이 생산·접수하여 보유, 관리하는 정보를 국민에게 공개함으로써 국민의 알권리를 보장하고 더 많은 정보를 바탕으로 국정운영에 대한 국민참여와 투명성 제고를 위한 제도입니다.</h2>></div>
-                        <img src="./source/menu1.1.JPG">
-                        </div>
-                        <img src="./source/menu1.2.JPG">
-                    <div>
-
+                        <h2>정보공개 제도란?</h2>
+                            각기관·지방자치단체 등 공공기관이 생산·접수하여 보유, 관리하는 정보를 국민에게 공개함으로써 국민의 알권리를 보장하고 더 많은 정보를 바탕으로 국정운영에 대한 국민참여와 투명성 제고를 위한 제도입니다.</h2>
+                            <img src="./source/menu1.1.JPG">
+                        <img src="./source/menu1.2.JPG">    
                     </div>
                 </section>
-                <section class="page" id="page12">
-                    <h2 class="page_tit">페이지 제목2</h2>
+                <section class="page" id="page2">
+                    <h2 class="page_tit">사전정보공표</h2>
+                    <div class="page_wrap">
+                    <img src="./source/menu2.1.JPG">
+                    <img src="./source/menu2.2.JPG"> 
+                    </div>
+                </section>
+                <section class="page" id="page3">
+                    <h2 class="page_tit">정보공개목록</h2>
+                    <div class="page_wrap">
+                        <img src="./source/menu3.JPG">
+                    </div>
+                </section>
+                <section class="page" id="page4">
+                    <h2 class="page_tit">정보공개청구</h2>
                     <div class="page_wrap"></div>
                 </section>
-                <section class="page" id="page13">
-                    <h2 class="page_tit">페이지 제목3</h2>
+                <section class="page" id="page5">
+                    <h2 class="page_tit">공개여부 및 불복 신청 사례</h2>
                     <div class="page_wrap"></div>
                 </section>
-                <section class="page" id="page14">
-                    <h2 class="page_tit">페이지 제목4</h2>
-                    <div class="page_wrap"></div>
+                <section class="page" id="page6">
+                    <h2 class="page_tit">정보공개제도</h2>
+                    <div class="page_wrap">
+                        <h2>정보공개 제도란?</h2>
+                            각기관·지방자치단체 등 공공기관이 생산·접수하여 보유, 관리하는 정보를 국민에게 공개함으로써 국민의 알권리를 보장하고 더 많은 정보를 바탕으로 국정운영에 대한 국민참여와 투명성 제고를 위한 제도입니다.</h2>
+                        <img src="./source/menu1.1.JPG">
+                        <img src="./source/menu1.2.JPG">    
+                    </div>
                 </section>
-                <section class="page" id="page15">
-                    <h2 class="page_tit">페이지 제목5</h2>
-                    <div class="page_wrap"></div>
+                <section class="page" id="page7">
+                    <h2 class="page_tit">비공개 대상 정보 안내</h2>
+                    <div class="page_wrap">
+                        <img src="./source/12.1.JPG">
+                        <img src="./source/menu7.2.JPG">
+                    </div>
+                </section>
+                <section class="page" id="page8">
+                    <h2 class="page_tit">수수료 안내</h2>
+                    <div class="page_wrap">
+                        <img src="./source//menu8.1.JPG">
+                        <img src="./source//menu8.2.JPG">
+                        <img src="./source//menu8.3.JPG">
+                        <img src="./source//menu8.4.JPG">
+                    </div>
                 </section>
             </div>
         </section>

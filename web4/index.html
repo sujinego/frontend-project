@@ -45,6 +45,10 @@
    <style>
     
     /*contetn1*/
+     .content1{
+    width:100vw;
+    }
+    
     .owl-prev { display: none; }
     .owl-next { display: none; }
     .owl-dots div { display:block; width: 20px; float:left; background-color: rgb(0, 0, 0); border-radius:12px; margin: 10px; }
@@ -58,7 +62,7 @@
         bottom: 42vh; 
         z-index: 10; 
         text-indent: -10000px;
-        background-image: url(./source/visualhanbler_left.png);
+        background-image: url(${pageContext.request.contextPath}/resources/img/visualhanbler_left.png);
     }
 
     button.slick-next.slick-arrow{
@@ -69,17 +73,30 @@
         bottom: 42vh; 
         z-index: 10; 
         text-indent: -10000px;
-        background-image: url(./source/visualhanbler_right.png);
+        background-image: url(${pageContext.request.contextPath}/resources/img/visualhanbler_right.png);
         }
     button.slick-prev.slick-arrow { left: 60px; }
 
-    button.slick-next.slick-arrow { right: 60px; }
+    button.slick-next.slick-arrow { right: 72px; width:45px; }
 
-    .slick-dots { position: absolute; width: 200px; left: 50%; margin-left: -80px; bottom: 80px; }
+    .slick-dots {
+     position: absolute; 
+     width: 200px; 
+     left: 50%; 
+     margin-left: -80px; 
+     bottom: 80px; 
+     }
 
     .slick-dots li {float: left;}
 
-    .slick-dots li button {display: block; width: 20px; height: 20px; border-radius: 12px; background-color: #fff; text-indent: -10000px;}
+    .slick-dots li button {
+    display: block; 
+    width: 20px; 
+    height: 20px; 
+    border-radius: 12px;
+     background-color: #9ea1aa; 
+     text-indent: -10000px;
+     }
 
     .slick-dots li.slick-active button {background-color: rgb(3, 53, 70);}
 
@@ -95,6 +112,7 @@
 
     /*contetn2*/
     .content2{
+    width:100vw;
     background-color: rgba(0, 73, 141, 0.7);
     height: 130px;
     position: relative;
@@ -104,9 +122,7 @@
     }
     .more_menu{
         max-width: 1200px;
-        padding: 22px;
-        height: 100px;
-        margin-left: 390px;
+        margin: 0 auto;
     }
     .more_menu >ul>li a{
         float: left;
@@ -130,18 +146,24 @@
     .menu1, .menu2, .menu3, .menu4, .menu5{
         width: 20%;
         height: 80px;
+        margin-top: 30px;
         float: left;
     }
-    
+    /*content3*/
+    .content3{
+        width: 100vw;
+        margin: 0 auto;
+    }
+    /*content4*/
     .content4{
-        width: 100%;
+        width: 100vw;
         height: 400px;     
     }
     .notice{
         clear: both;
         width: 1200px;
         height: 350px;
-        padding: 50px 350px;
+        padding: 50px 200px;
 
     }
     .notice1{
@@ -175,7 +197,7 @@
     .notice3 .ntwrap{
         width: 100%;
         height: 100%;
-        background: #1d4bb0 url("./source/tel.png") no-repeat 30px bottom;
+        background: #1d4bb0 url("${pageContext.request.contextPath}/resources/img/tel.png") no-repeat 30px bottom;
         padding: 30px;
         box-sizing: border-box;
     }
@@ -190,15 +212,16 @@
         padding-top: 60px;
         margin-left: 85px;
     }
+    /*content5*/
     .content5{
-        width: 100%;
+        width: 100vw;
         height: 100px;
 
     }
     .c5wrap{
         width: 1200px;
         height: 80px;
-        padding: 10px 352px;
+        padding: 10px 202px;
     }
     .snswrap .sns{
         width: 400px;
@@ -241,35 +264,37 @@
         background-color: blue;
         float: right;
     }
+
    </style> 
 	
 </head>
 <body>
     <div class="container">
         <header class="hd">
-            <div class="hd_wrap">
+            <div class="login">
+	            <ul>
+		            <li><a href="/member/reg">회원가입</a></li>
+		            <li><a href="/member/loginForm">로그인</a></li>
+				</ul>
+            </div>
                 <div class="logo">
                     <a href="index.html">
-                        <img src="./source/logo_main.png" alt="로고이미지">
+                        <img src="${pageContext.request.contextPath}/resources/img/logo_main.png" alt="로고이미지">
                     </a>
                         <div class="top_right">
-                            <nav class="top_nav">
+                            <div class="top_nav">
                                     <a href="" target="_blank">English</a>                           
-                                </li>
                                     <a href="" target="_blank">Chinese</a>                                
-                                </li>
-                            </ul>           
+                            </div>           
                     </div>
                 </div>
                 <div class="searchbar">
-                    <form method="post" action="jsp" method="post" target="_blank"> 
-                        <input type="text" name="qt" id="search_text" title="검색어를 입력하세요" placeholder="검색어를 입력하세요" style="ime-mode:auto;" size="4">
-                        <a href="" target="_blank" title="새창에서 열림">검색</a>
+                    <form method="post" action="" method="post" target="_blank"> 
+                        <input type="text" name="qt" id="search_text" title="검색어를 입력하세요" placeholder="검색어를 입력하세요" size="4">
                         <input type="hidden" name="siteId" value="moj">
+                        <a href="" target="_blank" title="새창에서 열림">검색</a>
                     </form>
-                    
                 </div>
-            </div>
             <div class="top_menu">
                 <div class="mainmenu">
                     <ul class="menu">
@@ -365,8 +390,6 @@
                                         <dd><a href="">정책참여</a></dd>
                                     </dl>
                                 </li>
-                                <li><a href="">국민이 함께하는 법무행정현장</a>
-                                </li>
                             </ul>
                         </li>
                         <li class="menu-item"><a href="">법령/자료</a>
@@ -440,6 +463,13 @@
                                 <li><a href="">제안합시다</a>
                                 </li>
                                 <li><a href="">신고센터</a>
+                                    <dl class="sub">
+                                        <dd><a href="">인권침해 신고</a></dd>
+                                        <dd><a href="">부조리  신고</a></dd>
+                                        <dd><a href="">예산낭비 신고</a></dd>
+                                        <dd><a href="">공익신고</a></dd>
+                                        <dd><a href="">안전신고</a></dd>  
+                                    </dl>
                                 </li>
                                 <li><a href="">규제개혁</a>
                                     <dl class="sub">
@@ -448,7 +478,12 @@
                                         <dd><a href="">규제혁파</a></dd>
                                     </dl>
                                 </li>
-                                <li><a href="">협동조합 경영공시</a>
+                                <li><a href="">적극행정</a>
+                                    <dl class="sub">
+                                        <dd><a href="">제도소개</a></dd>
+                                        <dd><a href="">국민참여</a></dd>
+                                        <dd><a href="">적극행정 소송지원</a></dd>
+                                    </dl>
                                 </li>
                                 <li><a href="">청렴생각함</a>
                                 </li>
@@ -468,241 +503,215 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="">사이트 안내</a></li>
+                        <li class="menu-item"><a href="board/list">게시판</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </header>
-            <div class="content1">
-                <div class="vs">
-                    <figure class="vs slick">
-                        <div class="vs_wrap">
-                            <div class="img_box single-item">
-                                <div class="item">
-                                    <h1>박범계 법무부장관-슈뢰더 전 총리, 아리랑 연주와 한식으로 함께한</h1>
-                                    <img src="./source/view1.jpg" alt="박범계 법무부장관-슈뢰더 전 총리, 아리랑 연주와 한식으로 함께한">
-                                    
-                                </div>
-                                <div class="item">
-                                    <h1>스타트업 법률지원을 위한 청년 창업가와의 대화</h1>
-                                    <img src="./source/view2.jpg" alt="스타트업 법률지원을 위한 청년 창업가와의 대화" >
-                                    
-                                </div>
-                                <div class="item">
-                                    <h1>허구연 MBC해설위원, 소년원생을 위한 티볼세트 기증식</h1>
-                                    <img src="./source/view3.jpg" alt="허구연 MBC해설위원, 소년원생을 위한 티볼세트 기증식" >
-                                    
-                                </div>
-                                <div class="item">
-                                    <h1>법무부, 부패방지 시책평가 3년 연속 1등급 달성</h1>
-                                    <img src="./source/view4.jpg" alt="법무부, 부패방지 시책평가 3년 연속 1등급 달성">
-                                    
-                                </div>
+        <div class="content1">
+            <div class="vs">
+                <figure class="vs slick">
+                    <div class="vs_wrap">
+                        <div class="img_box single-item">
+                            <div class="item">
+                             <!--   <h1>박범계 법무부장관-슈뢰더 전 총리, 아리랑 연주와 한식으로 함께한</h1>-->
+                                <img src="${pageContext.request.contextPath}/resources/img/view1.jpg" alt="박범계 법무부장관-슈뢰더 전 총리, 아리랑 연주와 한식으로 함께한">
+                            <h1>박범계 법무부장관-슈뢰더 전 총리, 아리랑 연주와 한식으로 함께한</h1>
+                            </div>
+                            <div class="item">
+                                <!--<h1>스타트업 법률지원을 위한 청년 창업가와의 대화</h1>-->
+                                <img src="${pageContext.request.contextPath}/resources/img/view2.jpg" alt="스타트업 법률지원을 위한 청년 창업가와의 대화" > 
+                            <h1>스타트업 법률지원을 위한 청년 창업가와의 대화</h1>
+                            </div>
+                            <div class="item">
+                               <!-- <h1>허구연 MBC해설위원, 소년원생을 위한 티볼세트 기증식</h1>-->
+                                <img src="${pageContext.request.contextPath}/resources/img/view3.jpg" alt="허구연 MBC해설위원, 소년원생을 위한 티볼세트 기증식" >
+                            <h1>허구연 MBC해설위원, 소년원생을 위한 티볼세트 기증식</h1>
+                            </div>
+                            <div class="item">
+                               <!-- <h1>법무부, 부패방지 시책평가 3년 연속 1등급 달성</h1>-->
+                                <img src="${pageContext.request.contextPath}/resources/img/view4.jpg" alt="법무부, 부패방지 시책평가 3년 연속 1등급 달성">
+                            <h1>법무부, 부패방지 시책평가 3년 연속 1등급 달성</h1>
                             </div>
                         </div>
-                    </figure>
-                    
-                        <script>
-                            $(function(){
-                                $(".img_box").slick({
-                                    dots:true,  //번호별 버튼 추가
-                                    arrows:true,    //좌우 버튼 추가
-                                    infinite:true,  //순환 반복
-                                    speed:300,  //한 슬라이드당 속도
-                                    autoplay:true,  //자동 실행
-                                    autoplaySpeed:3500, //한 슬라이딩하고, 기다리는 시간
-                                });
+                    </div>
+                </figure>
+                    <script>
+                        $(function(){
+                            $(".img_box").slick({
+                                dots:true,  //번호별 버튼 추가
+                                arrows:true,    //좌우 버튼 추가
+                                infinite:true,  //순환 반복
+                                speed:300,  //한 슬라이드당 속도
+                                autoplay:true,  //자동 실행
+                                autoplaySpeed:3500, //한 슬라이딩하고, 기다리는 시간
                             });
-                        </script>
-                </div>
-            
-                       
+                        });
+                    </script>
+            </div>     
+        </div>
+        <div class="content2">
+            <div class="more_menu">
+                <ul>
+                    <li class="menu1">
+                        <a href="" target="_black" title="새창알림"><img src="${pageContext.request.contextPath}/resources/img/iconLink_icon.png" ></a>
+                        <strong>법무/검찰</strong>
+                        <span>더보기</span>
+                    </li>
+                    <li class="menu2">
+                        <a href="" target="_black" title="새창알림"><img src="${pageContext.request.contextPath}/resources/img/iconLink_icon (1).png"></a>
+                        <strong >범죄예방</strong>
+                        <span>더보기</span>
+                    </li>
+                    <li class="menu3">
+                        <a href="" target="_black" title="새창알림"><img src="${pageContext.request.contextPath}/resources/img/iconLink_icon (2).png"></a>
+                        <strong>인권</strong>
+                        <span>더보기</span>
+                    </li>
+                    <li class="menu4">
+                        <a href="" target="_black" title="새창알림"><img src="${pageContext.request.contextPath}/resources/img/iconLink_icon (3).png"></a>
+                        <strong >교정</strong>
+                        <span>더보기</span>
+                    </li>
+                    <li class="menu5">
+                        <a href="" target="_black" title="새창알림"><img src="${pageContext.request.contextPath}/resources/img/iconLink_icon (4).png"></a>
+                        <strong>출입국/외국인</strong>
+                        <span>더보기</span>
+                    </li>
+                </ul>
             </div>
-            <div class="content2">
-                <div class="more_menu">
+        </div>
+        <div class="content3">
+            <figure class="vs_midle">
+                    <div class="img single-item owl-carousel">
+                        <div class="item">
+                            <img src="${pageContext.request.contextPath}/resources/img/sl1.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="${pageContext.request.contextPath}/resources/img/sl2.jpg" alt="" >
+                        </div>
+                        <div class="item">
+                            <img src="${pageContext.request.contextPath}/resources/img/sl3.jpg" alt="" >
+                        </div>
+                        <div class="item">
+                            <img src="${pageContext.request.contextPath}/resources/img/sl4.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="${pageContext.request.contextPath}/resources/img/sl5.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="${pageContext.request.contextPath}/resources/img/sl6.jpg" alt="" >
+                        </div>
+                        <div class="item">
+                            <img src="${pageContext.request.contextPath}/resources/img/sl7.jpg" alt="" >
+                        </div>
+                    </div>
+            </figure>
+
+                <script>
+                    $(function(){
+                        $(".owl-carousel").owlCarousel({
+                            autoplay:true,  //자동 실행
+                            loop:true,   //순환 반복
+                            margin: 30,   //아이템간 여백
+                            items:7,
+                            dots:true,
+                        });
+                    });    
+                </script>
+            </div>
+        </div>
+        <div class="content4">
+            <div class="notice">
+                <div class="notice1">
+                    <div class="ntwrap">
+                        <a href="" style="float: right; color: #000;">더보기+</a>
+                        <h2>[공지사항]</h2>
+                        <ul class="ntul">
+                            <li class="ntli">[채용정보]&nbsp;[의정부청소년비행에방센터] 2022년...</li>
+                            <li class="ntli">[채용정보]&nbsp;[대구보호관찰소] 2022년 제1회 대구...</li>
+                            <li class="ntli">[채용정보]&nbsp;[광주소년원] 2022년 제1회 광주소년...</li>
+                            <li class="ntli">[채용정보]&nbsp;법무부 부산출입국/외국인청장(공무직...</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="notice2">
+                    <div class="ntwrap">
+                        <a href="" style="float: right; color: #000;">더보기+</a>
+                        <h2>[보도자료]</h2>
+                        <ul class="ntul">
+                            <li class="ntli">전자여행허가제(K-EAT),시행 8개월의 성과 및 민원...</li>
+                            <li class="ntli">독일 스타트업 관계자 만난 법무부장관 "법적 지원...</li>
+                            <li class="ntli">법무부장관, 독일 연방의원 간담회에서 인권/법치...</li>
+                            <li class="ntli">법무부장관 방독 주요 일정 관련</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="notice3">
+                    <div class="ntwrap">
+                        <ul class="telbox">
+                            <li class="ntli"><a href=""><img src="${pageContext.request.contextPath}/resources/img/info.png">  찾아오시는 길</a></li>
+                            <li class="ntli"><a href=""><img src="${pageContext.request.contextPath}/resources/img/info-tel.png">  담당자 연락처</a></li>
+                            <li class="ntli"><a href=""><img src="${pageContext.request.contextPath}/resources/img/info_ad.png"> 설명자료</a></li>
+                        </ul>
+                            <div class="tel">
+                                <h3 style="color: #fff;">대표전화</h3>
+                                <strong style="color: #fff;">02-2110-3009</strong>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="content5">
+            <div class= "c5wrap">
+            <div class="snswrap">
+                <div class="sns">
                     <ul>
-                        <li class="menu1">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon.png" ></a>
-                            <strong>법무/검찰</strong>
-                            <span>더보기</span>
+                        <li>
+                            <a href="">페이스북</a>
+                            <img src="${pageContext.request.contextPath}/resources/img/facebook.png" alt="">
                         </li>
-                        <li class="menu2">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (1).png"></a>
-                            <strong >범죄예방</strong>
-                            <span>더보기</span>
+                        <li>
+                            <a href="">트위터</a>
+                            <img src="${pageContext.request.contextPath}/resources/img/twiter.png" alt="">
                         </li>
-                        <li class="menu3">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (2).png"></a>
-                            <strong>인권</strong>
-                            <span>더보기</span>
+                        <li>
+                            <a href="">유튜브</a>
+                            <img src="${pageContext.request.contextPath}/resources/img/youtube.png" alt="">
                         </li>
-                        <li class="menu4">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (3).png"></a>
-                            <strong >교정</strong>
-                            <span>더보기</span>
+                        <li>
+                            <a href="">네이버 블로그</a>
+                            <img src="${pageContext.request.contextPath}/resources/img/naver.png" alt="">
                         </li>
-                        <li class="menu5">
-                            <a href="" target="_black" title="새창알림"><img src="./source/iconLink_icon (4).png"></a>
-                            <strong>출입국/외국인</strong>
-                            <span>더보기</span>
+                        <li>
+                            <a href="">다음 블로그</a>
+                            <img src="${pageContext.request.contextPath}/resources/img/daum.png" alt="">
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="content3">
-                <figure class="vs_midle">
-                        <div class="img single-item owl-carousel">
-                            <div class="item">
-                                <img src="./source/sl1.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="./source/sl2.jpg" alt="" >
-                            </div>
-                            <div class="item">
-                                <img src="./source/sl3.jpg" alt="" >
-                            </div>
-                            <div class="item">
-                                <img src="./source/sl5.jpg" alt="">
-                            </div>
-                        </div>
-                </figure>
-
-                    <script>
-                        $(function(){
-                            $(".owl-carousel").owlCarousel({
-                                autoplay:true,  //자동 실행
-                                loop:true,   //순환 반복
-                                margin: 3,   //아이템간 여백
-                                items:3,
-                                dots:true,
-                            });
-                        });    
-                    </script>
+            <div class="linkwrap">
+                <div class="link1">
+                    <a href="">법무연수원 바로가기</a>
                 </div>
-            </div>
-            <div class="content4">
-                <div class="notice">
-                    <div class="notice1">
-                        <div class="ntwrap">
-                            <a href="" style="float: right; color: #000;">더보기+</a>
-                            <h2>[공지사항]</h2>
-                            <ul class="ntul">
-                                <li class="ntli">[채용정보]&nbsp;[의정부청소년비행에방센터] 2022년...</li>
-                                <li class="ntli">[채용정보]&nbsp;[대구보호관찰소] 2022년 제1회 대구...</li>
-                                <li class="ntli">[채용정보]&nbsp;[광주소년원] 2022년 제1회 광주소년...</li>
-                                <li class="ntli">[채용정보]&nbsp;법무부 부산출입국/외국인청장(공무직...</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="notice2">
-                        <div class="ntwrap">
-                            <a href="" style="float: right; color: #000;">더보기+</a>
-                            <h2>[보도자료]</h2>
-                            <ul class="ntul">
-                                <li class="ntli">전자여행허가제(K-EAT),시행 8개월의 성과 및 민원...</li>
-                                <li class="ntli">독일 스타트업 관계자 만난 법무부장관 "법적 지원...</li>
-                                <li class="ntli">법무부장관, 독일 연방의원 간담회에서 인권/법치...</li>
-                                <li class="ntli">법무부장관 방독 주요 일정 관련</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="notice3">
-                        <div class="ntwrap">
-                            <ul class="telbox">
-                                <li class="ntli"><a href=""><img src="./source/info.png">  찾아오시는 길</a></li>
-                                <li class="ntli"><a href=""><img src="./source/info-tel.png">  담당자 연락처</a></li>
-                                <li class="ntli"><a href=""><img src="./source/info_ad.png"> 설명자료</a></li>
-                            </ul>
-                                <div class="tel">
-                                    <h3 style="color: #fff;">대표전화</h3>
-                                    <strong style="color: #fff;">02-2110-3009</strong>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="content5">
-                <div class= "c5wrap">
-                <div class="snswrap">
-                    <div class="sns">
-                        <ul>
-                            <li>
-                                <a href="">페이스북</a>
-                                <img src="./source/facebook.png" alt="">
-                            </li>
-                            <li>
-                                <a href="">트위터</a>
-                                <img src="./source/twiter.png" alt="">
-                            </li>
-                            <li>
-                                <a href="">유튜브</a>
-                                <img src="./source/youtube.png" alt="">
-                            </li>
-                            <li>
-                                <a href="">네이버 블로그</a>
-                                <img src="./source/naver.png" alt="">
-                            </li>
-                            <li>
-                                <a href="">다음 블로그</a>
-                                <img src="./source/daum.png" alt="">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="linkwrap">
-                    <div class="link1">
-                        <a href="">법무연수원 바로가기</a>
-                    </div>
-                    <div class="link2">
-                        <div class="sitenav">
-                            <select id="jumpsite" title="관련 사이트" style="width: 200px; height: 50px; font-size: 15px;" >
-                            <option value="">대검찰청</option>
-                            <option value="">광주고등검찰청</option>
-                            <option value="">대구고등검찰청</option>
-                            <option value="">대전고등검찰청</option>
-                            <option value="">부산고등검찰청</option>
-                            <option value="">서울고등검찰청</option>
-                            </select>
-                        </div>
+                <div class="link2">
+                    <div class="sitenav">
+                        <select id="jumpsite" title="관련 사이트" style="width: 200px; height: 50px; font-size: 15px;" >
+                        <option value="">대검찰청</option>
+                        <option value="">광주고등검찰청</option>
+                        <option value="">대구고등검찰청</option>
+                        <option value="">대전고등검찰청</option>
+                        <option value="">부산고등검찰청</option>
+                        <option value="">서울고등검찰청</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
-            <footer class="ft">
-                <div class="ft_wrap">
-                    <div class="f_logo">
-                        <img src="./source/logo_main.png" alt="로고이미지">
-                    </div>
-                    <div class="linkbar">
-                        <nav class="linkbar_nav">
-                            <ul>
-                                <li><a href="">개인정보처리방침</a></li>
-                                <li><a href="">찾아오시는 길</a></li>
-                                <li><a href="">뷰어프로그램</a></li>
-                                <li><a href="">홈페이지 의견접수</a></li>
-                                <li><a href="">담당부서연락처</a></li>
-                            </ul>
-                        </nav>
-                        <div class="copyright">
-                            <p class="add">(우13809) 경기도 과천시 관문로 47 정부과천청사 법무부(1동)</p>
-                            <p class="copy">COPYRIGHTⓒ MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHTS RESERVED.</p>
-                        </div>
-                    </div>
-                    <div class="wa">
-                        <ul>
-                            <li style="float: left;">
-                                <img src="./source/footer_war.png" alt="WA인증로고">
-                                <span></span>
-                            </li>
-                            <li  style="float: right; margin-top: 10px;">
-                                <img src="./source/footer_open.png" alt="오픈인증로고">
-                                <span></span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
+    </div>
+</footer>
         
     </body>
     </html>
