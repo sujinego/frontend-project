@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정보공개/개방</title>
-    <!--파비콘 설정-->
-	<link rel="shortcut icon" type="image/x-icon" href="/source/favicon.ico.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/source/favicon.ico.png">
     <!-- 메타포 설정 -->
     <meta name="apple-mobile-web-app-title" content="법무부">
     <meta name="description" content="경기도 과천시 관문로 위치. 전자민원, 준법 운동, 여성포럼, 인권 광장.">
@@ -29,109 +27,95 @@
    </script>
     
     <!-- 폰트 로딩 -->
-    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="typo.css">
+   <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="/typo.css">
     <!-- 필수 API 로딩 -->
-    <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <!-- 외부 스타일 연결 -->
-    <link rel="stylesheet" href="common.css">
+   <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="/common.css">	
+		<!-- 합쳐지고 최소화된 최신 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<!-- 부가적인 테마 -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	 	
+	 	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-<style>
-    .content{
-        width: 100%;
+		<title>회원가입</title>
+        <style>
+            .mainmenu > ul.menu > li.menu-item {
+            float: left;
+            width: 12%;
+            height: 40px;
+            margin-right: 37px;
+            }
+            .mainmenu li.menu-item .menu-sub li {
+            float: left;
+            width: 600px;
+            height: 30px;
+            margin-left: 200px;
+            margin-bottom: 50px;
+            }
+            .content{
+            width:1200px;
+            margin: 0 auto;
+            padding: 164px;
+            text-align: center;
+            }
+            #regForm{
+                border: 1px solid;
+                width: 600px;
+                margin: 0 auto;
+                padding: 60px 18px 60px 18px;
+            }
+            .frm_fr{
+            width: 800px;
+           height: 300px;
+           margin: 50px auto;
+           }
+           .has-feedback {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+           }
+           .has-feedback .form-control {
+            margin-bottom: 20px;
+           }
+           .idChkBtn{
+            float: right;
+            border: 1px solid;
+            width: 70px;
+            height: 30px;
+            margin-top: -52px;
+            margin-right: -99px;
+           }
+            .form_group { list-style:none;     margin-top: 50px;}
+            .form_group li { padding:8px; clear:both; margin:8px; }
+            .form_group li .form-control{     
+            width: 500px;
+           height: 30px;
+           padding: 14px
+           }
+           .btn {
+            width: 100px;
+            height: 35px;
+            margin-top: 23px;
+            margin-left: 10px;
+            background-color: rgb(0 0 0 / 47%);
+            border: solid 1px;
+            font-size: 16px;
+            font-weight: bolder;
+           }
+          
+            </style>
 
-    }
-    .vs{
-       background-image: url(./source/sVisual_02.png);
-        width: 100%;
-        height: 300px;
-    }
-    .vs p{
-       padding: 90px 800px;
-       color: rgb(255, 255, 255);
-       font-size: 50px;
-    }
-    .con_wrap{
-        clear: both;
-        width: 100%;
-        min-height: 100vh;
-
-    }
-</style>
-<style>
-    .con_wrap { clear:both; width: 100%; min-height:100vh; }
-    .con_wrap:after { content:""; display:block; clear:both; } /* clear-fix */
-    .page { clear:both; width: 100%; min-height:100vh; }
-    .page_tit { text-align: center; line-height: 100px; font-size:32px;; color:navy; }
-    .page_wrap{
-        width: 1200px;
-        clear: both;
-        padding: 100px 380px;
-    }
-    .bread_box { 
-        clear:both; 
-        width: 1200px; 
-        height: 70px;
-        margin: 5px 470px;
-        border-bottom:2px solid #222; }
-    .bread_lst { 
-        width: 100%; 
-        height: 70px; 
-    }
-    .bread_lst li {
-        width: 180px;
-         float:left; 
-         height: 48px; 
-         line-height: 48px;
-          margin-top:9px; 
-        margin-right: 24px; 
-         padding-left: 14px; 
-         padding-right: 14px; 
-         position:relative;
-     }
-     .bread_lst li.main_cate{
-         background-color: rgb(137, 138, 145);
-         width: 20px;
-     }
-    .bread_lst li a { color:rgb(0, 0, 0); }
-    .bread_lst li select { 
-        width: 100%;
-        height: 40px;
-        border:0;
-        border: 1px solid #2222227d;
-        color:rgb(0, 0, 0); 
-    }
-    .bread_lst li select option { border:0; outline:0; }
-    .bread_lst li.cate3 { width: 120px; border:0; box-sizing:border-box;  }
-
-    #sel3 { position:absolute; width: 160px; height: 40px; overflow:hidden; 
-    top: 5px; left: 0; z-index:30; border:1px solid #333;
-    color:rgb(0, 0, 0); }
-    #sel3.on { height: 40px; }
-    #sel3 dl { width: 120px; }
-    #sel3 dt, #sel3 dd { line-height: 40px; height: 40px; padding-left: 14px; 
-    width: 120px; } 
-    select option:first-child{display: none;}
-    ::marker {  color:rgb(0, 0, 0); }
-
-    </style>
 </head>
 <body>
-    <div class="container">
-        <script>
-            $(document).ready(function(){
-                var loc = location.href;
-                var page = loc.substring(loc.indexOf("=")+1, loc.length)-9;
-                $(".page").css("display", "none");
-                $(".page").eq(page).css("display","block");
-            });
-        </script>
-         <header class="hd">
+        <header class="hd">
             <div class="login">
-	            <ul>
-		            <li><a href="reg.html">회원가입</a></li>
-		            <li><a href="loginForm.html">로그인</a></li>
-				</ul>
+                <ul>
+                    <li><a href="reg.html">회원가입</a></li>
+                    <li><a href="loginForm.html">로그인</a></li>
+                </ul>
             </div>
                 <div class="logo">
                     <a href="index.html">
@@ -365,127 +349,33 @@
                 </div>
             </div>
         </header>
-        <div class="vs">
-            <p>정보공개/개방</p>
-        </div>
         <div class="content">
-            <div class="bread_box">
-                <ul class="bread_lst">
-                    <li class="main_cate">
-                        <a href="index.html" class="home_ico"><img src="./source/home.png"></a>
-                    </li>
-                    <li>
-                        <select name="sel1" id="sel1">
-                            <option value="">정보공개/개방</option>
-                            <option value="menu1.html">정보공개/개방</option>
-                            <option value="menu2.htm1">법무정책서비스</option>
-                            <option value="menu3.htm1">법령/자료</option>
-                            <option value="menu4.htm1">법무뉴스</option>
-                            <option value="menu5.htm1">국민참여</option>
-                            <option value="menu6.htm1">법무부 소개</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select name="sel2" id="sel2">
-                            <option value="">정보공개청구 안내</option>
-                            <option value="menu1.html?page=1">정보공개청구 안내</option>
-                            <option value="menu1.html?page=2">사전정보공표</option>
-                            <option value="menu1.html?page=3">정보공개목록</option>
-                            <option value="menu1.html?page=4">정보공개청구</option>
-                            <option value="menu1.html?page=5">공개여부 및 불복 신청 사례</option>
-                        </select>
-                    </li>
-                    <li class="cate2">
-                        <select name="sel3" id="sel3">
-                                <option value="">정보공개제도</option>
-                                <option value="menu1.html?page=6">정보공개제도</option>
-                                <option value="menu1.html?page=7">비공개 대상 정보 안내</option>
-                                <option value="menu1.html?page=8">수수료 안내</option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-            <script>
-            $(function(){
-                $("#sel1,#sel2,#sel3").change(function(){
-                    location.href = $(this).val();
-                });
-                var sel_sw = true;
-                $(".bread_lst li.cate2").click(function(){
-                    if(sel_sw) {
-                        $("#sel3").addClass("on");
-                        sel_sw = false;
-                    } else {
-                        $("#sel3").removeClass("on");
-                        sel_sw = true;
-                    }    
-                });
-            });
-            </script>
-            <div class="con_wrap">
-                <section class="page" id="page1">
-                    <h2 class="page_tit">정보공개제도</h2>
-                    <div class="page_wrap">
-                        <h2>정보공개 제도란?</h2>
-                            각기관·지방자치단체 등 공공기관이 생산·접수하여 보유, 관리하는 정보를 국민에게 공개함으로써 국민의 알권리를 보장하고 더 많은 정보를 바탕으로 국정운영에 대한 국민참여와 투명성 제고를 위한 제도입니다.</h2>
-                            <img src="./source/menu1.1.JPG">
-                        <img src="./source/menu1.2.JPG">    
+            <h1>회원가입</h1>
+                <form action="/member/registery" method="post" id="regForm" name="vo" onsummit="return regData(this)">
+                    <div class="form-group has-feedback">
+                                <label class="control-label" for="userId">아이디</label>
+                                <input class="form-control" type="text" id="userId" name="userId" required />
+                                <button class="idChkBtn" type="button" id="idChkBtn" onclick="fn_idChk();">중복확인</button>
+                                <input type="hidden" id="idChk" value="N"/>
                     </div>
-                </section>
-                <section class="page" id="page2">
-                    <h2 class="page_tit">사전정보공표</h2>
-                    <div class="page_wrap">
-                    <img src="./source/menu2.1.JPG">
-                    <img src="./source/menu2.2.JPG"> 
+                    <div class="form-group has-feedback">
+                        <label class="control-label" for="userPass">패스워드</label>
+                        <input class="form-control" type="password" id="userPass" name="userPass"  required/>
                     </div>
-                </section>
-                <section class="page" id="page3">
-                    <h2 class="page_tit">정보공개목록</h2>
-                    <div class="page_wrap">
-                        <img src="./source/menu3.1.JPG">
+                    <div class="form-group has-feedback">
+                        <label class="control-label" for="userPass2">패스워드 확인</label>
+                        <input class="form-control" type="password" id="userPass2" name="userPass2" required/>
                     </div>
-                </section>
-                <section class="page" id="page4">
-                    <h2 class="page_tit">정보공개청구</h2>
-                    <div class="page_wrap">
-                        <img src="./source/menu3.JPG">
+                    <div class="form-group has-feedback">
+                        <label class="control-label" for="userName">성명</label>
+                        <input class="form-control" type="text" id="userName" name="userName" required/>
                     </div>
-                </section>
-                <section class="page" id="page5">
-                    <h2 class="page_tit">공개여부 및 불복 신청 사례</h2>
-                    <div class="page_wrap">
-                        <img src="./source/menu5.JPG">
+                    <div class="form-group has-feedback">
+                        <button class="btn" type="submit" id="submit">회원가입</button>
+                        <button class="btn" type="button">취소</button>
                     </div>
-                </section>
-                <section class="page" id="page6">
-                    <h2 class="page_tit">정보공개제도</h2>
-                    <div class="page_wrap">
-                        <h2>정보공개 제도란?</h2>
-                            각기관·지방자치단체 등 공공기관이 생산·접수하여 보유, 관리하는 정보를 국민에게 공개함으로써 국민의 알권리를 보장하고 더 많은 정보를 바탕으로 국정운영에 대한 국민참여와 투명성 제고를 위한 제도입니다.</h2>
-                        <img src="./source/menu1.1.JPG">
-                        <img src="./source/menu1.2.JPG">    
-                    </div>
-                </section>
-                <section class="page" id="page7">
-                    <h2 class="page_tit">비공개 대상 정보 안내</h2>
-                    <div class="page_wrap">
-                        <img src="./source/12.1.JPG">
-                        <img src="./source/menu7.2.JPG">
-                    </div>
-                </section>
-                <section class="page" id="page8">
-                    <h2 class="page_tit">수수료 안내</h2>
-                    <div class="page_wrap">
-                        <img src="./source//menu8.1.JPG">
-                        <img src="./source//menu8.2.JPG">
-                        <img src="./source//menu8.3.JPG">
-                        <img src="./source//menu8.4.JPG">
-                    </div>
-                </section>
-            </div>
-        </section>
+                </form>
         </div>
-    
     </div>
     <footer class="ft">
         <div class="ft_wrap">
@@ -520,6 +410,6 @@
                 </ul>
             </div>
         </div>
-    </footer>
+    </footer>      
 </body>
 </html>
