@@ -40,16 +40,41 @@
    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="common.css">
     <style>
-        .container {
-        width: 1170px;
-        height: 800px;
-        padding: 119px 86px;
-    }
+        .mainmenu li.menu-item .menu-sub {
+        display: none;
+        width: 100vw;
+        height: 350px;
+        position: absolute;
+        left: 0px;
+        z-index: 99;
+        background-color: #9ea1aaad;
+        box-sizing: border-box;
+        padding-top: 25px;
+        margin-top: 10px;
+        }
+        .mainmenu > ul.menu > li.menu-item {
+        float: left;
+        width: 12%;
+        height: 40px;
+        margin-left: 26px;
+        }
+        .mainmenu li.menu-item .menu-sub li {
+            float: left;
+            width: 550px;
+            height: 30px;
+            margin-left: 200px;
+            margin-bottom: 50px;
+        }
         .col-sm-10{
             width: 500px;
         }
         .col-md-offset-3{
             margin-left: 500px;
+        }
+        .container {
+        width: 1170px;
+        height: 800px;
+        padding: 119px 86px;
         }
         .button{
             border: 1px solid;
@@ -58,283 +83,278 @@
             text-align: center;
             float: right;
         }
-        .mainmenu > ul.menu > li.menu-item {
-        float: left;
-        width: 12%;
-        height: 40px;
-        margin-left: 30px;
-    }
+
+
     </style>
     <title>게시판</title>
 </head>
 <body>
-        <header class="hd">
-            <div class="login">
-	            <ul>
-		            <li><a href="reg.html">회원가입</a></li>
-		            <li><a href="loginForm.html">로그인</a></li>
-				</ul>
-            </div>
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="./source/logo_main.png" alt="로고이미지">
-                    </a>
-                        <div class="top_right">
-                            <div class="top_nav">
-                                    <a href="" target="_blank">English</a>                           
-                                    <a href="" target="_blank">Chinese</a>                                
-                            </div>           
-                    </div>
-                </div>
-                <div class="searchbar">
-                    <form method="post" action="" method="post" target="_blank"> 
-                        <input type="text" name="qt" id="search_text" title="검색어를 입력하세요" placeholder="검색어를 입력하세요" size="4">
-                        <input type="hidden" name="siteId" value="moj">
-                        <a href="" target="_blank" title="새창에서 열림">검색</a>
-                    </form>
-                </div>
-            <div class="top_menu">
-                <div class="mainmenu">
-                    <ul class="menu">
-                        <li class="menu-item">
-                            <a href="menu1.html">정보공개/개방</a>
-                            <ul class="menu-sub">
-                                <li>
-                                    <a href="menu1.html?page=1">정보공개청구 안내</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">정보공개제도</a></dd>
-                                        <dd><a href="">비공개 대상 정보 안내</a></dd>
-                                        <dd><a href="">수수료 안내</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="menu1.html?page=2">사전정보공표</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">공표대상 법무행정정보의 목록</a></dd>
-                                        <dd><a href="">주요정책 추친과정 공개</a></dd>
-                                        <dd><a href="">행정자료실</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="menu1.html?page=3">정보공개목록</a>
-                                </li>
-                                <li><a href="menu1.html?page=4">정보공개청구</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">정보공개청구신청</a></dd>
-                                        <dd><a href="">정보공개담당자</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="menu1.html?page=5">공개여부 및 불복 신청 사례</a></li>
-                                <li><a href="menu1.html?page=6">정책실명제</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">국민신청실명제</a></dd>
-                                        <dd><a href="">정책실명 공개과제</a></dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="">법무정책서비스</a>
-                            <ul class="menu-sub">
-                                <li><a href="">법무/검찰</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">상가건문임대차법령정보</a></dd>
-                                        <dd><a href="">주택임대차법령정보</a></dd>
-                                        <dd><a href="">공증</a></dd>
-                                        <dd><a href="">재외공관공증</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">범죄예방</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">법교육</a></dd>
-                                        <dd><a href="">사회봉사 국민공모제</a></dd>
-                                        <dd><a href="">전자감독제도</a></dd>
-                                        <dd><a href="">범죄예방 환경개선 사업</a></dd>
-                                        <dd><a href="">신상정보 등록제도</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">인권</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">국가인권정책기본계획</a></dd>
-                                        <dd><a href="">국제인권규범</a></dd>
-                                        <dd><a href="">인권보호제도</a></dd>
-                                        <dd><a href="">번죄피해자 보호/지원제도</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">교정</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">수형자 집중인성교육</a></dd>
-                                        <dd><a href="">구인/구직 만남의 날</a></dd>
-                                        <dd><a href="">스마트접견제도</a></dd>
-                                        <dd><a href="">교정시설 원격의료시스템</a></dd>
-                                        <dd><a href="">심리치료프로그램 운영</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">출입국 외국인</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">사회통합 정책</a></dd>
-                                        <dd><a href="">전자비자센터</a></dd>
-                                        <dd><a href="">외국인 계절근로자 프로그램</a></dd>
-                                        <dd><a href="">우수 인재 특별귀화</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">시험정보</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">변호사 시험</a></dd>
-                                        <dd><a href="">법조 윤리 시험</a></dd>
-                                        <dd><a href="">사법시험</a></dd>
-                                        <dd><a href="">시험자료실</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">정책참여</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">정책참여</a></dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="">법령/자료</a>
-                            <ul class="menu-sub">
-                                <li><a href="">법령정보</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">훈령</a></dd>
-                                        <dd><a href="">예규</a></dd>
-                                        <dd><a href="">고시</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">통계정보</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">통계자료</a></dd>
-                                        <dd><a href="">교정 통계</a></dd>
-                                        <dd><a href="">출입국 통계</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">자료실</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">업무자료</a></dd>
-                                        <dd><a href="">간행물</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">해외자료</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">해외 법제 자료 및 최신 동향</a></dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="">법무뉴스</a>
-                            <ul class="menu-sub">
-                                <li><a href="">보도자료</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">보도자료</a></dd>
-                                        <dd><a href="">해명자료</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">공지사항</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">공지사항</a></dd>
-                                        <dd><a href="">법무행사</a></dd>
-                                        <dd><a href="">채용정보</a></dd>
-                                        <dd><a href="">입찰정보</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">코로나 19 대응상황</a>
-                                </li>
-                                <li><a href="">홍보자료</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">동영상</a></dd>
-                                        <dd><a href="">카드뉴스</a></dd>
-                                        <dd><a href="">홍보책자</a></dd>
-                                        <dd><a href="">소식지</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">국민을 위한 수사권 개혁</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="">국민참여</a>
-                            <ul class="menu-sub">
-                                <li><a href="">칭찬합시다</a>
-                                </li>
-                                <li><a href="">포상참여</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">포상대상자공개</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">제안합시다</a>
-                                </li>
-                                <li><a href="">신고센터</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">인권침해 신고</a></dd>
-                                        <dd><a href="">부조리  신고</a></dd>
-                                        <dd><a href="">예산낭비 신고</a></dd>
-                                        <dd><a href="">공익신고</a></dd>
-                                        <dd><a href="">안전신고</a></dd>  
-                                    </dl>
-                                </li>
-                                <li><a href="">규제개혁</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">자료마당</a></dd>
-                                        <dd><a href="">알림마당</a></dd>
-                                        <dd><a href="">규제혁파</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">적극행정</a>
-                                    <dl class="sub">
-                                        <dt></dt>
-                                        <dd><a href="">제도소개</a></dd>
-                                        <dd><a href="">국민참여</a></dd>
-                                        <dd><a href="">적극행정 소송지원</a></dd>
-                                    </dl>
-                                </li>
-                                <li><a href="">청렴생각함</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="">법무부 소개</a>
-                            <ul class="menu-sub">
-                                <li><a href="">장관소개</a>
-                                </li>
-                                <li><a href="">차관소개</a>
-                                </li>
-                                <li><a href="">기관소개</a>
-                                </li>
-                                <li><a href="">조직과 기능</a>
-                                </li>
-                                <li><a href="">청사안내</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="board.html">게시판</a>
-                        </li>
-                    </ul>
+    <header class="hd">
+        <div class="login">
+            <ul>
+                <li><a href="reg.html">회원가입</a></li>
+                <li><a href="loginForm.html">로그인</a></li>
+            </ul>
+        </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./source/logo_main.png" alt="로고이미지">
+                </a>
+                    <div class="top_right">
+                        <div class="top_nav">
+                                <a href="">English</a>                           
+                                <a href="" >Chinese</a>                                
+                        </div>           
                 </div>
             </div>
-        </header>
+            <div class="searchbar">
+                <form method="post" action="search.jsp"> 
+                    <input type="text" name="qt" id="search_text" title="검색어를 입력하세요" placeholder="검색어를 입력하세요" size="4">
+                    <input type="hidden" name="siteId" value="moj">
+                    <a href="" title="새창에서 열림">검색</a>
+                </form>
+            </div>
+        <div class="top_menu">
+            <div class="mainmenu">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="menu1.html">정보공개/개방</a>
+                        <ul class="menu-sub">
+                            <li>
+                                <a href="menu1.html?page=1">정보공개청구 안내</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">정보공개제도</a></dd>
+                                    <dd><a href="">비공개 대상 정보 안내</a></dd>
+                                    <dd><a href="">수수료 안내</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="menu1.html?page=2">사전정보공표</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">공표대상 법무행정정보의 목록</a></dd>
+                                    <dd><a href="">주요정책 추친과정 공개</a></dd>
+                                    <dd><a href="">행정자료실</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="menu1.html?page=3">정보공개목록</a>
+                            </li>
+                            <li><a href="menu1.html?page=4">정보공개청구</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">정보공개청구신청</a></dd>
+                                    <dd><a href="">정보공개담당자</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="menu1.html?page=5">공개여부 및 불복 신청 사례</a></li>
+                            <li><a href="menu1.html?page=6">정책실명제</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">국민신청실명제</a></dd>
+                                    <dd><a href="">정책실명 공개과제</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="">법무정책서비스</a>
+                        <ul class="menu-sub">
+                            <li><a href="">법무/검찰</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">상가건문임대차법령정보</a></dd>
+                                    <dd><a href="">주택임대차법령정보</a></dd>
+                                    <dd><a href="">공증</a></dd>
+                                    <dd><a href="">재외공관공증</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">범죄예방</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">법교육</a></dd>
+                                    <dd><a href="">사회봉사 국민공모제</a></dd>
+                                    <dd><a href="">전자감독제도</a></dd>
+                                    <dd><a href="">범죄예방 환경개선 사업</a></dd>
+                                    <dd><a href="">신상정보 등록제도</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">인권</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">국가인권정책기본계획</a></dd>
+                                    <dd><a href="">국제인권규범</a></dd>
+                                    <dd><a href="">인권보호제도</a></dd>
+                                    <dd><a href="">번죄피해자 보호/지원제도</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">교정</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">수형자 집중인성교육</a></dd>
+                                    <dd><a href="">구인/구직 만남의 날</a></dd>
+                                    <dd><a href="">스마트접견제도</a></dd>
+                                    <dd><a href="">교정시설 원격의료시스템</a></dd>
+                                    <dd><a href="">심리치료프로그램 운영</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">출입국 외국인</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">사회통합 정책</a></dd>
+                                    <dd><a href="">전자비자센터</a></dd>
+                                    <dd><a href="">외국인 계절근로자 프로그램</a></dd>
+                                    <dd><a href="">우수 인재 특별귀화</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">시험정보</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">변호사 시험</a></dd>
+                                    <dd><a href="">법조 윤리 시험</a></dd>
+                                    <dd><a href="">사법시험</a></dd>
+                                    <dd><a href="">시험자료실</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">정책참여</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">정책참여</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="">법령/자료</a>
+                        <ul class="menu-sub">
+                            <li><a href="">법령정보</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">훈령</a></dd>
+                                    <dd><a href="">예규</a></dd>
+                                    <dd><a href="">고시</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">통계정보</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">통계자료</a></dd>
+                                    <dd><a href="">교정 통계</a></dd>
+                                    <dd><a href="">출입국 통계</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">자료실</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">업무자료</a></dd>
+                                    <dd><a href="">간행물</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">해외자료</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">해외 법제 자료 및 최신 동향</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="">법무뉴스</a>
+                        <ul class="menu-sub">
+                            <li><a href="">보도자료</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">보도자료</a></dd>
+                                    <dd><a href="">해명자료</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">공지사항</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">공지사항</a></dd>
+                                    <dd><a href="">법무행사</a></dd>
+                                    <dd><a href="">채용정보</a></dd>
+                                    <dd><a href="">입찰정보</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">코로나 19 대응상황</a>
+                            </li>
+                            <li><a href="">홍보자료</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">동영상</a></dd>
+                                    <dd><a href="">카드뉴스</a></dd>
+                                    <dd><a href="">홍보책자</a></dd>
+                                    <dd><a href="">소식지</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">국민을 위한 수사권 개혁</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="">국민참여</a>
+                        <ul class="menu-sub">
+                            <li><a href="">칭찬합시다</a>
+                            </li>
+                            <li><a href="">포상참여</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">포상대상자공개</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">제안합시다</a>
+                            </li>
+                            <li><a href="">신고센터</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">인권침해 신고</a></dd>
+                                    <dd><a href="">부조리  신고</a></dd>
+                                    <dd><a href="">예산낭비 신고</a></dd>
+                                    <dd><a href="">공익신고</a></dd>
+                                    <dd><a href="">안전신고</a></dd>  
+                                </dl>
+                            </li>
+                            <li><a href="">규제개혁</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">자료마당</a></dd>
+                                    <dd><a href="">알림마당</a></dd>
+                                    <dd><a href="">규제혁파</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">적극행정</a>
+                                <dl class="sub">
+                                    <dt></dt>
+                                    <dd><a href="">제도소개</a></dd>
+                                    <dd><a href="">국민참여</a></dd>
+                                    <dd><a href="">적극행정 소송지원</a></dd>
+                                </dl>
+                            </li>
+                            <li><a href="">청렴생각함</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="">법무부 소개</a>
+                        <ul class="menu-sub">
+                            <li><a href="">장관소개</a>
+                            </li>
+                            <li><a href="">차관소개</a>
+                            </li>
+                            <li><a href="">기관소개</a>
+                            </li>
+                            <li><a href="">조직과 기능</a>
+                            </li>
+                            <li><a href="">청사안내</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="board.html">게시판</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
         <div class="container">
             <h1>게시판</h1>
             <div class="button">
                 <a href="boardWrite.html">글 쓰기</a>
             </div>
-            <form role="form" method="get">
                 <table class="table table-hover">
                     <thead>
                         <tr><th>번호</th><th>제목</th><th>작성자</th><th>등록일</th><th>조회수</th></tr>
