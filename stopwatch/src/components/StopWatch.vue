@@ -1,28 +1,33 @@
 <template>
 
-  <div id="StopWatch">
-		
-		
-    <div class="m-3" >
-    <h1>StopWatch</h1>
-	<div class="m-3">
-    {{ hours }}:{{ minutes }}:{{ seconds }}.{{ milisec }} 		       <!--mustache-->
-	</div>
+  <div id="StopWatch" style="background-color:gray;">		
+        <div class="m-3" > <h1>StopWatch</h1>
+                <div class="m-3">
+                    <span >{{ hh }}</span>:<span >{{ mm }}</span>:<span >{{ ss }}</span><span>:{{ ms }}</span>
+                    </div>
+                </div>
+                <div>
+                    <b-button 
+                    class="m-1"
+                    variant="danger" id="btn1" v-on:click="btn1" >{{ btn1Text }}</b-button>
+                    <b-button
+                    class="m-1"
+                        variant="primary" id="btn3" v-on:click="btn3">{{ btn3Text }}
+                </b-button>
+            </div>
+            <div>
+<ul>
+  <li v-for="(item, index) in timelog"
+    :key="index"
+  >
+  {{ index+1 }} : {{  getTimeLog(item) }}
+  
+  </li>
+</ul>
+            </div>
+
+        <div>
     </div>
-
-<div>
-    <b-button 
-    class="m-1"
-    variant="primary" id="btn1" v-on:click="btn1">{{ btn1Text }}
-    </b-button>
-
-    <b-button
-    class="m-1"
-		variant="secondary" id="btn2" v-on:click="btn2">{{ btn2Text }}
-    </b-button>
-</div>
-<div>
-</div>
 </div>
 </template>
 
@@ -33,75 +38,96 @@
 export default {
     data () {
         return {
-            btn1Text:'시작',
-            btn2Text:'기록',
-            state:"init",
-            ms:0,
-            sec:0,
-            min:0,
-            hor:0,
+            btn1Text:"start",
+            lapbtn:'lap',
+            btn3Text:'reset',
+            state:"ready",
             timelog:[], 
-
             timerId:0, //setInterval startTimer function 호출 변수
+            time:0,
             startedTime:0,
-            calculatedTime:0,
+            displayTime:0
         }
     },
 
      computed: {
-
-
-        hours: function() {
-            return this.hor >=10 ? this.hor: '0' + this.hor;
+        hh: function() {
+            var hh = Math.floor((this.displayTime / (1000 * 60 * 60)) % 24)
+            return hh >= 10 ? hh: '0' + hh
         },
-        minutes: function() {
-            return this.min >=10 ? this.min: '0' + this.min;        
+        mm: function() {
+
+            var mm = Math.floor((this.displayTime / (1000 * 60)) % 60)
+            return mm >= 10 ? mm: '0' + mm        
         },
-        seconds: function() {
-            return this.sec >=10 ? this.sec: '0' + this.sec;
+        ss: function() {
+            var ss = Math.floor((this.displayTime/1000) %60)
+            return ss >= 10 ? ss: '0' + ss
+
         }, 
-        milisec: function() {
-            var milisec = parseInt((this.ms%1000));
-            return milisec >=10 ? milisec: '0' + milisec;
+        ms: function() {
+            var ms = Math.floor((this.displayTime%1000)/10)
+            return ms >= 10 ? ms: '0' + ms
         }
-	
-
      },
      methods: {
-
-
          btn1: function(){
 
-             if(this.state=="ready"){ // 시작
-             start()
-
+             if(this.state=="ready"){ // start(시작)
+                this.start() 
              }
-             else if(this.state=="started"){ //멈춤 기능
-             stop()
-             }
-             else if(this.state=="stopped"){ //재시작 기능
+             else if(this.state=="started"){  //measure(기록)
+              this.measure()
              }
          },
-         
-         btn2: function(){
-             if(this.state=="started"){ //기록
-                measure()
-             }
-             else if(this.state=="stopped"){ //초기화
-             }
-         },
-         start () {
-            this.startedTime = new Date().getTime()
-            this.startTimer
+         btn3:function(){ //reset(초기화)
+            this.state=="stopped"
+            this.stop()
+             
          },
          updateTime ()  {
              //경과시간을 측정한다.
-             this.calculatedTime = new Date().getTime() - this.startedTime
+             this.displayTime = Date.now() - this.startedTime
+         },
+         start () {
+            this.startedTime = Date.now()
+            this.startTimer()
+            this.state = "started"
+            this.btn1Text = "stop"
+            
          },
          startTimer () {
              this.timerId = setInterval(this.updateTime, 10)
+         },
+          getTimeLog(measuedTimedMillis) {
+            var hor = Math.floor((measuedTimedMillis / (1000 * 60 * 60)) % 24)
+            var min = Math.floor((measuedTimedMillis / (1000 * 60)) % 60)
+            var sec = Math.floor((measuedTimedMillis / 1000) % 60);
+              var milisec = parseInt((measuedTimedMillis % 1000)/10);
+              return (hor >=10 ? hor: '0' + hor )
+              + ':' 
+              +(min >=10 ? min: '0' + min)
+              + ':'
+              + (sec >=10 ? sec: '0' + sec)
+              + '.'
+              + (milisec >=10 ? milisec: '0' + milisec)
+        },
+         measure() { //요청시점에 기록을 측정한다.
+            
+           const measuredTimeMillis = (Date.now() - this.startedTime)		
+            this.timelog.push(measuredTimeMillis)
+            
+         },
+         stop() {
+            clearInterval(this.timerId)
+            this.reset()
+         },
+         reset() {
+            this.lapbtn= this.btn1Text
+            this.displayTime = 0
+            this.state = "ready"
+            this.btn1Text = "start"
          }
-        
      }
 }
 </script>
